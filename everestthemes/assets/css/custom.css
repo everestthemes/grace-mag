@@ -342,6 +342,7 @@ span.edit-link a:before {
 .screen-reader-text {
    clip: rect(1px, 1px, 1px, 1px);
    position: absolute !important;
+   top: -100px;
 }
 .screen-reader-text:hover,
 .screen-reader-text:active,
@@ -613,9 +614,11 @@ button.hamburger.hamburger_nb {
 .menu-wrap{
     position: relative;
 }
-.main_navigation ul li.search-icon,
+
 .search-icon {
-    float: right;
+    position: absolute;
+    top: 3px;
+    right: 0;
 }
 
 .search-icon .btn-search {
@@ -635,9 +638,7 @@ button.hamburger.hamburger_nb {
     color: white;
 }
 
-.search-icon {
-    position: relative;
-}
+
 
 #header-search {
     background: #fff;

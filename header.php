@@ -114,7 +114,7 @@
                     * @hooked grace_mag_header_main_menu_action - 10
                     */
                     do_action( 'grace_mag_header_main_menu' );
-                    
+
                     /**
                     * Hook - grace_mag_header_mobile_menu.
                     *
@@ -122,6 +122,14 @@
                     */
                     do_action( 'grace_mag_header_mobile_menu' );
                     ?>
+                    <div class="search-icon">
+                     <button class="btn-style btn-search" type="button"><i class="fa fa-search"></i></button>
+                    <div id="header-search">
+                        <form role="" class="search-form" search" method="get" id="search-form" class="clearfix" action="">
+                            <input type="search" name="s" placeholder="Type Something" value""="" autofocus><input type="submit" id="submit" value="Search">
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <!--menu wrap-->
             </div>
