@@ -79,17 +79,17 @@ function grace_mag_customize_register( $wp_customize ) {
 	 * Control Rearrange
 	 */
     
-    $wp_customize->get_control( 'header_textcolor' )->label = esc_html__( 'Site Title Color', 'grace-mag' );
-    $wp_customize->get_control( 'background_color' )->section = 'background_image';
-    $wp_customize->get_section( 'background_image' )->title = esc_html__( 'Site Background', 'grace-mag' );
+//    $wp_customize->get_control( 'header_textcolor' )->label = esc_html__( 'Site Title Color', 'grace-mag' );
+//    $wp_customize->get_control( 'background_color' )->section = 'background_image';
+//    $wp_customize->get_section( 'background_image' )->title = esc_html__( 'Site Background', 'grace-mag' );
     $wp_customize->get_control( 'header_image' )->priority = 30;
-    
-    $wp_customize->get_control( 'custom_logo' )->section = 'grace_mag_site_logo_section';
-    $wp_customize->get_control( 'blogname' )->section = 'grace_mag_site_logo_section';
-    $wp_customize->get_control( 'blogdescription' )->section = 'grace_mag_site_logo_section';
-    $wp_customize->get_control( 'header_textcolor' )->section = 'grace_mag_site_logo_section';
-    $wp_customize->get_control( 'display_header_text' )->section = 'grace_mag_site_logo_section';
-    $wp_customize->get_control( 'site_icon' )->section = 'grace_mag_site_favicon_section';
+//    
+//    $wp_customize->get_control( 'custom_logo' )->section = 'grace_mag_site_logo_section';
+//    $wp_customize->get_control( 'blogname' )->section = 'grace_mag_site_logo_section';
+//    $wp_customize->get_control( 'blogdescription' )->section = 'grace_mag_site_logo_section';
+//    $wp_customize->get_control( 'header_textcolor' )->section = 'grace_mag_site_logo_section';
+//    $wp_customize->get_control( 'display_header_text' )->section = 'grace_mag_site_logo_section';
+//    $wp_customize->get_control( 'site_icon' )->section = 'grace_mag_site_favicon_section';
     $wp_customize->get_control( 'header_image' )->section = 'grace_mag_main_header_section';
 }
 add_action( 'customize_register', 'grace_mag_customize_register' );
@@ -143,6 +143,20 @@ function grace_mag_enqueues() {
     // Localize the script with new data
     $title_array = array(
         'custom_logo' => esc_html__( 'Logo Setup', 'grace-mag' ),
+        'top_header_display_today_date' => esc_html__( 'Top Header : Options', 'grace-mag' ),
+        'top_header_news_ticker_category' => esc_html__( 'News Ticker Content', 'grace-mag' ),
+        'header_image' => esc_html__( 'Header Image', 'grace-mag' ),
+        'banner_category' => esc_html__( 'Banner Content', 'grace-mag' ),
+        'post_single_display_featured_image' => esc_html__( 'Post Content', 'grace-mag' ),
+        'post_single_display_author_section' => esc_html__( 'Author Section', 'grace-mag' ),
+        'post_single_display_related_posts_section' => esc_html__( 'Related Posts Section', 'grace-mag' ),
+        'page_single_display_featured_image' => esc_html__( 'Page Content', 'grace-mag' ),
+        'blog_page_display_featured_image' => esc_html__( 'Post Content', 'grace-mag' ),
+        'blog_page_sidebar_position' => esc_html__( 'Sidebar Position', 'grace-mag' ),
+        'archive_page_display_featured_image' => esc_html__( 'Post Content', 'grace-mag' ),
+        'archive_page_sidebar_position' => esc_html__( 'Sidebar Position', 'grace-mag' ),
+        'search_page_display_featured_image' => esc_html__( 'Post Content', 'grace-mag' ),
+        'search_page_sidebar_position' => esc_html__( 'Sidebar Position', 'grace-mag' ),
     );
     wp_localize_script( 'grace-mag-customizer-script', 'grace_mag', $title_array );
 

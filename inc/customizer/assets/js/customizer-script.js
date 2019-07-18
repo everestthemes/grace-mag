@@ -13,6 +13,20 @@
 
 		// Site Identity
 		//customizer_label( 'custom_logo', ggrace_mag.custom_logo );
+		customizer_label( 'grace_mag_top_header_display_today_date', grace_mag.top_header_display_today_date );
+		customizer_label( 'grace_mag_top_header_news_ticker_category', grace_mag.top_header_news_ticker_category );
+		customizer_label( 'header_image', grace_mag.header_image );
+		customizer_label( 'grace_mag_banner_category', grace_mag.banner_category );
+		customizer_label( 'grace_mag_post_single_display_featured_image', grace_mag.post_single_display_featured_image );
+		customizer_label( 'grace_mag_post_single_display_author_section', grace_mag.post_single_display_author_section );
+		customizer_label( 'grace_mag_post_single_display_related_posts_section', grace_mag.post_single_display_related_posts_section );
+		customizer_label( 'grace_mag_page_single_display_featured_image', grace_mag.page_single_display_featured_image );
+		customizer_label( 'grace_mag_blog_page_display_featured_image', grace_mag.blog_page_display_featured_image );
+		customizer_label( 'grace_mag_blog_page_sidebar_position', grace_mag.blog_page_sidebar_position );
+        customizer_label( 'grace_mag_archive_page_display_featured_image', grace_mag.archive_page_display_featured_image );
+		customizer_label( 'grace_mag_archive_page_sidebar_position', grace_mag.archive_page_sidebar_position );
+        customizer_label( 'grace_mag_search_page_display_featured_image', grace_mag.search_page_display_featured_image );
+		customizer_label( 'grace_mag_search_page_sidebar_position', grace_mag.search_page_sidebar_position );
 
 		/**
 		 *	Toogle Custom Control's Script
