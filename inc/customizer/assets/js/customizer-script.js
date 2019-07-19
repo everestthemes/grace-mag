@@ -12,7 +12,7 @@
 		}
 
 		// Site Identity
-		//customizer_label( 'custom_logo', ggrace_mag.custom_logo );
+		customizer_label( 'custom_logo', grace_mag.custom_logo );
 		customizer_label( 'grace_mag_top_header_display_today_date', grace_mag.top_header_display_today_date );
 		customizer_label( 'grace_mag_top_header_news_ticker_category', grace_mag.top_header_news_ticker_category );
 		customizer_label( 'header_image', grace_mag.header_image );

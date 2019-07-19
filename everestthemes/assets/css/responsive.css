@@ -29,12 +29,12 @@
         margin-top: 15px;
     }
 
-.main_navigation ul li.menu-item-has-children {
+.main_navigation ul li.page_item_has_children {
   position: relative;
   margin-top: 0;
   padding-top: 0;
 }
-    .main_navigation ul li.menu-item-has-children .sub-menu {
+    .main_navigation ul li.page_item_has_children .sub-menu {
         position: relative;
         width: 100%;
         display: none;
@@ -44,7 +44,7 @@
         top:0;
     }
 
-    .main_navigation ul li.menu-item-has-children>a:after {
+    .main_navigation ul li.page_item_has_children>a:after {
         display: none;
     }
 
@@ -133,24 +133,24 @@
         background-color: #ca0606;
         color: #fff;
     }
- .main_navigation ul li.menu-item-has-children  .sub-menu{
+ .main_navigation ul li.page_item_has_children  .sub-menu{
   display: none;
   opacity: 1;
   visibility: visible;
  }
 
-    .main_navigation ul li.menu-item-has-children .sub-menu li {
+    .main_navigation ul li.page_item_has_children .sub-menu li {
         margin-bottom: 0;
         padding-bottom: 0;
         border-bottom: none;
     }
 
-    .main_navigation ul li.menu-item-has-children .sub-menu li a {
+    .main_navigation ul li.page_item_has_children .sub-menu li a {
         padding: 10px 15px;
         text-transform: uppercase;
     }
 
-    .main_navigation ul li.menu-item-has-children .sub-menu {
+    .main_navigation ul li.page_item_has_children .sub-menu {
         padding-top: 0;
     }
 
@@ -191,11 +191,7 @@
     .logo-area {
         max-width: 80px;
     }
-.search-icon {
-    position: absolute;
-    top: -16px;
-    right: 70px;
-}
+
     /*slider*/
     .slider-caption .l-title,
     .full-left-layput2-content .l-title {
@@ -337,7 +333,7 @@
     margin-bottom: 0;
     border-bottom: 1px solid #d02829;
 }
- .header-inner.layout1 .main_navigation ul li.menu-item-has-children.current-page-ancestor .sub-toggle i{
+ .header-inner.layout1 .main_navigation ul li.page_item_has_children.current_page_ancestor .sub-toggle i{
     color: #171717;
 }
  .header-inner.layout1 .main_navigation ul li.search-icon, .header-inner.layout1 .search-icon{

@@ -26,6 +26,10 @@
 
 	<header id="gm-masterheader" class="gm-masterheader">
     <div class="header-inner">
+        <?php
+        $display_top_header = grace_mag_mod( 'display_top_header', true );
+        if( $display_top_header == true ) {
+        ?>
         <div class="header-top-block top-bar clearfix">
             <div class="container">
                 <div class="row align-items-center">
@@ -64,6 +68,9 @@
             </div>
             <!--container-->
         </div>
+        <?php
+        }
+        ?>
         <!--top-header topbar-->
         <div class="header-mid-block logo-sec">
             <div class="container">
@@ -114,7 +121,7 @@
                     * @hooked grace_mag_header_main_menu_action - 10
                     */
                     do_action( 'grace_mag_header_main_menu' );
-
+                    
                     /**
                     * Hook - grace_mag_header_mobile_menu.
                     *
@@ -122,14 +129,6 @@
                     */
                     do_action( 'grace_mag_header_mobile_menu' );
                     ?>
-                    <div class="search-icon">
-                     <button class="btn-style btn-search" type="button"><i class="fa fa-search"></i></button>
-                    <div id="header-search">
-                        <form role="" class="search-form" search" method="get" id="search-form" class="clearfix" action="">
-                            <input type="search" name="s" placeholder="Type Something" value""="" autofocus><input type="submit" id="submit" value="Search">
-                            </form>
-                        </div>
-                    </div>
                 </div>
                 <!--menu wrap-->
             </div>

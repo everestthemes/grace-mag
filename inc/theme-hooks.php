@@ -16,14 +16,23 @@
 if( ! function_exists( 'grace_mag_header_current_date_action' ) ) :
 
  	function grace_mag_header_current_date_action() {
+        
+        $top_header_display_today_date = grace_mag_mod( 'top_header_display_today_date', true );
+        
+        if( $top_header_display_today_date == true ) {
+        
+            $type = 'l, jS F Y';
+        
+            $time = current_time( $type, $gmt = 0 );
 
- 		?>
- 		<div class="current-date">
-            <span><?php esc_html__( 'Today', 'grace-mag' ); ?></span>
-            <i>Sunday, 29th June 2019</i>
-        </div>
-        <!--topbar current time-->
-        <?php
+            ?>
+            <div class="current-date">
+                <span><?php esc_html_e( 'Today', 'grace-mag' ); ?></span>
+                <i><?php echo esc_html( $time );  ?></i>
+            </div>
+            <!--topbar current time-->
+            <?php
+        }
  	}
 endif;
 add_action( 'grace_mag_header_current_date', 'grace_mag_header_current_date_action', 10 );
@@ -37,25 +46,17 @@ add_action( 'grace_mag_header_current_date', 'grace_mag_header_current_date_acti
 if( ! function_exists( 'grace_mag_header_breaking_news_action' ) ) :
 
  	function grace_mag_header_breaking_news_action() {
+        
+        $top_header_display_news_ticker = grace_mag_mod( 'top_header_display_news_ticker', true );
+        
+        if( $top_header_display_news_ticker == true ) {
 
  		?>
  		<div class="breaking-news-wrap">
-            <div class="nt_wrapper">
-                <div class="nt_title pull-left">Breaking News <i class="fa fa-angle-right"></i></div>
-                <ul id="webticker">
-                    <li>
-                        <a href="#" title="">A Pretium Enim Dolor Donec Eu Venenatis Curabitur</a>
-                    </li>
-                    <li>
-                        <a href="#" title="">A Pretium Enim Dolor Donec Eu Venenatis Curabitur</a>
-                    </li>
-                    <li>
-                        <a href="#" title="">A Pretium Enim Dolor Donec Eu Venenatis Curabitur</a>
-                    </li>
-                </ul>
-            </div>
+            <?php grace_mag_news_ticker_template(); ?>
         </div> <!--topbar Breaking News-->
         <?php
+        }
  	}
 endif;
 add_action( 'grace_mag_header_breaking_news', 'grace_mag_header_breaking_news_action', 10 );
@@ -69,18 +70,18 @@ add_action( 'grace_mag_header_breaking_news', 'grace_mag_header_breaking_news_ac
 if( ! function_exists( 'grace_mag_header_social_links_action' ) ) :
 
  	function grace_mag_header_social_links_action() {
+        
+        $top_header_display_social_links = grace_mag_mod( 'top_header_display_social_links', true );
+        
+        if( $top_header_display_social_links == true ) {
 
  		?>
  		<ul class="top-social-icon">
-            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+            <?php grace_mag_social_links_template( 'header' ); ?>
         </ul>
         <!--top social-->
         <?php
+        }
  	}
 endif;
 add_action( 'grace_mag_header_social_links', 'grace_mag_header_social_links_action', 10 );
@@ -143,9 +144,14 @@ if( ! function_exists( 'grace_mag_header_canvas_menu_button_action' ) ) :
 
  	function grace_mag_header_canvas_menu_button_action() {
         
+        $main_header_display_canvas = grace_mag_mod( 'main_header_display_canvas', true );
+        
+        if( $main_header_display_canvas == true ) {
+        
         ?>
  		<button class="hamburger hamburger_nb" type="button"> <span class="hamburger_box"> <span class="hamburger_inner"></span> </span> </button>
         <?php
+        }
  	}
 endif;
 add_action( 'grace_mag_header_canvas_menu_button', 'grace_mag_header_canvas_menu_button_action', 10 );
@@ -190,7 +196,7 @@ if( ! function_exists( 'grace_mag_header_mobile_menu_action' ) ) :
         
         ?>
  		<div class="mobile-menu-icon">
-            <div class="mobile-menu"><i class="fa fa-align-right"></i>Menu</div>
+            <div class="mobile-menu"><i class="fa fa-align-right"></i><?php esc_html_e( 'Menu', 'grace-mag' ); ?></div>
         </div>
         <!--mobile-menu-->
         <?php
@@ -207,6 +213,10 @@ if( ! function_exists( 'grace_mag_header_canvas_menu_action' ) ) :
 
  	function grace_mag_header_canvas_menu_action() {
         
+        $main_header_display_canvas = grace_mag_mod( 'main_header_display_canvas', true );
+        
+        if( $main_header_display_canvas == true ) {
+        
         ?>
  		<div class="side-canvas">
             <div class="close">
@@ -221,6 +231,7 @@ if( ! function_exists( 'grace_mag_header_canvas_menu_action' ) ) :
             ?>
         </div>
         <?php
+        }
  	}
 endif;
 add_action( 'grace_mag_header_canvas_menu', 'grace_mag_header_canvas_menu_action', 10 );

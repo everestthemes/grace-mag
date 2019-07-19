@@ -111,7 +111,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'multiple', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color )
     true //default
 );
 
@@ -225,19 +225,19 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'multiple', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color )
     true //default
 );
 
 grace_mag_add_field( 
     'banner_post_number', //id
     'No. of Posts Items', //label
-    'Maximum 5 items and minimum 2 items can be set for banner.', //desc
+    'Maximum 5 items and minimum 3 items can be set for banner.', //desc
     'number', //type ( text, number, url, select, ios )
     'banner_section', //section
     '', //choices
     'grace_mag_active_banner', //active_callback
-    '2', //min
+    '3', //min
     '5', //max
     '1', //step
     '', //control ( image, toggle, slider, multiple, color )
@@ -737,7 +737,7 @@ grace_mag_add_field(
 -----------------------------------------------------------------------------*/
 
 grace_mag_add_section( 
-    'site_sidebar', //id
+    'site_sidebar_section', //id
     'Site Sidebar', //title
     '', //desc
     '', //panel
@@ -749,7 +749,7 @@ grace_mag_add_field(
     "Enable Sticky Sidebar", //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
-    'site_sidebar', //section
+    'site_sidebar_section', //section
     '', //choices
     '', //active_callback
     '', //min
@@ -764,7 +764,7 @@ grace_mag_add_field(
 -----------------------------------------------------------------------------*/
 
 grace_mag_add_section( 
-    'site_footer', //id
+    'site_footer_section', //id
     'Site Footer', //title
     '', //desc
     '', //panel
@@ -776,7 +776,7 @@ grace_mag_add_field(
     "Display Scroll Top", //label
     'This option lets you to display or hide scroll to top link floating at right corner.', //desc
     'ios', //type ( text, number, url, select, ios )
-    'site_footer', //section
+    'site_footer_section', //section
     '', //choices
     '', //active_callback
     '', //min
@@ -784,4 +784,131 @@ grace_mag_add_field(
     '', //step
     'toggle', //control ( image, toggle, slider, multiple, color )
     true //default
+);
+
+//Option : Footer Copyright Text
+$wp_customize->add_setting( 'grace_mag_copyright_text', array(
+    'sanitize_callback'        => 'grace_mag_sanitize_copyright_credit',
+    'default'                  => '',
+) );
+
+$wp_customize->add_control( 'grace_mag_copyright_text', array(
+    'label'                    => esc_html__( 'Copyright Text', 'grace-mag' ),
+    'description'		       => esc_html__( 'You can use <a> & <span> tags with the copyright and credit text.', 'grace-mag' ),
+    'section'                  => 'grace_mag_site_footer_section',
+    'type'                     => 'text',
+) );
+
+/*-----------------------------------------------------------------------------
+							SOCIAL LINKS SECTION OPTIONS
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_section( 
+    'social_links_section', //id
+    'Social Links', //title
+    '', //desc
+    '', //panel
+    20 //priority
+);
+
+grace_mag_add_field( 
+    'facebook_link', //id
+    "Facebook Link", //label
+    '', //desc
+    'url', //type ( text, number, url, select, ios )
+    'social_links_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color )
+    '' //default
+);
+
+grace_mag_add_field( 
+    'instagram_link', //id
+    "Instagram Link", //label
+    '', //desc
+    'url', //type ( text, number, url, select, ios )
+    'social_links_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color )
+    '' //default
+);
+
+grace_mag_add_field( 
+    'twitter_link', //id
+    "Twitter Link", //label
+    '', //desc
+    'url', //type ( text, number, url, select, ios )
+    'social_links_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color )
+    '' //default
+);
+
+grace_mag_add_field( 
+    'youtube_link', //id
+    "Youtube Link", //label
+    '', //desc
+    'url', //type ( text, number, url, select, ios )
+    'social_links_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color )
+    '' //default
+);
+
+grace_mag_add_field( 
+    'display_rss_feed', //id
+    "Display RSS Feed", //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'social_links_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color )
+    true //default
+);
+
+/*-----------------------------------------------------------------------------
+							EXCERPT LINKS SECTION OPTIONS
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_section( 
+    'excerpt_length_section', //id
+    'Excerpt Length', //title
+    '', //desc
+    '', //panel
+    20 //priority
+);
+
+grace_mag_add_field( 
+    'excerpt_length', //id
+    "Excerpt Length", //label
+    'Maximum excerpt length 40 and minimum excerpt length 20 can be set.', //desc
+    'number', //type ( text, number, url, select, ios )
+    'excerpt_length_section', //section
+    '', //choices
+    '', //active_callback
+    '20', //min
+    '40', //max
+    '1', //step
+    '', //control ( image, toggle, slider, multiple, color )
+    '' //default
 );

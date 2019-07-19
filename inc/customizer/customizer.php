@@ -79,17 +79,17 @@ function grace_mag_customize_register( $wp_customize ) {
 	 * Control Rearrange
 	 */
     
-//    $wp_customize->get_control( 'header_textcolor' )->label = esc_html__( 'Site Title Color', 'grace-mag' );
-//    $wp_customize->get_control( 'background_color' )->section = 'background_image';
-//    $wp_customize->get_section( 'background_image' )->title = esc_html__( 'Site Background', 'grace-mag' );
+    $wp_customize->get_control( 'header_textcolor' )->label = esc_html__( 'Site Title Color', 'grace-mag' );
+    $wp_customize->get_control( 'background_color' )->section = 'background_image';
+    $wp_customize->get_section( 'background_image' )->title = esc_html__( 'Site Background', 'grace-mag' );
     $wp_customize->get_control( 'header_image' )->priority = 30;
-//    
-//    $wp_customize->get_control( 'custom_logo' )->section = 'grace_mag_site_logo_section';
-//    $wp_customize->get_control( 'blogname' )->section = 'grace_mag_site_logo_section';
-//    $wp_customize->get_control( 'blogdescription' )->section = 'grace_mag_site_logo_section';
-//    $wp_customize->get_control( 'header_textcolor' )->section = 'grace_mag_site_logo_section';
-//    $wp_customize->get_control( 'display_header_text' )->section = 'grace_mag_site_logo_section';
-//    $wp_customize->get_control( 'site_icon' )->section = 'grace_mag_site_favicon_section';
+   
+    $wp_customize->get_control( 'custom_logo' )->section = 'grace_mag_site_logo_section';
+    $wp_customize->get_control( 'blogname' )->section = 'grace_mag_site_logo_section';
+    $wp_customize->get_control( 'blogdescription' )->section = 'grace_mag_site_logo_section';
+    $wp_customize->get_control( 'header_textcolor' )->section = 'grace_mag_site_logo_section';
+    $wp_customize->get_control( 'display_header_text' )->section = 'grace_mag_site_logo_section';
+    $wp_customize->get_control( 'site_icon' )->section = 'grace_mag_site_favicon_section';
     $wp_customize->get_control( 'header_image' )->section = 'grace_mag_main_header_section';
 }
 add_action( 'customize_register', 'grace_mag_customize_register' );
