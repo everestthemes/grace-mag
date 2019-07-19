@@ -29,18 +29,14 @@ if( $banner_query -> have_posts() ) {
                             $banner_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                             ?>
                             <div class="slides" style="background-image: url(<?php echo esc_url( $banner_image_url ); ?>);">
-                            <div class="slider-caption">
-                                <h2 class="l-title"><a href="#">A Pretium Enim Dolor Donec Eu Venenatis Curabitur</a></h2>
-                                <div class="meta">
-                                    <span class="posted-date">
-                                        <em class="meta-icon"><i class="fa fa-clock-o"> </i></em> <a href="#" rel=""><time class="entry-date published">4th July , 2019</time></a>
-                                    </span>
-                                    <span class="comments">
-                                        <em class="meta-icon"><i class="fa fa-comment"></i></em><a href="#">0</a>
-                                    </span>
+                                <div class="slider-caption">
+                                    <h2 class="l-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                    <div class="meta">
+                                        <?php grace_mag_posted_on( true ); ?>
+                                        <?php grace_mag_comments_no( true ); ?>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- slides -->
+                            </div><!-- slides -->
                             <?php
                             }
                             $count++;
@@ -63,18 +59,14 @@ if( $banner_query -> have_posts() ) {
                         $banner_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                         ?>
                         <div class="slide-related-post" style="background-image: url(<?php echo esc_url( $banner_image_url ); ?>);">
-                    <div class="slider-caption">
-                        <h2 class="l-title"><a href="#">A Pretium Enim Dolor Donec Eu Venenatis Curabitur</a></h2>
-                        <div class="meta">
-                            <span class="posted-date">
-                                <em class="meta-icon"><i class="fa fa-clock-o"> </i></em> <a href="#" rel=""><time class="entry-date published">4th July , 2019</time></a>
-                            </span>
-                            <span class="comments">
-                                <em class="meta-icon"><i class="fa fa-comment"></i></em><a href="#">0</a>
-                            </span>
-                        </div>
-                    </div>
-                </div><!-- slides -->
+                            <div class="slider-caption">
+                                <h2 class="l-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <div class="meta">
+                                    <?php grace_mag_posted_on( true ); ?>
+                                    <?php grace_mag_comments_no( true ); ?>
+                                </div>
+                            </div>
+                        </div><!-- slides -->
                         <?php
                         }
                         $count++;
