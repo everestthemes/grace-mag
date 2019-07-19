@@ -222,6 +222,53 @@ if( ! function_exists( 'grace_mag_header_canvas_menu_action' ) ) :
             <div class="close">
                 <span class="fa fa-close"></span>
             </div>
+            
+            <div class="canvas-recent-post">
+                <div class="title-sec">
+                    <h2 class="md-title">Recent Post</h2>
+                </div>
+                <ul class="canvas-recent">
+                    <li class="row no-gutters">
+                        <div class="col-12 col-lg-5">
+                            <figure class="img-hover"><img src="assets/img/layout5-listing-img1.jpg" alt="listing"></figure>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <div class="canvas-recent-content">
+                                <div class="gm-sub-cate">
+                                    <small><a class="greenbg" href="#">Healthy Food</a></small>
+                                </div>
+                                <h4 class="sub-title"><a href="#">A Pretium Enim Dolor Donec Eu Venenatis </a></h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row no-gutters">
+                        <div class="col-12 col-lg-5">
+                            <figure class="img-hover"><img src="assets/img/layout5-listing.jpg" alt="listing"></figure>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <div class="canvas-recent-content">
+                                <div class="gm-sub-cate">
+                                    <small><a class="orangebg" href="3">Fashion</a></small>
+                                </div>
+                                <h4 class="sub-title"><a href="#">A Pretium Enim Dolor Donec Eu Venenatis </a></h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row no-gutters">
+                        <div class="col-12 col-lg-5">
+                            <figure class="img-hover"><img src="assets/img/layout5-listing-img1.jpg" alt="listing"></figure>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <div class="canvas-recent-content">
+                                <div class="gm-sub-cate">
+                                    <small><a class="bluebg" href="3">Lifestyle</a></small>
+                                </div>
+                                <h4 class="sub-title"><a href="#">A Pretium Enim Dolor Donec Eu Venenatis </a></h4>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <?php
             //canvas sidebar
             if( is_active_sidebar( 'grace-mag-canvas-sidebar' ) ) {
