@@ -62,43 +62,15 @@ jQuery(document).ready( function($) {
   $("#header-search").slideToggle();
 });
 
- $('.hamburger').click(function() {
-    
-    if($(this).hasClass('active')) {
-      $('.side-canvas').removeClass('gm-canvas-show');
-       $(this).removeClass('active');
-    }else{ 
-      $('body').addClass('canvas_open');
-      $('.side-canvas').addClass('gm-canvas-show');
-        $(this).addClass('active');
-        $(".overlay").show();
-    }
-    
-    $(".close").click(function(){
-      $(".hamburger.hamburger_nb").removeClass("active");
-      $(".side-canvas").removeClass("gm-canvas-show");
-      $(".overlay").fadeOut();
-      //$('.header-inner').removeClass("overlay");
-    });
-    $(".overlay").click(function(){
-      $(".hamburger.hamburger_nb").removeClass("active");
-      $(".side-canvas").removeClass("gm-canvas-show");
-      $(".overlay").fadeOut();
-      //$('.header-inner').removeClass("overlay");
-    });
-  });
-
-
-});
 
 // Mobile Menu
 $('.mobile-menu').click(function(e) {
-  //e.preventDefault();
+  e.preventDefault();
  // $('body').toggleClass('nav-open');
-  //$(this).toggleClass('active');
+  $(this).toggleClass('active');
   $('.main_navigation').slideToggle('medium');
 });
-$('.main_navigation .menu-item-has-children > a').each(function() {
+$('.main_navigation .page_item_has_children > a').each(function() {
   $(this).after('<span class=\'sub-toggle\'><i class=\'fa fa-angle-down\'></i></span>');
 
 }); 
@@ -151,7 +123,6 @@ $('.gm-slider').slick({
     // instead of a settings object
   ]
 });
-
 
 $('.gm-slider2').slick({
   autoplay:true,
@@ -211,7 +182,34 @@ $('.gm-slider2').slick({
 
 $(document).ready(function() { 
   //$(".overlay").hide();
- 
+  $('.hamburger').click(function() {
+    
+    if($(this).hasClass('active')) {
+      $('.side-canvas').removeClass('gm-canvas-show');
+       $(this).removeClass('active');
+    }else{ 
+      $('body').addClass('canvas_open');
+      $('.side-canvas').addClass('gm-canvas-show');
+        $(this).addClass('active');
+        $(".overlay").show();
+    }
+    
+    $(".close").click(function(){
+      $(".hamburger.hamburger_nb").removeClass("active");
+      $(".side-canvas").removeClass("gm-canvas-show");
+      $(".overlay").fadeOut();
+      //$('.header-inner').removeClass("overlay");
+    });
+    $(".overlay").click(function(){
+      $(".hamburger.hamburger_nb").removeClass("active");
+      $(".side-canvas").removeClass("gm-canvas-show");
+      $(".overlay").fadeOut();
+      //$('.header-inner').removeClass("overlay");
+    });
+  });
+
+
+});
     
 });
 
