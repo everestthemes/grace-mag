@@ -57,9 +57,9 @@ if( !function_exists( 'grace_mag_sidebar_position_array' ) ) :
         } else {
             
             $position = array(
-                'left'  => get_template_directory_uri() . '/inc/customizer/assets/images/sidebar_left.png',
-                'right' => get_template_directory_uri() . '/inc/customizer/assets/images/sidebar_right.png',
-                'none'  => get_template_directory_uri() . '/inc/customizer/assets/images/sidebar_none.png',
+                'left'  => get_template_directory_uri() . '/everestthemes/admin/images/sidebar_left.png',
+                'right' => get_template_directory_uri() . '/everestthemes/admin/images/sidebar_right.png',
+                'none'  => get_template_directory_uri() . '/everestthemes/admin/images/sidebar_none.png',
             );
         }
 

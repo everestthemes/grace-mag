@@ -144,13 +144,56 @@ function grace_mag_widgets_init() {
 		'before_title'  => '<div class="widget-title"><h2>',
 		'after_title'   => '</h2></div>',
 	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Footer Left', 'grace-mag' ),
+		'id'            => 'grace-mag-footer-left',
+		'description'   => esc_html__( 'Add widgets here.', 'grace-mag' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-title foot-tittle"><h2 class="wid-title">',
+		'after_title'   => '</h2></div>',
+	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Footer Middle', 'grace-mag' ),
+		'id'            => 'grace-mag-footer-middle',
+		'description'   => esc_html__( 'Add widgets here.', 'grace-mag' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-title foot-tittle"><h2 class="wid-title">',
+		'after_title'   => '</h2></div>',
+	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Footer Right', 'grace-mag' ),
+		'id'            => 'grace-mag-footer-right',
+		'description'   => esc_html__( 'Add widgets here.', 'grace-mag' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-title foot-tittle"><h2 class="wid-title">',
+		'after_title'   => '</h2></div>',
+	) );
 }
 add_action( 'widgets_init', 'grace_mag_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
+
+function grace_mag_admin_enqueue_script() {
+    
+    wp_enqueue_style('grace-mag-admin-style', get_template_directory_uri().'/everestthemes/admin/css/gm-admin-style.css');
+    
+    wp_enqueue_script( 'grace-mag-admin-script', get_template_directory_uri() . '/everestthemes/admin/js/gm-admin-script.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
+}
+add_action('admin_enqueue_scripts', 'grace_mag_admin_enqueue_script');
+
+/**
+ * Enqueue scripts and styles.
+ */
 function grace_mag_scripts() {
+    
 	wp_enqueue_style( 'grace-mag-style', get_stylesheet_uri() );
     
     wp_enqueue_style( 'grace-mag-reset', get_template_directory_uri() . '/everestthemes/assets/css/reset.css' );
