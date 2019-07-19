@@ -320,8 +320,7 @@ button.hamburger.hamburger_nb {
 }
 
 
-
-.main_navigation ul li.search-icon .btn-search {
+.search-icon .btn-search {
     border: 1px solid #171717;
     cursor: pointer;
     height: 35px;
@@ -332,7 +331,7 @@ button.hamburger.hamburger_nb {
     transition: 0.5s ease all;
 }
 
-.main_navigation ul li.search-icon .btn-search:hover {
+.search-icon .btn-search:hover {
     background: #171717;
     color: white;
 }
