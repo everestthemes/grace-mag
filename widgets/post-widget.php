@@ -91,7 +91,7 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
 
             ?>
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_name('layout') ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id('layout') ); ?>">
                     <strong><?php esc_html_e('Chooose Layout', 'gucherry-blog-pro'); ?></strong>
                 </label>
                 <select class="widefat" id="<?php echo esc_attr( $this->get_field_id('layout') ); ?>" name="<?php echo esc_attr( $this->get_field_name('layout') ); ?>">
@@ -115,7 +115,7 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
             </p>
 
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_name('title') ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>">
                     <strong><?php esc_html_e('Title', 'gucherry-blog-pro'); ?></strong>
                 </label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />   
@@ -139,7 +139,7 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
             </p>
             
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_name( 'orderby' ) ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id( 'orderby' ) ); ?>">
                     <strong><?php esc_html_e( 'Order By' , 'gucherry-blog-pro' ); ?></strong>
                     <br>
                     <small><b><?php esc_html_e( 'Select how to sort retrieved posts.' , 'gucherry-blog-pro' ); ?></b></small>
@@ -170,7 +170,7 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
             </p>
             
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_name( 'post_order' ) ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id( 'post_order' ) ); ?>">
                     <strong><?php esc_html_e( 'Sort Order' , 'gucherry-blog-pro' ); ?></strong>
                     <br>
                     <small><b><?php esc_html_e( 'Designates the ascending or descending order.' , 'gucherry-blog-pro' ); ?></b></small>
@@ -196,14 +196,14 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
             </p>
 
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
                     <strong><?php esc_html_e('No of Posts', 'gucherry-blog-pro'); ?></strong>
                 </label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>" name="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>" type="number" value="<?php echo esc_attr( $instance['post_no'] ); ?>" />   
             </p>
 
             <p>
-                <label for="<?php echo esc_attr( $this->get_field_name( 'post_content' ) ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id( 'post_content' ) ); ?>">
                     <strong><?php esc_html_e( 'Post Content' , 'gucherry-blog-pro' ); ?></strong>
                 </label>
                 <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'post_content' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_content' ) ); ?>">
@@ -230,7 +230,7 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
             
             <p>
                 <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'post_format_icon' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_format_icon' ) ); ?>" <?php if( $instance['post_format_icon'] == true ) { esc_attr_e( 'checked', 'gucherry-blog-pro' ); } ?>>
-                <label for="<?php echo esc_attr( $this->get_field_name( 'post_format_icon' ) ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id( 'post_format_icon' ) ); ?>">
                     <strong><?php esc_html_e( 'Display Post Format Icon', 'gucherry-blog-pro' ); ?></strong>
                 </label>
             </p>     

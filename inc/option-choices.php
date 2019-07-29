@@ -67,3 +67,36 @@ if( !function_exists( 'grace_mag_sidebar_position_array' ) ) :
 
 	}
 endif;
+
+if( !function_exists( 'grace_mag_fullwidth_layouts_array' ) ) :
+	/*
+	 * Function to get fullwidth style
+	 */
+	function grace_mag_fullwidth_layouts_array() {
+
+        $full_width = array(
+            'full_one'            => esc_url( 'https://via.placeholder.com/100' ),
+            'full_two'            => esc_url( 'https://via.placeholder.com/100' ),
+        );
+
+        return $full_width;
+
+	}
+endif;
+
+if( !function_exists( 'grace_mag_halfwidth_layouts_array' ) ) :
+	/*
+	 * Function to get halfwidth style
+	 */
+	function grace_mag_halfwidth_layouts_array() {
+
+        $half_width = array(
+            'half_one'            => esc_url( 'https://via.placeholder.com/100' ),
+            'half_two'            => esc_url( 'https://via.placeholder.com/100' ),
+            'half_three'          => esc_url( 'https://via.placeholder.com/100' ),
+        );
+
+        return $half_width;
+
+	}
+endif;

@@ -109,7 +109,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 if( has_post_thumbnail() ) {
                                                 ?>
                                                 <figure>
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-seven', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
                                                 </figure>
                                                 <?php
                                                 }
@@ -117,7 +117,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 <div class="list-content">
                                                     <?php grace_mag_categories_meta( true ); ?>
                                                     <h4 class="sm-title">
-                                                      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                      <a href="<?php the_pemalink(); ?>"><?php the_title(); ?></a>
                                                     </h4>
                                                 </div>
                                             </li>
@@ -134,15 +134,15 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                 <div class="col-12  col-lg-4">
                                     <div class="primary-content-area">
                                     <?php
-
+                                    
                                     $count = 1;
-
+                                    
                                     while( $post_query->have_posts() ) :
 
                                         $post_query->the_post();
-
+                    
                                         if( $count == 4 ) {
-
+                    
                                             $post_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                                             ?>
                                             <div class="primary-main-bdy<?php grace_mag_has_image_class( $post_image_url ); ?>"<?php grace_mag_has_image_url( $post_image_url ); ?>>
@@ -164,7 +164,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                         ?>
                                         <ul class="primary-list1 ">
                                         <?php
-
+                                        
                                         $count = 1;
 
                                         while( $post_query->have_posts() ) :
@@ -179,7 +179,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 if( has_post_thumbnail() ) {
                                                 ?>
                                                 <figure>
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-seven', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
                                                 </figure>
                                                 <?php
                                                 }
@@ -187,7 +187,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 <div class="list-content">
                                                     <?php grace_mag_categories_meta( true ); ?>
                                                     <h4 class="sm-title">
-                                                      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                      <a href="<?php the_pemalink(); ?>"><?php the_title(); ?></a>
                                                     </h4>
                                                 </div>
                                             </li>
@@ -203,16 +203,16 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                 <!-- col-lg-4 -->
                                 <div class="col-12  col-lg-4">
                                     <div class="primary-content-area">
-                                    <?php
-
+                                        <?php
+                                    
                                     $count = 1;
-
+                                    
                                     while( $post_query->have_posts() ) :
 
                                         $post_query->the_post();
-
+                    
                                         if( $count == 7 ) {
-
+                    
                                             $post_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                                             ?>
                                             <div class="primary-main-bdy<?php grace_mag_has_image_class( $post_image_url ); ?>"<?php grace_mag_has_image_url( $post_image_url ); ?>>
@@ -234,7 +234,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                         ?>
                                         <ul class="primary-list1 ">
                                         <?php
-
+                                        
                                         $count = 1;
 
                                         while( $post_query->have_posts() ) :
@@ -249,7 +249,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 if( has_post_thumbnail() ) {
                                                 ?>
                                                 <figure>
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-seven', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
                                                 </figure>
                                                 <?php
                                                 }
@@ -257,7 +257,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 <div class="list-content">
                                                     <?php grace_mag_categories_meta( true ); ?>
                                                     <h4 class="sm-title">
-                                                      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                      <a href="<?php the_pemalink(); ?>"><?php the_title(); ?></a>
                                                     </h4>
                                                 </div>
                                             </li>
@@ -280,7 +280,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                     ?>
                     <div class="full-layout5">
                         <div class="container">
-                            <?php
+                           <?php
                             if( !empty( $title ) ) {
                             ?>
                             <div class="title-sec orange">
@@ -289,75 +289,88 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                             <?php
                             }
                             ?>
+                            <?php
+                            if( $posts_no%5 == 0 ) {
+                            ?>
                             <div class="row ">
                                 <div class="col-12 col-lg-6">
                                     <div class="full-layout5-aside">
                                         <ul class="row">
-                                        <?php
-
-                                        $count = 1;
-
-                                        while( $post_query->have_posts() ) :
-
-                                            $post_query->the_post();
-
-                                            if( $count == 1 || $count <= 4 ) {
-                                            
-                                            ?>
-                                            <li class="col-12 col-lg-6">
-                                                <figure class="img-hover">
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-two', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
-                                                </figure>
-                                                <h4 class="sub-title">
-                                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                </h4>
-                                            </li>
                                             <?php
-                                            }
-                                            $count++;
-                                        endwhile;
-                                        wp_reset_postdata();
-                                        ?>
+                                
+                                            $count = 1;
+                            
+                                            while( $post_query->have_posts() ) :
+
+                                                $post_query->the_post();
+                                
+                                                $break = $count%5;
+                                
+                                                if( !$break == 0 && $count < 5 ) {
+                                                ?>
+                                                <li class="col-12 col-lg-6">
+                                                    <?php
+                                                    if( has_post_thumbnail() ) {
+                                                    ?>
+                                                    <figure class="img-hover">
+                                                        <?php the_post_thumbnail( 'grace-mag-thumbnail-two', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    </figure>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                    <h4 class="sub-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                                </li>
+                                            <?php
+                                                }
+                                                $count++;
+                                            endwhile;
+                                            wp_reset_postdata();
+                                            ?>
                                         </ul>
                                         <!--3rd inner-row-->
                                     </div>
                                 </div>
-                                <?php
-                                $count = 1;
-
-                                while( $post_query->have_posts() ) :
-
-                                    $post_query->the_post();
-
-                                    if( $count == 5 ) {
-                                    ?>
-                                    <!--inner-col-lg-6-->
-                                    <div class="col-12 col-lg-6">
-                                        <div class="full-layout5-content">
-                                            <figure class="img-hover">
-                                                <?php the_post_thumbnail( 'grace-mag-thumbnail-three', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
-                                            </figure>
-                                            <div class="full-layout-bdy">
-                                                <?php grace_mag_categories_meta( true ); ?>
-                                                <h3 class="sm-title">
-                                                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                </h3>
-                                                <div class="meta"> 
-                                                    <?php grace_mag_posted_on( true ); ?>
-                                                    <?php grace_mag_comments_no( true ); ?> 
-                                                </div>
-                                                <!--meta-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--col-lg-6-->
+                                <!--inner-col-lg-6-->
+                                <div class="col-12 col-lg-6">
+                                    <div class="full-layout5-content">
                                     <?php
-                                    }
-                                    $count++;
-                                endwhile;
-                                wp_reset_postdata();
-                                ?>
+                                
+                                    $count = 1;
+
+                                    while( $post_query->have_posts() ) :
+
+                                        $post_query->the_post();
+
+                                        $break = $count%5;
+
+                                        if( $break == 0 ) {
+                                        ?>
+                                        <figure class="img-hover">
+                                            <?php the_post_thumbnail( 'grace-mag-thumbnail-three', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                        </figure>
+                                        <div class="full-layout-bdy">
+                                            <?php grace_mag_categories_meta( true ); ?>
+                                            <h3 class="sm-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                            </h3>
+                                            <div class="meta"> 
+                                                <?php grace_mag_posted_on( true ); ?>
+                                                <?php grace_mag_comments_no( true ); ?>
+                                            </div>
+                                            <!--meta-->
+                                        </div>
+                                        <?php
+                                        }
+                                        $count++;
+                                    endwhile;
+                                    wp_reset_postdata();
+                                    ?>
+                                    </div>
+                                </div>
+                                <!--col-lg-6-->
                             </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                     <!-- full layout5 -->
