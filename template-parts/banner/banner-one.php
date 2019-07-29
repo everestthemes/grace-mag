@@ -28,7 +28,7 @@ if( $banner_query -> have_posts() ) {
 
                             $banner_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                             ?>
-                            <div class="slides" style="background-image: url(<?php echo esc_url( $banner_image_url ); ?>);">
+                            <div class="slides"<?php grace_mag_has_image_url( $banner_image_url ); ?>>
                                 <div class="slider-caption">
                                     <h2 class="l-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                     <div class="meta">
@@ -58,7 +58,7 @@ if( $banner_query -> have_posts() ) {
 
                         $banner_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                         ?>
-                        <div class="slide-related-post" style="background-image: url(<?php echo esc_url( $banner_image_url ); ?>);">
+                        <div class="slide-related-post"<?php grace_mag_has_image_url( $banner_image_url ); ?>>
                             <div class="slider-caption">
                                 <h2 class="l-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                 <div class="meta">

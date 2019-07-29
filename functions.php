@@ -46,6 +46,14 @@ if ( ! function_exists( 'grace_mag_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+        
+        add_image_size( 'grace-mag-thumbnail-one', 105, 82, true ); //Fullwidth widget : Featured grid
+        add_image_size( 'grace-mag-thumbnail-two', 255, 170, true ); //Fullwidth widget : Featured right block : List
+        add_image_size( 'grace-mag-thumbnail-three', 540, 360, true ); //Fullwidth widget : Featured right block : feature
+        add_image_size( 'grace-mag-thumbnail-four', 255, 170, true ); //Halfwidth widget : Grid Layout
+        add_image_size( 'grace-mag-thumbnail-five', 326, 215, true ); //Halfwidth widget : List Layout
+        add_image_size( 'grace-mag-thumbnail-six', 398, 331, true ); //Halfwidth widget : Featured Blog 1st Image
+        add_image_size( 'grace-mag-thumbnail-seven', 135, 90, true ); //Halfwidth widget : Featured Blog others Image
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
