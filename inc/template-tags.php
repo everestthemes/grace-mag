@@ -183,24 +183,59 @@ if ( ! function_exists( 'grace_mag_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
-
-		<?php else : ?>
-
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
-		</a>
+			<figure>
+				<?php the_post_thumbnail( 'full', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+			</figure><!-- // thumb featured-image -->
 
 		<?php
+        
+        else :
+
+		$display_featured_image = true;
+            
+            if( is_home() ) {
+                $display_featured_image = grace_mag_mod( 'blog_page_display_featured_image', true );
+            }
+            
+            if( is_archive() ) {
+                $display_featured_image = grace_mag_mod( 'archive_page_display_featured_image', true );
+            }
+            
+            if( is_search() ) {
+                $display_featured_image = grace_mag_mod( 'search_page_display_featured_image', true );
+            }
+            
+            if( $display_featured_image == true ) {    
+            ?>
+            <figure class="img-hover">
+                <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+            </figure><!-- // thumb -->
+
+		<?php
+            }
 		endif; // End is_singular().
+	}
+endif;
+
+if( ! function_exists( 'grace_mag_tags_meta' ) ) :
+	/*
+	 * Prints HTML with meta information for post categories.
+	 */
+	function grace_mag_tags_meta( $display_meta ) {
+
+		if( $display_meta == true  ) {
+
+			// Hide category and tag text for pages.
+			if ( 'post' === get_post_type() ) {
+
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list();
+
+				if ( $tags_list ) {
+					echo '<div class="entry-tags"><div class="post-tags">' . wp_kses_post( $tags_list ) . '</div></div>'; // WPCS: XSS OK.
+				}
+			}
+		}
 	}
 endif;
 
@@ -246,3 +281,16 @@ if ( ! function_exists( 'grace_mag_has_image_url' ) ) :
         echo $bg_image_style;
 	}
 endif;
+
+
+
+
+
+
+
+
+
+
+
+
+

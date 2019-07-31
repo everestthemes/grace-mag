@@ -6,6 +6,53 @@
  */
 
 /**
+ * Funtion To Get Google Fonts
+ */
+if ( !function_exists( 'grace_mag_fonts_url' ) ) :
+
+    /**
+     * Return Font's URL.
+     *
+     * @since 1.0.0
+     * @return string Fonts URL.
+     */
+    function grace_mag_fonts_url() {
+
+        $fonts_url = '';
+        $fonts     = array();
+        $subsets   = 'latin,latin-ext';
+
+        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+        if ('off' !== _x('on', 'Roboto font: on or off', 'grace-mag')) {
+
+            $fonts[] = 'Roboto:400,400i,500,500i,700,700i';
+        }
+        
+        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+        if ('off' !== _x('on', 'Roboto Condensed font: on or off', 'grace-mag')) {
+
+            $fonts[] = 'Roboto+Condensed:400,400i,700,700i';
+        }
+
+        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+
+        if ('off' !== _x('on', 'Josefin Sans font: on or off', 'grace-mag')) {
+
+            $fonts[] = 'Josefin+Sans:400,400i,600,600i,700,700i';
+        }
+
+        if ( $fonts ) {
+            $fonts_url = add_query_arg( array(
+                'family' => urlencode( implode( '|', $fonts ) ),
+                'subset' => urlencode( $subsets ),
+            ), '//fonts.googleapis.com/css' );
+        }
+
+        return $fonts_url;
+    }
+endif;
+
+/**
  * Function to get customizer options
  */
 if ( !function_exists( 'grace_mag_mod' ) ) {
@@ -33,6 +80,37 @@ if ( !function_exists( 'grace_mag_mod' ) ) {
         return $theme_mod;
     }
 }
+
+/**
+ * Customize Readmore Link.
+ */
+function post_excerpt_more( $more ) {
+  	return '...';
+}
+add_filter( 'excerpt_more', 'post_excerpt_more' );
+
+/**
+* Filter the except length to 40 words default.
+*/
+if( !function_exists( 'grace_mag_excerpt_length' ) ) {
+   /*
+    * Excerpt Length
+    */
+   function grace_mag_excerpt_length( $length ) {
+       
+       if( is_admin() ) {
+           return $length;
+       }
+
+       $excerpt_length = grace_mag_mod( 'excerpt_length', 25 );
+
+       if( absint( $excerpt_length ) > 0 ) {
+           $excerpt_length = absint( $excerpt_length );
+       }
+       return $excerpt_length;
+   }
+}
+add_filter( 'excerpt_length', 'grace_mag_excerpt_length' );
 
 /**
  * Fallback For Main Menu

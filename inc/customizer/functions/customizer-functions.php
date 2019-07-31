@@ -156,6 +156,12 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 					$setting_args['sanitize_callback'] = $theme_prefix . '_sanitize_multiple_select';
 
 				}
+                
+                if( $control == 'upload' ) {
+
+					$setting_args['sanitize_callback'] = 'esc_url_raw';
+
+				}
 				
 				break;
 
@@ -246,6 +252,12 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
             case 'multiple':
 
 				$wp_customize->add_control( new Grace_Mag_Multiple_Select_Control( $wp_customize, $field_id, $control_args ) );
+
+				break;
+                
+            case 'upload':
+
+				$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, $field_id, $control_args ) );
 
 				break;
 			

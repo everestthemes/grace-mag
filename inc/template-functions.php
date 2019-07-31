@@ -151,3 +151,322 @@ if( ! function_exists( 'grace_mag_banner_template' ) ) {
     
     }
 }
+
+/**
+ * Selects post listiong layout template
+ */
+if( ! function_exists( 'grace_mag_post_listing_layout_template' ) ) {
+    
+    function grace_mag_post_listing_layout_template() {
+        
+        get_template_part( 'template-parts/layout/layout', 'grid' );
+    }
+}
+
+/**
+ * Function to check position of sidebar.
+ */
+if( !function_exists( 'grace_mag_sidebar_position' ) ) {
+
+    function grace_mag_sidebar_position() {
+
+    	$sidebar_position = '';
+
+        if( is_active_sidebar( 'grace-mag-sidebar' ) ) {
+
+            if( !is_singular() ) {
+
+                if( is_archive() ) {
+
+                    $sidebar_position = grace_mag_mod( 'archive_page_sidebar_position', 'right' );
+                } 
+
+                if( is_search() ) {
+
+                    $sidebar_position = grace_mag_mod( 'search_page_sidebar_position', 'right' );
+                } 
+
+                if( is_home() ) {
+
+                    $sidebar_position = grace_mag_mod( 'blog_page_sidebar_position', 'right' );
+                }
+            } else {
+
+                $sidebar_position = get_post_meta( get_the_ID(), 'grace_mag_sidebar_position', true );
+            }
+
+            if( empty( $sidebar_position ) ) {
+
+                $sidebar_position = 'right';
+            }
+        } else {
+
+            $sidebar_position = 'none';
+        }
+
+    	return $sidebar_position;
+    }
+}
+
+/**
+ * Add custom class for main container containing posts.
+ */
+if( ! function_exists( 'grace_mag_main_container_class' ) ) {
+
+	function grace_mag_main_container_class() {
+
+		$container_class = '';
+        
+        $sidebar_position = grace_mag_sidebar_position();
+        
+		$sticky_enabled = grace_mag_mod( 'enable_sticky_sidebar', true );
+
+		if( $sidebar_position == 'none' || !is_active_sidebar( 'grace-mag-sidebar' ) ) {
+            
+            $container_class = 'col-md-12 col-lg-12';
+	
+		} else {
+
+			$container_class = 'col-md-12 col-lg-9';
+		}
+
+		if( $sticky_enabled == true && $sidebar_position != 'none' ) {
+
+			$container_class .= ' sticky-portion';
+		}
+
+		echo esc_attr( $container_class );
+	}
+}
+
+/**
+ * Add custom class for main container containing posts.
+ */
+if( ! function_exists( 'grace_mag_layout_container_class' ) ) {
+
+	function grace_mag_layout_container_class() {
+
+		$container_class = '';
+        
+        $sidebar_position = grace_mag_sidebar_position();
+
+		if( $sidebar_position == 'none' || !is_active_sidebar( 'grace-mag-sidebar' ) ) {
+            
+            $container_class = 'col-12 col-lg-4';
+	
+		} else {
+
+			$container_class = 'col-12 col-lg-6';
+		}
+
+		echo esc_attr( $container_class );
+	}
+}
+
+/**
+ * Add custom class for sidebar.
+ */
+if( ! function_exists( 'grace_mag_sidebar_class' ) ) {
+
+	function grace_mag_sidebar_class() {
+
+		$sidebar_class = 'col-12 col-md-4 col-lg-3';
+		$sticky_enabled = grace_mag_mod( 'enable_sticky_sidebar', true );
+
+		if( $sticky_enabled == true ) {
+			$sidebar_class .= ' sticky-portion';
+		}
+        
+		echo esc_attr( $sidebar_class );
+	}
+}
+
+
+if ( ! function_exists( 'grace_mag_display_sidebar' ) ) :
+	/*
+	 * Displays the sidebar as per input.
+	 */
+	function grace_mag_display_sidebar( $position ) {
+        
+        if( empty( $position ) ) {
+            return;
+        }
+        
+        if( !empty( $position ) ) {
+            
+            $sidebar_position = grace_mag_sidebar_position();
+            
+            if( $sidebar_position == $position && $sidebar_position != 'none' ) {
+                
+                get_sidebar();
+            }
+        }
+	}
+endif;
+
+/**
+ * Function that defines posts pagination.
+ */
+if( ! function_exists( 'grace_mag_pagination' ) ) {
+
+	function grace_mag_pagination() {
+        
+        ?>
+        <div class="gm-pagination">
+        <?php
+        
+            the_posts_pagination( array(
+                'mid_size' => 2,
+                'prev_text' => esc_html__( '', 'gucherry-blog-pro' ),
+                'next_text' => esc_html__( '', 'gucherry-blog-pro' ),
+            ) );
+        ?>
+        </div>
+        <?php
+	}
+}
+
+/**
+ * Function that defines pages links.
+ */
+if( ! function_exists('grace_mag_pages_links') ) {
+
+function grace_mag_pages_links() {
+
+        $pages_links_args = array(
+            'before'    => '<div class="page-links">' . esc_html__( 'Pages:', 'grace-mag' ),
+            'after'     => '</div>',
+        );
+
+        wp_link_pages( $pages_links_args );
+    }
+}
+
+/**
+ * Function that defines post navigation.
+ */
+if( ! function_exists( 'grace_mag_post_navigation' ) ) {
+
+	function grace_mag_post_navigation() {
+		
+		$next_post = get_next_post();
+
+	    $previous_post = get_previous_post();
+        
+        ?>
+        <div class="post-navigation">
+            <div class="nav-links">
+              <?php
+               if (!empty( $previous_post )):
+                ?>
+                <div class="nav-previous">
+                    <span><?php echo esc_html__( 'Prev post', 'gucherry-blog' ); ?></span>
+                    <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>"><?php echo esc_attr( $previous_post->post_title ); ?></a>
+                </div>
+                <?php
+                endif;
+        
+               if (!empty( $next_post )):
+                ?>
+                <div class="nav-next">
+                    <span><?php echo esc_html__( 'Next post', 'gucherry-blog' ); ?></span>
+                    <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo esc_attr( $next_post->post_title ); ?></a>
+                </div>
+                <?php
+                endif;
+                ?>
+            </div><!-- // nav-links -->
+        </div><!-- // post-navigation -->
+        <?php
+	}
+}
+
+/**
+ * Breadcrumb declaration of the theme.
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_breadcrumb' ) ) :
+
+ 	function grace_mag_breadcrumb() {
+        
+        $display_breadcrumb = grace_mag_mod( 'display_breadcrumb', true );
+
+ 		if( $display_breadcrumb == true ) {
+ 			?>
+ 			<div class="container">
+                <div class="breadcrumbs-sec breadcrumbs-layout1">
+                    <?php
+                    $breadcrumb_args = array(
+                        'show_browse' => false,
+                    );
+                    grace_mag_breadcrumb_trail( $breadcrumb_args );
+                    ?>
+                </div>
+                <!--breadcdrum-->
+            </div>
+ 			<?php
+ 		}  		
+ 	}
+endif;
+
+/**
+ * Function to return customizer option for posted time
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_posted_time_option' ) ) :
+
+ 	function grace_mag_posted_time_option() {
+        
+        $display_posted_time = false;
+        
+        if( is_home() ) {
+            
+            $display_posted_time = grace_mag_mod( 'blog_page_display_posted_time', true );
+        }
+        
+        if( is_archive() ) {
+            
+            $display_posted_time = grace_mag_mod( 'archive_page_display_posted_time', true );
+        }
+        
+        if( is_search() ) {
+            
+            $display_posted_time = grace_mag_mod( 'search_page_display_posted_time', true );
+        }
+        
+        return $display_posted_time;
+ 	}
+endif;
+
+/**
+ * Function to return customizer option for comment number
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_comment_no_option' ) ) :
+
+ 	function grace_mag_comment_no_option() {
+        
+        $display_comment_no = false;
+        
+        if( is_home() ) {
+            
+            $display_comment_no = grace_mag_mod( 'blog_page_display_comment_number', true );
+        }
+        
+        if( is_archive() ) {
+            
+            $display_comment_no = grace_mag_mod( 'archive_page_display_comment_number', true );
+        }
+        
+        if( is_search() ) {
+            
+            $display_comment_no = grace_mag_mod( 'search_page_display_comment_number', true );
+        }
+        
+        return $display_comment_no;
+ 	}
+endif;
+

@@ -66,7 +66,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -81,7 +81,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -96,7 +96,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -111,7 +111,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -126,7 +126,7 @@ grace_mag_add_field(
     '2', //min
     '5', //max
     '1', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     '4' //default
 );
 
@@ -141,7 +141,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -168,7 +168,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -183,7 +183,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -210,7 +210,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -225,7 +225,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -240,7 +240,7 @@ grace_mag_add_field(
     '3', //min
     '5', //max
     '1', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     '4' //default
 );
 
@@ -278,7 +278,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -293,7 +293,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -308,7 +308,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -323,7 +323,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -338,7 +338,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -353,7 +353,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -368,7 +368,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     'RELATED POSTS' //default
 );
 
@@ -383,7 +383,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -398,7 +398,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -413,7 +413,7 @@ grace_mag_add_field(
     '1', //min
     '3', //max
     '1', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     '3' //default
 );
 
@@ -440,7 +440,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -467,22 +467,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
-    true //default
-);
-
-grace_mag_add_field( 
-    'blog_page_display_post_category', //id
-    "Display Post Category", //label
-    '', //desc
-    'ios', //type ( text, number, url, select, ios )
-    'blog_page_section', //section
-    '', //choices
-    '', //active_callback
-    '', //min
-    '', //max
-    '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -497,7 +482,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -512,7 +497,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -527,7 +512,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'image', //control ( image, toggle, slider, multiple, color )
+    'image', //control ( image, toggle, slider, multiple, color, upload )
     'right' //default
 );
 
@@ -554,22 +539,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
-    true //default
-);
-
-grace_mag_add_field( 
-    'archive_page_display_post_category', //id
-    "Display Post Category", //label
-    '', //desc
-    'ios', //type ( text, number, url, select, ios )
-    'archive_page_section', //section
-    '', //choices
-    '', //active_callback
-    '', //min
-    '', //max
-    '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -584,7 +554,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -599,7 +569,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -614,7 +584,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'image', //control ( image, toggle, slider, multiple, color )
+    'image', //control ( image, toggle, slider, multiple, color, upload )
     'right' //default
 );
 
@@ -641,22 +611,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
-    true //default
-);
-
-grace_mag_add_field( 
-    'search_page_display_post_category', //id
-    "Display Post Category", //label
-    '', //desc
-    'ios', //type ( text, number, url, select, ios )
-    'search_page_section', //section
-    '', //choices
-    '', //active_callback
-    '', //min
-    '', //max
-    '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -671,7 +626,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -686,7 +641,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -701,8 +656,35 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'image', //control ( image, toggle, slider, multiple, color )
+    'image', //control ( image, toggle, slider, multiple, color, upload )
     'right' //default
+);
+
+/*-----------------------------------------------------------------------------
+							COMMON PAGE SECTION OPTIONS
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_section( 
+    'common_page_section', //id
+    'Common Page', //title
+    '', //desc
+    'site_pages', //panel
+    10 //priority
+);
+
+grace_mag_add_field( 
+    'common_page_background_image', //id
+    "", //label
+    'Uploaded image will be shown in Archive and search page.', //desc
+    '', //type ( text, number, url, select, ios )
+    'common_page_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'upload', //control ( image, toggle, slider, multiple, color, upload )
+    '' //default
 );
 
 /*-----------------------------------------------------------------------------
@@ -728,7 +710,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -755,7 +737,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -782,7 +764,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -822,7 +804,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     '' //default
 );
 
@@ -837,7 +819,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     '' //default
 );
 
@@ -852,7 +834,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     '' //default
 );
 
@@ -867,7 +849,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    '', //control ( image, toggle, slider, multiple, color )
+    '', //control ( image, toggle, slider, multiple, color, upload )
     '' //default
 );
 
@@ -882,7 +864,7 @@ grace_mag_add_field(
     '', //min
     '', //max
     '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color )
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
     true //default
 );
 
@@ -909,6 +891,6 @@ grace_mag_add_field(
     '20', //min
     '40', //max
     '1', //step
-    '', //control ( image, toggle, slider, multiple, color )
-    '' //default
+    '', //control ( image, toggle, slider, multiple, color, upload )
+    '25' //default
 );

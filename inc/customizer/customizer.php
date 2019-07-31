@@ -157,6 +157,7 @@ function grace_mag_enqueues() {
         'archive_page_sidebar_position' => esc_html__( 'Sidebar Position', 'grace-mag' ),
         'search_page_display_featured_image' => esc_html__( 'Post Content', 'grace-mag' ),
         'search_page_sidebar_position' => esc_html__( 'Sidebar Position', 'grace-mag' ),
+        'common_page_background_image' => esc_html__( 'Background Image', 'grace-mag' ),
     );
     wp_localize_script( 'grace-mag-customizer-script', 'grace_mag', $title_array );
 

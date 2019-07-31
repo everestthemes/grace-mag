@@ -27,6 +27,7 @@
 		customizer_label( 'grace_mag_archive_page_sidebar_position', grace_mag.archive_page_sidebar_position );
         customizer_label( 'grace_mag_search_page_display_featured_image', grace_mag.search_page_display_featured_image );
 		customizer_label( 'grace_mag_search_page_sidebar_position', grace_mag.search_page_sidebar_position );
+		customizer_label( 'grace_mag_common_page_background_image', grace_mag.common_page_background_image );
 
 		/**
 		 *	Toogle Custom Control's Script

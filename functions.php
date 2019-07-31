@@ -47,13 +47,7 @@ if ( ! function_exists( 'grace_mag_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
         
-        add_image_size( 'grace-mag-thumbnail-one', 105, 82, true ); //Fullwidth widget : Featured grid
-        add_image_size( 'grace-mag-thumbnail-two', 255, 170, true ); //Fullwidth widget : Featured right block : List
-        add_image_size( 'grace-mag-thumbnail-three', 540, 360, true ); //Fullwidth widget : Featured right block : feature
-        add_image_size( 'grace-mag-thumbnail-four', 255, 170, true ); //Halfwidth widget : Grid Layout
-        add_image_size( 'grace-mag-thumbnail-five', 326, 215, true ); //Halfwidth widget : List Layout
-        add_image_size( 'grace-mag-thumbnail-six', 398, 331, true ); //Halfwidth widget : Featured Blog 1st Image
-        add_image_size( 'grace-mag-thumbnail-seven', 135, 90, true ); //Halfwidth widget : Featured Blog others Image
+        add_image_size( 'grace-mag-thumbnail-one', 600, 400, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -204,6 +198,8 @@ function grace_mag_scripts() {
     
 	wp_enqueue_style( 'grace-mag-style', get_stylesheet_uri() );
     
+    wp_enqueue_style( 'grace-mag-google-fonts', grace_mag_fonts_url() );
+    
     wp_enqueue_style( 'grace-mag-reset', get_template_directory_uri() . '/everestthemes/assets/css/reset.css' );
     
 	wp_enqueue_style( 'grace-mag-bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
@@ -271,6 +267,11 @@ require get_template_directory() . '/inc/option-choices.php';
 require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**
+ * Load breadcrumbs.
+ */
+require get_template_directory() . '/third-party/breadcrumbs.php';
+
+/**
  * Functions which hooks into the theme functions.
  */
 require get_template_directory() . '/inc/theme-hooks.php';
@@ -286,4 +287,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Load widgets for theme
  */
 require get_template_directory() . '/widgets/widgets.php';
+
+/**
+ * Post Meta Sidebar Position for this theme.
+ */
+require get_template_directory() . '/inc/custom-fields/sidebar-position.php';
 
