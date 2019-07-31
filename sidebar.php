@@ -7,11 +7,13 @@
  * @package Grace_Mag
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'grace-mag-sidebar' ) ) {
 	return;
 }
 ?>
 
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<div class="<?php grace_mag_sidebar_class(); ?>">
+    <aside id="secondary" class="secondary-widget-area">
+        <?php dynamic_sidebar( 'grace-mag-sidebar' ); ?>
+    </aside><!-- // aside -->
+</div><!--side-bar col-3-->

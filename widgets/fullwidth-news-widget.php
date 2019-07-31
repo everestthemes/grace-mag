@@ -25,9 +25,9 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
 
             $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-            $posts_no = !empty( $instance[ 'post_no' ] ) ? $instance[ 'post_no' ] : 4;
+            $posts_no = !empty( $instance[ 'post_no' ] ) ? $instance[ 'post_no' ] : 9;
 
-            $layout = !empty( $instance[ 'layout' ] ) ? $instance[ 'layout' ] : 'layout_one';
+            $layout = !empty( $instance[ 'layout' ] ) ? $instance[ 'layout' ] : 'full_one';
             
             $select_cat    = !empty( $instance['select_cat'] ) ? $instance['select_cat'] : 0;
 
@@ -306,7 +306,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                             ?>
                                             <li class="col-12 col-lg-6">
                                                 <figure class="img-hover">
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-two', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
                                                 </figure>
                                                 <h4 class="sub-title">
                                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -335,7 +335,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                     <div class="col-12 col-lg-6">
                                         <div class="full-layout5-content">
                                             <figure class="img-hover">
-                                                <?php the_post_thumbnail( 'grace-mag-thumbnail-three', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
                                             </figure>
                                             <div class="full-layout-bdy">
                                                 <?php grace_mag_categories_meta( true ); ?>
@@ -382,7 +382,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
             
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id('layout') ); ?>">
-                    <strong><?php esc_html_e('Chooose Layout', 'gucherry-blog-pro'); ?></strong>
+                    <strong><?php esc_html_e('Chooose Layout', 'grace-mag'); ?></strong>
                 </label>
                 
                 <br>
@@ -407,14 +407,14 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
 
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id('title') ); ?>">
-                    <strong><?php esc_html_e('Title', 'gucherry-blog-pro'); ?></strong>
+                    <strong><?php esc_html_e('Title', 'grace-mag'); ?></strong>
                 </label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />   
             </p>
             
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'select_cat' ) ); ?>">
-                    <strong><?php echo esc_html_e( 'Select Category' , 'gucherry-blog-pro' ); ?></strong>
+                    <strong><?php echo esc_html_e( 'Select Category' , 'grace-mag' ); ?></strong>
                 </label>
                 <?php
                     wp_dropdown_categories( array(
@@ -423,7 +423,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                         'name'             => esc_attr( $this->get_field_name( 'select_cat' ) ),
                         'orderby'          => 'name',
                         'selected'         => esc_attr( $instance [ 'select_cat' ] ),
-                        'show_option_all'  => esc_html__( 'Select To Show Category Posts' , 'gucherry-blog-pro' ),
+                        'show_option_all'  => esc_html__( 'Select To Show Category Posts' , 'grace-mag' ),
                         )
                     );
                 ?>
@@ -431,7 +431,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
 
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
-                    <strong><?php esc_html_e('No of Posts', 'gucherry-blog-pro'); ?></strong>
+                    <strong><?php esc_html_e('No of Posts', 'grace-mag'); ?></strong>
                 </label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>" name="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>" type="number" value="<?php echo esc_attr( $instance['post_no'] ); ?>" />   
             </p>

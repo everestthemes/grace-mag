@@ -146,6 +146,3 @@
 * @hooked grace_mag_header_canvas_menu_action - 10
 */
 do_action( 'grace_mag_header_canvas_menu' );
-?>
-<!--canvas-->
-<div class="overlay"></div>
