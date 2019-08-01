@@ -180,16 +180,27 @@ if ( ! function_exists( 'grace_mag_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() ) :
+		if ( is_singular() ) {
+        
+            if( is_page() ) {
+                $display_featured_image = grace_mag_mod( 'page_single_display_featured_image', true );
+            }
+            
+            if( is_single() ) {
+                $display_featured_image = grace_mag_mod( 'post_single_display_featured_image', true );
+            }
+            
+            if( $display_featured_image == true ) {
 			?>
-
+            
 			<figure>
 				<?php the_post_thumbnail( 'full', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
 			</figure><!-- // thumb featured-image -->
 
 		<?php
+            }
         
-        else :
+        } else {
 
 		$display_featured_image = true;
             
@@ -213,7 +224,7 @@ if ( ! function_exists( 'grace_mag_post_thumbnail' ) ) :
 
 		<?php
             }
-		endif; // End is_singular().
+        } // End is_singular().
 	}
 endif;
 

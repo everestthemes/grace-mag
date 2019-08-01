@@ -283,21 +283,6 @@ grace_mag_add_field(
 );
 
 grace_mag_add_field( 
-    'post_single_display_category', //id
-    "Display Category", //label
-    '', //desc
-    'ios', //type ( text, number, url, select, ios )
-    'post_single_section', //section
-    '', //choices
-    '', //active_callback
-    '', //min
-    '', //max
-    '', //step
-    'toggle', //control ( image, toggle, slider, multiple, color, upload )
-    true //default
-);
-
-grace_mag_add_field( 
     'post_single_display_posted_date', //id
     "Display Posted Date", //label
     '', //desc
@@ -373,8 +358,8 @@ grace_mag_add_field(
 );
 
 grace_mag_add_field( 
-    'post_single_display_related_posts_category', //id
-    "Display Category", //label
+    'post_single_display_related_posted_date', //id
+    "Display Posted Date", //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -661,12 +646,12 @@ grace_mag_add_field(
 );
 
 /*-----------------------------------------------------------------------------
-							COMMON PAGE SECTION OPTIONS
+							COMMON OPTION SECTION OPTIONS
 -----------------------------------------------------------------------------*/
 
 grace_mag_add_section( 
     'common_page_section', //id
-    'Common Page', //title
+    'Common Options', //title
     '', //desc
     'site_pages', //panel
     10 //priority
@@ -675,7 +660,7 @@ grace_mag_add_section(
 grace_mag_add_field( 
     'common_page_background_image', //id
     "", //label
-    'Uploaded image will be shown in Archive and search page.', //desc
+    'Uploaded image will be shown in Archive Page, Search Page, Post Single and Page Single.', //desc
     '', //type ( text, number, url, select, ios )
     'common_page_section', //section
     '', //choices

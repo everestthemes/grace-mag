@@ -13,28 +13,39 @@
  */
 
 get_header();
+
+$background_image_url = grace_mag_mod( 'common_page_background_image', '' );
 ?>
+<div class="inner-banner<?php grace_mag_has_image_class( $background_image_url ); ?>"<?php grace_mag_has_image_url( $background_image_url ); ?>></div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="sigle-post">
+    <?php grace_mag_breadcrumb(); ?>
+    <div class="container">
+        <div class="single-post-layout1">
+            <div class="row">
+                <?php grace_mag_display_sidebar( 'left' ); ?>
+                <div class="<?php grace_mag_main_container_class(); ?>">
+                    <?php
+                    if( have_posts() ) :
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+                        while( have_posts() ) :
+                            the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+                            get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+                        endwhile;
 
-		endwhile; // End of the loop.
-		?>
+                    else :
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+                        get_template_part( 'template-parts/content', 'none' );
 
+                    endif;
+                    ?>
+                </div><!--col-lg-8-->
+                <?php grace_mag_display_sidebar( 'right' ); ?>
+            </div><!--single-post-layout1-->
+        </div><!--container-->
+    </div> <!--not found page-->
+</div>
 <?php
-get_sidebar();
 get_footer();

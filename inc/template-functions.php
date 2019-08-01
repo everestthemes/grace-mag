@@ -18,9 +18,19 @@ function grace_mag_body_classes( $classes ) {
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	if ( ! is_active_sidebar( 'grace-mag-sidebar' ) ) {
 		$classes[] = 'no-sidebar';
 	}
+    
+    // Adds a class of no-sidebar when there is no sidebar present.
+    $sidebar_position = grace_mag_sidebar_position();
+	if ( ! is_active_sidebar( 'grace-mag-sidebar' ) || $sidebar_position == 'none' ) {
+		$classes[] = 'no-sidebar';
+	}
+    
+    if( get_background_image() || get_background_color() != 'ffffff'  ) {
+        $classes[] = 'boxed';
+    }
 
 	return $classes;
 }
@@ -192,7 +202,7 @@ if( !function_exists( 'grace_mag_sidebar_position' ) ) {
                 }
             } else {
 
-                $sidebar_position = get_post_meta( get_the_ID(), 'grace_mag_sidebar_position', true );
+                $sidebar_position = get_post_meta( get_the_ID(), 'grace_mag_sidebar_position', 'right' );
             }
 
             if( empty( $sidebar_position ) ) {
@@ -296,7 +306,7 @@ if ( ! function_exists( 'grace_mag_display_sidebar' ) ) :
             
             $sidebar_position = grace_mag_sidebar_position();
             
-            if( $sidebar_position == $position && $sidebar_position != 'none' ) {
+            if( $position == $sidebar_position && is_active_sidebar( 'grace-mag-sidebar' ) ) {
                 
                 get_sidebar();
             }
@@ -317,8 +327,6 @@ if( ! function_exists( 'grace_mag_pagination' ) ) {
         
             the_posts_pagination( array(
                 'mid_size' => 2,
-                'prev_text' => esc_html__( '', 'gucherry-blog-pro' ),
-                'next_text' => esc_html__( '', 'gucherry-blog-pro' ),
             ) );
         ?>
         </div>
@@ -421,6 +429,11 @@ if( ! function_exists( 'grace_mag_posted_time_option' ) ) :
         
         $display_posted_time = false;
         
+        if( is_single() ) {
+            
+            $display_posted_time = grace_mag_mod( 'post_single_display_posted_date', true );
+        }
+        
         if( is_home() ) {
             
             $display_posted_time = grace_mag_mod( 'blog_page_display_posted_time', true );
@@ -450,6 +463,11 @@ if( ! function_exists( 'grace_mag_comment_no_option' ) ) :
  	function grace_mag_comment_no_option() {
         
         $display_comment_no = false;
+        
+        if( is_single() ) {
+            
+            $display_comment_no = grace_mag_mod( 'post_single_display_comment_number', true );
+        }
         
         if( is_home() ) {
             
