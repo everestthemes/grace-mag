@@ -368,7 +368,7 @@ if( ! function_exists( 'grace_mag_post_navigation' ) ) {
                if (!empty( $previous_post )):
                 ?>
                 <div class="nav-previous">
-                    <span><?php echo esc_html__( 'Prev post', 'gucherry-blog' ); ?></span>
+                    <span><?php echo esc_html__( 'Prev post', 'grace-mag' ); ?></span>
                     <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>"><?php echo esc_attr( $previous_post->post_title ); ?></a>
                 </div>
                 <?php
@@ -377,7 +377,7 @@ if( ! function_exists( 'grace_mag_post_navigation' ) ) {
                if (!empty( $next_post )):
                 ?>
                 <div class="nav-next">
-                    <span><?php echo esc_html__( 'Next post', 'gucherry-blog' ); ?></span>
+                    <span><?php echo esc_html__( 'Next post', 'grace-mag' ); ?></span>
                     <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo esc_attr( $next_post->post_title ); ?></a>
                 </div>
                 <?php

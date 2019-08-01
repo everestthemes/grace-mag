@@ -25,8 +25,8 @@ if( ! function_exists( 'grace_mag_add_panel' ) ) {
 
 		$wp_customize->add_panel( $panel_id,
 			array(
-				'title' => esc_html__( $title, 'grace-mag' ),
-				'description' => esc_html__( $desc, 'grace-mag'),
+				'title' => $title,
+				'description' => $desc,
 				'priority' => $priority,
 			)
 		);
@@ -49,8 +49,8 @@ if( ! function_exists( 'grace_mag_add_section' ) ) {
 		$panel_id = $theme_prefix . '_' . $panel;
 
 		$section_args = array(
-			'title'	=> esc_html__( $title, 'grace-mag' ),
-			'description' => esc_html__( $desc, 'grace-mag'),
+			'title'	=> $title,
+			'description' => $desc,
 		);
 
 		if( !empty( $panel ) ) {
@@ -81,8 +81,8 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 		$section_id = $theme_prefix . '_' . $section;
 
 		$control_args = array(
-			'label' => esc_html__( $label, 'grace-mag'),
-			'description' => esc_html__( $desc, 'grace-mag'),
+			'label' => $label,
+			'description' => $desc,
 			'section' => $section_id,
 		);
 

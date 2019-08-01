@@ -15,7 +15,7 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
                 'grace-mag-post-widget',  // Widget ID
                 esc_html__( 'GM: Post Widget', 'grace-mag' ),   // Widget Name
                 array(
-                    'description' => esc_html__( '', 'grace-mag' ), 
+                    'description' => esc_html__( 'Displays the posts.', 'grace-mag' ), 
                 )
             ); 
      

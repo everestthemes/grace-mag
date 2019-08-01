@@ -292,16 +292,3 @@ if ( ! function_exists( 'grace_mag_has_image_url' ) ) :
         echo $bg_image_style;
 	}
 endif;
-
-
-
-
-
-
-
-
-
-
-
-
-
