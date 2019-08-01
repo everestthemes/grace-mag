@@ -5,7 +5,6 @@
  * @package Grace_Mag
  */
 
-
 /**
  * Sanitization callback function for number field with value in range.
  */
@@ -23,7 +22,6 @@ if ( ! function_exists( 'grace_mag_sanitize_range' ) ) {
     }
 }
 
-
 /**
  * Sanitization callback function for number field.
  */
@@ -34,7 +32,6 @@ if ( ! function_exists( 'grace_mag_sanitize_number' ) ) {
         return absint( $input );
     }
 }
-
 
 /**
  * Sanitization callback function for select field.
@@ -50,23 +47,6 @@ if ( !function_exists('grace_mag_sanitize_select') ) {
         return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
     }
 }
-
-/**
- * Sanitization function for multiple select.
- */
-if( !function_exists( 'grace_mag_sanitize_multiple_select' ) ) {
-
-    function grace_mag_sanitize_multiple_select( $input, $setting ) {
-
-        if( !empty( $input ) ) {
-
-            $input = array_map( 'sanitize_text_field', $input );
-        }
-
-        return $input;
-    } 
-}
-
 
 /**
  * Sanitization Function - Copyright & Credit

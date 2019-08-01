@@ -97,6 +97,11 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 		}
 
 		//Setting of Customizer
+        
+        $setting_args = array(
+            'default'			=> $default,
+            'capability'        => 'edit_theme_options',
+		);
 
 		switch ( $type ) {
 
@@ -138,24 +143,6 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 				break;
 
 			case '':
-
-				if( $control == 'slider' ) {
-
-					$setting_args['sanitize_callback'] = $theme_prefix . '_sanitize_range';
-
-				}
-                
-                if( $control == 'color' ) {
-
-					$setting_args['sanitize_callback'] = 'sanitize_hex_color';
-
-				}
-                
-                if( $control == 'multiple' ) {
-
-					$setting_args['sanitize_callback'] = $theme_prefix . '_sanitize_multiple_select';
-
-				}
                 
                 if( $control == 'upload' ) {
 
@@ -169,11 +156,6 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 				# code...
 				break;
 		}
-
-		$setting_args = array(
-				'default'			=> $default,
-				'capability'        => 'edit_theme_options',
-		);
 
 		$wp_customize->add_setting( $field_id, $setting_args );
 				
@@ -209,12 +191,6 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 					);
 
 				}
-                
-                if( $control == 'multiple' ) {
-
-					$control_args['choices'] = $choices;
-
-				}
 
 				break;
 
@@ -234,24 +210,6 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 			case 'toggle':
 
 				$wp_customize->add_control( new Grace_Mag_Customizer_Toggle_Control( $wp_customize, $field_id, $control_args ) );
-
-				break;
-
-			case 'slider':
-
-				$wp_customize->add_control( new Grace_Mag_Slider_Custom_Control( $wp_customize, $field_id, $control_args ) );
-
-				break;
-                
-            case 'color':
-
-				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $field_id, $control_args ) );
-
-				break;
-                
-            case 'multiple':
-
-				$wp_customize->add_control( new Grace_Mag_Multiple_Select_Control( $wp_customize, $field_id, $control_args ) );
 
 				break;
                 

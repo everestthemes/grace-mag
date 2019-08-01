@@ -29,16 +29,6 @@ function grace_mag_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/controls/class-customizer-toggle-control.php';
     
     /**
-	 * Load custom customizer control for slider control
-	 */
-	require get_template_directory() . '/inc/customizer/controls/class-customizer-slider-control.php';
-    
-    /**
-	 * Load custom customizer control for multiple select control
-	 */
-	require get_template_directory() . '/inc/customizer/controls/class-customizer-multiple-select-control.php';
-    
-    /**
 	 * Load customizer functions for sanitization of input values of contol fields
 	 */
 	require get_template_directory() . '/inc/customizer/functions/sanitize-callback.php';
@@ -53,16 +43,6 @@ function grace_mag_customize_register( $wp_customize ) {
 	 * and control fields
 	 */
 	require get_template_directory() . '/inc/customizer/functions/customizer-fields.php';
-    
-    /**
-	 * Load customizer functions for typography option
-	 */
-	require get_template_directory() . '/inc/customizer/functions/option-typo.php';
-    
-    /**
-	 * Load customizer functions for color option
-	 */
-	require get_template_directory() . '/inc/customizer/functions/option-color.php';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -98,11 +78,6 @@ add_action( 'customize_register', 'grace_mag_customize_register' );
  * Load active callback functions.
  */
 require get_template_directory() . '/inc/customizer/functions/active-callback.php';
-
-/**
- * Load dynamic style
- */
-require get_template_directory() . '/inc/customizer/functions/dynamic-style.php';
 
 /**
  * Render the site title for the selective refresh partial.
