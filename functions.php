@@ -214,6 +214,8 @@ function grace_mag_scripts() {
 	wp_enqueue_style( 'grace-mag-fancybox', get_template_directory_uri() . '/everestthemes/assets/css/jquery.fancybox.min.css' );
     
 	wp_enqueue_style( 'grace-mag-custom', get_template_directory_uri() . '/everestthemes/assets/css/custom.css' );
+
+	wp_enqueue_style( 'grace-mag-default-style', get_template_directory_uri() . '/everestthemes/assets/css/default-style.css' );
     
 	wp_enqueue_style( 'grace-mag-responsive', get_template_directory_uri() . '/everestthemes/assets/css/responsive.css' );
     
