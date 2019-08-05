@@ -214,6 +214,8 @@ function grace_mag_scripts() {
 	wp_enqueue_style( 'grace-mag-fancybox', get_template_directory_uri() . '/everestthemes/assets/css/jquery.fancybox.min.css' );
     
 	wp_enqueue_style( 'grace-mag-custom', get_template_directory_uri() . '/everestthemes/assets/css/custom.css' );
+
+	wp_enqueue_style( 'grace-mag-default-style', get_template_directory_uri() . '/everestthemes/assets/css/default-style.css' );
     
 	wp_enqueue_style( 'grace-mag-responsive', get_template_directory_uri() . '/everestthemes/assets/css/responsive.css' );
     
@@ -225,11 +227,13 @@ function grace_mag_scripts() {
     
     wp_enqueue_script( 'grace-mag-fancybox', get_template_directory_uri() . '/everestthemes/assets/js/jquery.fancybox.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
     
-    wp_enqueue_script( 'grace-mag-custom', get_template_directory_uri() . '/everestthemes/assets/js/custom.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
+    
 
 	wp_enqueue_script( 'grace-mag-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'grace-mag-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'grace-mag-custom', get_template_directory_uri() . '/everestthemes/assets/js/custom.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
