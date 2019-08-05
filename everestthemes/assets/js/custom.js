@@ -1,4 +1,5 @@
-jQuery(document).ready( function($) {
+(function($){
+  jQuery(document).ready( function($) {
     
     $(document).ready(function() {
     //sticky header
@@ -106,6 +107,10 @@ $(document).on('click', '.sub-toggle', function(){
   $(this).toggleClass('open').next('.sub-menu').slideToggle();
 });
 
+$(document).on('load', '.loader', function(){
+  $(this).fadeIn('slow');
+});
+ 
 
 $('.gm-slider').slick({
   autoplay:true,
@@ -206,12 +211,16 @@ $('.gm-slider2').slick({
     // instead of a settings object
   ]
   });
-});
 
-
-$(document).ready(function() { 
-  //$(".overlay").hide();
  
-    
 });
 
+ $(window).load(function() {
+    $(".loader-wrap").fadeOut("slow");
+  });
+
+ 
+ 
+
+
+})(jQuery);

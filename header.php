@@ -18,9 +18,20 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
+    <div class="loader-wrap">
+        <div class="loader-inn">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div><!--loader-->
+</div>
+</div><!--loader-wrap-->
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'grace-mag' ); ?></a>
 
