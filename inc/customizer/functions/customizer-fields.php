@@ -9,6 +9,33 @@ $categories = grace_mag_categories_array();
 $sidebar_position = grace_mag_sidebar_position_array( 'image' );
 
 /*-----------------------------------------------------------------------------
+							SITE PRELOADER SECTION OPTIONS
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_section( 
+    'site_preloader_section', //id
+    'Site Preloader', //title
+    '', //desc
+    '', //panel
+    5 //priority
+);
+
+grace_mag_add_field( 
+    'display_site_preloader', //id
+    "Display Preloader", //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'site_preloader_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+/*-----------------------------------------------------------------------------
 							SITE HEADER PANEL OPTIONS 
 -----------------------------------------------------------------------------*/
 

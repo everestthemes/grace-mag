@@ -4,6 +4,7 @@
  *
  * @package Grace_Mag
  */
+
 if( ! class_exists( 'Grace_Mag_Sidebar_Position_Custom_Field' ) ) :
 
 	class Grace_Mag_Sidebar_Position_Custom_Field {
@@ -45,7 +46,11 @@ if( ! class_exists( 'Grace_Mag_Sidebar_Position_Custom_Field' ) ) :
 
 			global $post;
 
-			$sidebar_position = get_post_meta( $post->ID, 'grace_mag_sidebar_position', true );
+			global $theme_prefix;
+
+			$sidebar_position_key = $theme_prefix . '_sidebar_position';
+
+			$sidebar_position = get_post_meta( $post->ID, $sidebar_position_key, true );
 
 			if( empty( $sidebar_position ) ) {
 				$sidebar_position = 'right';
@@ -103,9 +108,13 @@ if( ! class_exists( 'Grace_Mag_Sidebar_Position_Custom_Field' ) ) :
 		        return;
 		    } 
 
+		    global $theme_prefix;
+
+			$sidebar_position_key = $theme_prefix . '_sidebar_position';
+
 		    if( isset( $_POST['sidebar_position'] ) ) {
 
-				update_post_meta( $post->ID, 'grace_mag_sidebar_position', sanitize_text_field( wp_unslash( $_POST['sidebar_position'] ) ) ); 
+				update_post_meta( $post->ID, $sidebar_position_key, sanitize_text_field( wp_unslash( $_POST['sidebar_position'] ) ) ); 
 			}
 		}
 	}
