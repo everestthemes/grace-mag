@@ -22,16 +22,19 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="loader-wrap">
-        <div class="loader-inn">
-    <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div><!--loader-->
-</div>
-</div><!--loader-wrap-->
+   
+<?php
+     
+if( class_exists( 'wp_body_open' ) ) { 
+    wp_body_open(); 
+}
+/**
+* Hook - grace_mag_site_preloader_action.
+*
+* @hooked grace_mag_site_preloader_action - 10
+*/
+do_action( 'grace_mag_site_preloader' );
+?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'grace-mag' ); ?></a>
 

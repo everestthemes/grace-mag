@@ -250,7 +250,7 @@ if( ! function_exists( 'grace_mag_main_container_class' ) ) {
 }
 
 /**
- * Add custom class for main container containing posts.
+ * Add custom class for grid layout container containing posts.
  */
 if( ! function_exists( 'grace_mag_layout_container_class' ) ) {
 

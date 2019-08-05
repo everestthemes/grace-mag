@@ -7,6 +7,35 @@
  * @package Grace_Mag
  */ 
 
+/**
+ * Site preloader hook declaration
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_site_preloader_action' ) ) :
+
+ 	function grace_mag_site_preloader_action() {
+        
+        $display_site_preloader = grace_mag_mod( 'display_site_preloader', true );
+        
+        if( $display_site_preloader == true ) {
+
+            ?>
+            <div class="loader-wrap">
+                <div class="loader-inn">
+                    <div class="loader">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div><!--loader-->
+                </div>
+            </div><!--loader-wrap-->
+            <?php
+        }
+ 	}
+endif;
+add_action( 'grace_mag_site_preloader', 'grace_mag_site_preloader_action', 10 );
 
 /**
  * Header current date hook declaration

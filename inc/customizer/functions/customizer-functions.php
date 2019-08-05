@@ -24,7 +24,7 @@ if( ! function_exists( 'grace_mag_add_panel' ) ) {
 		}
 
 		$wp_customize->add_panel( $panel_id,
-			array(
+			array(  
 				'title' => $title,
 				'description' => $desc,
 				'priority' => $priority,
@@ -96,57 +96,78 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 			$control_args['active_callback'] = $active_callback;
 		}
 
-		//Setting of Customizer
-        
-        $setting_args = array(
-            'default'			=> $default,
-            'capability'        => 'edit_theme_options',
-		);
-
 		switch ( $type ) {
 
 			case 'text':
-
-				$setting_args['sanitize_callback'] = 'sanitize_text_field';
+                
+                $wp_customize->add_setting( $field_id, array(
+                    'capability'          => 'edit_theme_options',
+                    'sanitize_callback'   => 'sanitize_text_field',
+                    'default'             => $default,
+                ) );
 				
 				break;
 
 			case 'number':
 
 				if( !empty( $max ) && !empty( $min ) && !empty( $step ) ) {
-
-					$setting_args['sanitize_callback'] = $theme_prefix . '_sanitize_range';
+                    
+                    $wp_customize->add_setting( $field_id, array(
+                        'capability'          => 'edit_theme_options',
+                        'sanitize_callback'   => $theme_prefix . '_sanitize_range',
+                        'default'             => $default,
+                    ) );
 
 				} else {
-
-					$setting_args['sanitize_callback'] = $theme_prefix . '_sanitize_number';	
+                    
+                    $wp_customize->add_setting( $field_id, array(
+                        'capability'          => 'edit_theme_options',
+                        'sanitize_callback'   => $theme_prefix . '_sanitize_number',
+                        'default'             => $default,
+                    ) );
 				}
 				
 				break;
 
 			case 'url':
-
-				$setting_args['sanitize_callback'] = 'esc_url_raw';
+                
+                $wp_customize->add_setting( $field_id, array(
+                    'capability'          => 'edit_theme_options',
+                    'sanitize_callback'   => 'esc_url_raw',
+                    'default'             => $default,
+                ) );
 				
 				break;
 
 			case 'select':
-
-				$setting_args['sanitize_callback'] = $theme_prefix . '_sanitize_select';
+                
+                $wp_customize->add_setting( $field_id, array(
+                    'capability'          => 'edit_theme_options',
+                    'sanitize_callback'   => $theme_prefix . '_sanitize_select',
+                    'default'             => $default,
+                ) );
 				
 				break;
 
 			case 'ios':
-
-				$setting_args['sanitize_callback'] = 'wp_validate_boolean';
+                
+                $wp_customize->add_setting( $field_id, array(
+                    'capability'          => 'edit_theme_options',
+                    'sanitize_callback'   => 'wp_validate_boolean',
+                    'default'             => $default,
+                ) );
 				
 				break;
 
 			case '':
                 
                 if( $control == 'upload' ) {
-
-					$setting_args['sanitize_callback'] = 'esc_url_raw';
+                    
+                    $wp_customize->add_setting( $field_id, array(
+                        'capability'          => 'edit_theme_options',
+                        'sanitize_callback'   => 'esc_url_raw',
+                        'default'             => $default,
+                    ) );
 
 				}
 				
@@ -156,8 +177,6 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 				# code...
 				break;
 		}
-
-		$wp_customize->add_setting( $field_id, $setting_args );
 				
 		//Control of Customizer
 

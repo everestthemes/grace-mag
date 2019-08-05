@@ -149,6 +149,36 @@ function grace_mag_widgets_init() {
 	) );
     
     register_sidebar( array(
+		'name'          => esc_html__( 'Fullwidth Top News Area', 'grace-mag' ),
+		'id'            => 'grace-mag-fullwidth-top-news-area',
+		'description'   => esc_html__( 'Add fullwidth widget here.', 'grace-mag' ),
+		'before_widget' => '<div id="%1$s"><div class="widget %2$s">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Middle News Area', 'grace-mag' ),
+		'id'            => 'grace-mag-middle-news-area',
+		'description'   => esc_html__( 'Add halfwidget widget here.', 'grace-mag' ),
+		'before_widget' => '<div id="%1$s"><div class="widget %2$s">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Fullwidth Bottom News Area', 'grace-mag' ),
+		'id'            => 'grace-mag-fullwidth-bottom-news-area',
+		'description'   => esc_html__( 'Add fullwidth widget here.', 'grace-mag' ),
+		'before_widget' => '<div id="%1$s"><div class="widget %2$s">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+    
+    register_sidebar( array(
 		'name'          => esc_html__( 'Footer Left', 'grace-mag' ),
 		'id'            => 'grace-mag-footer-left',
 		'description'   => esc_html__( 'Add widgets here.', 'grace-mag' ),
@@ -178,7 +208,7 @@ function grace_mag_widgets_init() {
 		'after_title'   => '</h2></div>',
 	) );
 }
-add_action( 'widgets_init', 'grace_mag_widgets_init' );
+add_action( 'widgets_init', 'grace_mag_widgets_init', 20 );
 
 /**
  * Enqueue scripts and styles.

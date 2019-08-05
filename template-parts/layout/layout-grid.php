@@ -58,7 +58,7 @@
                         
                         if( is_home() ) {
                             ?>
-                            <h2 class="md-title"><?php single_post_title(); ?></h2>
+                            <h2 class="md-title"><?php echo esc_html__( 'Blog Page', 'grace-mag' ); ?></h2>
                             <?php
                         }
                         
