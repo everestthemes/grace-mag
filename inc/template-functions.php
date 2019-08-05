@@ -174,6 +174,23 @@ if( ! function_exists( 'grace_mag_post_listing_layout_template' ) ) {
 }
 
 /**
+ * Function to get post and page sidebar position.
+ */
+if( ! function_exists( 'grace_mag_single_sidebar_position' ) ) {
+
+	function grace_mag_single_sidebar_position() {
+
+		global $theme_prefix;
+
+		$sidebar_position_key = $theme_prefix . '_sidebar_position';
+
+		$single_sidebar_position = get_post_meta( get_the_ID(), $sidebar_position_key, true );
+
+		return $single_sidebar_position;
+	}
+}
+
+/**
  * Function to check position of sidebar.
  */
 if( !function_exists( 'grace_mag_sidebar_position' ) ) {
@@ -202,7 +219,7 @@ if( !function_exists( 'grace_mag_sidebar_position' ) ) {
                 }
             } else {
 
-                $sidebar_position = get_post_meta( get_the_ID(), 'grace_mag_sidebar_position', 'right' );
+                $sidebar_position = grace_mag_single_sidebar_position();
             }
 
             if( empty( $sidebar_position ) ) {
@@ -302,9 +319,9 @@ if ( ! function_exists( 'grace_mag_display_sidebar' ) ) :
             return;
         }
         
-        if( !empty( $position ) ) {
-            
-            $sidebar_position = grace_mag_sidebar_position();
+        $sidebar_position = grace_mag_sidebar_position();
+        
+        if( !empty( $position ) && !empty( $sidebar_position ) ) {
             
             if( $position == $sidebar_position && is_active_sidebar( 'grace-mag-sidebar' ) ) {
                 
