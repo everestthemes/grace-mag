@@ -10,6 +10,8 @@
 get_header();
 
 $background_image_url = grace_mag_mod( 'common_page_background_image', '' );
+
+$sidebar_position = grace_mag_sidebar_position();
 ?>
 
 <div class="inner-banner<?php grace_mag_has_image_class( $background_image_url ); ?>"<?php grace_mag_has_image_url( $background_image_url ); ?>></div>
@@ -19,7 +21,14 @@ $background_image_url = grace_mag_mod( 'common_page_background_image', '' );
     <div class="container">
         <div class="single-post-layout1">
             <div class="row">
-                <?php grace_mag_display_sidebar( 'left' ); ?>
+                <?php
+                
+                if( $sidebar_position == 'left' && is_active_sidebar( 'grace-mag-sidebar' ) ) {
+                    
+                    get_sidebar();
+                }
+                
+                ?>
                 <div class="<?php grace_mag_main_container_class(); ?>">
                     <?php
                     if( have_posts() ) :
@@ -38,7 +47,14 @@ $background_image_url = grace_mag_mod( 'common_page_background_image', '' );
                     endif;
                     ?>
                 </div><!--col-lg-8-->
-                <?php grace_mag_display_sidebar( 'right' ); ?>
+                <?php
+                
+                if( $sidebar_position == 'right' && is_active_sidebar( 'grace-mag-sidebar' ) ) {
+                    
+                    get_sidebar();
+                }
+                
+                ?>
             </div><!--single-post-layout1-->
         </div><!--container-->
     </div> <!--not found page-->

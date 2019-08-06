@@ -24,22 +24,6 @@ if( !function_exists( 'grace_mag_categories_array' ) ) :
 	}
 endif;
 
-if( !function_exists( 'grace_mag_pagination_type_array' ) ) :
-	/*
-	 * Function to get select pagination style
-	 */
-	function grace_mag_pagination_type_array() {
-
-		$alignment = array(
-            'numeric'             => esc_html__( 'Numeric', 'grace-mag' ),
-            'button_click_load'   => esc_html__( 'Button Click Load', 'grace-mag' ),
-        );
-        
-        return $alignment;
-
-	}
-endif;
-
 if( !function_exists( 'grace_mag_sidebar_position_array' ) ) :
 	/*
 	 * Function to get select pagination style

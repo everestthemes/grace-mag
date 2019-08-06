@@ -6,6 +6,7 @@
  * @package Grace_Mag
  */
 
+$sidebar_position = grace_mag_sidebar_position();
 ?>
 <div class="category-page">
     <?php
@@ -47,7 +48,14 @@
     <div class="cate-page-content-layout1">
         <div class="container">
             <div class="row">
-                <?php grace_mag_display_sidebar( 'left' ); ?>
+                <?php
+                
+                if( $sidebar_position == 'left' && is_active_sidebar( 'grace-mag-sidebar' ) ) {
+                    
+                    get_sidebar();
+                }
+                
+                ?>
                 <div class="<?php grace_mag_main_container_class(); ?>">
                     <div class="title-sec green">
                         <?php
@@ -102,7 +110,14 @@
                     </div>
                     <!--inner-row-->
                 </div><!--col-lg-8-->
-                <?php grace_mag_display_sidebar( 'right' ); ?>
+                <?php
+                
+                if( $sidebar_position == 'right' && is_active_sidebar( 'grace-mag-sidebar' ) ) {
+                    
+                    get_sidebar();
+                }
+                
+                ?>
             </div><!--container-->
         </div>
     </div>

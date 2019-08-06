@@ -196,3 +196,38 @@ if( !function_exists( 'grace_mag_banner_posts_query' ) ) {
         return $banner_query;
     }         
 }
+
+/*
+ * Hook - Plugin Recommendation
+ */
+if ( ! function_exists( 'grace_mag_recommended_plugins' ) ) :
+    /**
+     * Recommend plugins.
+     *
+     * @since 1.0.0
+     */
+    function grace_mag_recommended_plugins() {
+
+        $plugins = array(
+            array(
+                'name'     => esc_html__( 'Everest Toolkit', 'grace-mag' ),
+                'slug'     => 'everest-toolkit',
+                'required' => false,
+            ),
+            array(
+                'name'     => esc_html__( 'Universal Google AdSense And Ads Manager', 'grace-mag' ),
+                'slug'     => 'universal-google-adsense-and-ads-manager',
+                'required' => false,
+            ),
+            array(
+                'name'     => esc_html__( 'Contact Form 7', 'grace-mag' ),
+                'slug'     => 'contact-form-7',
+                'required' => false,
+            ),
+        );
+
+        tgmpa( $plugins );
+    }
+
+endif;
+add_action( 'tgmpa_register', 'grace_mag_recommended_plugins' );
