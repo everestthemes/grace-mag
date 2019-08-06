@@ -8,6 +8,36 @@
 
 @media (max-width: 992px) {
 
+
+
+.header-inner.withbg .header-bottom-block{
+    padding:5px 0;
+}
+.header-inner.withbg button.hamburger.hamburger_nb {
+
+    padding-top: 0;
+}
+.header-inner.withbg .header-bottom-block .search-icon .btn-search {
+    height: 35px;
+    width: 35px;
+}
+.header-inner.withbg .header-bottom-block .search-icon {
+    top: -18px;
+}
+.sub-toggle .fa-angle-down:before,
+.sub-toggle{
+    display: block;
+}
+.header-inner.withbg .mobile-menu-icon .mobile-menu{
+    color: #ca0606;
+}
+.header-inner.withbg .header-bottom-block .main_navigation ul li a:hover{
+    color: #333;
+}
+.gm-primary-sec .primary-main-bdy.has-background-img{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 .canvas-recent-content {
     margin-top: 15px;
     margin-left: 0;
@@ -239,8 +269,8 @@
     }
 
     .full-left-layput2-content,
-    .layout-bdy5-listing,
-    .title-sec {
+    .layout-bdy5-listing
+  {
         margin-top: 30px;
     }
 
@@ -393,6 +423,9 @@
   top:-45px;
 }
 .primary-content-area, .layout-bdy5-listing li:last-child, .full-layout4-content, .full-layout5-content, .layout-with-bg {
+    margin-bottom: 0;
+}
+.primary-widget.gm-primary-sec .title-sec{
     margin-bottom: 0;
 }
 .has-background-img{

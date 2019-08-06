@@ -355,6 +355,7 @@ span.edit-link a:before {
 select#archives-dropdown-2,
 select.postform,
 select#archives-dropdown--1,
+select#archives-dropdown-4,
 .widget_archive>ul>li
 
  {
@@ -545,9 +546,14 @@ input.wpcf7-form-control.wpcf7-submit:hover{
 /* archive */
 .widget_archive>ul>li{
 	border: 1px solid #ddd;
-	text-align: right;
+	text-align: left;
+	margin-bottom: 15px;
+	padding:10px 15px;
 }
 
+.widget_archive>ul>li:last-child{
+	margin-bottom: 0;
+}
 /* wp-calendar */
 #wp-calendar tr td{
  border:1px solid #eee;
