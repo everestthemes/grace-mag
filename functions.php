@@ -282,6 +282,11 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/theme-functions.php';
 
 /**
+ * Load TGM plugin activation.
+ */
+require get_template_directory() . '/third-party/class-tgm-plugin-activation.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
