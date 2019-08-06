@@ -433,6 +433,10 @@ select#archives-dropdown--1,
 	text-align: left;
     float: left;
 }
+#archives-3.widget_archive>ul>li a{
+	float: none;
+}
+
 .footer-bg .widget_archive>ul>li a{
 	color: #fff;
 }
