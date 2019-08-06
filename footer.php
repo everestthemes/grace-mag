@@ -74,7 +74,7 @@
         </div>
     </div>
 </footer>
-
+<a href="#" class="scrollup"><i class="fa fa-long-arrow-up"></i></a>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
