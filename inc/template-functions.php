@@ -308,29 +308,6 @@ if( ! function_exists( 'grace_mag_sidebar_class' ) ) {
 	}
 }
 
-
-if ( ! function_exists( 'grace_mag_display_sidebar' ) ) :
-	/*
-	 * Displays the sidebar as per input.
-	 */
-	function grace_mag_display_sidebar( $position ) {
-        
-        if( empty( $position ) ) {
-            return;
-        }
-        
-        $sidebar_position = grace_mag_sidebar_position();
-        
-        if( !empty( $position ) && !empty( $sidebar_position ) ) {
-            
-            if( $position == $sidebar_position && is_active_sidebar( 'grace-mag-sidebar' ) ) {
-                
-                get_sidebar();
-            }
-        }
-	}
-endif;
-
 /**
  * Function that defines posts pagination.
  */
