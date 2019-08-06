@@ -12,7 +12,7 @@ if( $banner_query -> have_posts() ) {
 ?>
 <!--Banner section-->
 <div class="banner-slider lrg-padding">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="main-slider">
