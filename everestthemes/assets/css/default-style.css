@@ -363,7 +363,10 @@ select#archives-dropdown--1,
     padding: 10px;
 }
 .copy-content a{
-	color: #666;
+	color: #fff;
+}
+.copy-content a:hover{
+	opacity: 0.6;
 }
 .widget_meta{
 	background-color: #fff;
@@ -778,4 +781,101 @@ background-color: transparent;
 .comment-form input:focus{
 	outline: 0;
 	box-shadow: none;
+}
+
+.logo-area span.site-title a {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+
+}
+.half-widget-layout1 .half-first-content{
+	margin-bottom: 30px;
+}
+.half-widget-layout1 {
+	margin-bottom: -30px;
+}
+.layout-bdy5.has-background-img{
+	height: 362px;
+}
+
+/* scroll to top */
+.scrollup {
+    position: fixed;
+    color: #faf1f1;
+    bottom: 40px;
+    right: 50px;
+    height: 40px;
+    width: 40px;
+    padding-top: 8px;
+    background: #333;
+    border:1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 10;
+}
+
+.scrollup:hover {
+    background: #333;
+    color: white;
+}
+
+/* header with background */
+.sub-toggle .fa-angle-down:before,
+.sub-toggle{
+	display: none;
+}
+.header-inner.withbg {
+	background-repeat: no-repeat;
+	position: relative;
+}
+.header-inner.withbg:before{
+	position: absolute;
+	content: '';
+	background-color: rgba(0,0,0,0.2);
+	top: 38px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+}
+.header-inner.withbg .header-bottom-block{
+	margin-bottom: 30px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.header-inner.withbg .header-bottom-block .main_navigation ul li a{
+	padding:15px;
+}
+.header-inner.withbg .header-bottom-block .main_navigation ul li.menu-item-has-children .sub-menu{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.header-inner.withbg .main_navigation ul li a:hover{
+	color:#e01212;
+}
+.header-inner.withbg .header-bottom-block  .main_navigation ul li.menu-item-has-children .sub-menu li{
+	padding-bottom: 0;
+	margin-bottom:0;
+}
+.header-inner.withbg .header-bottom-block  .search-icon{
+	top:6px;
+}
+.header-inner.withbg .top-bar{
+	padding:6px 0;
+}
+.header-inner.withbg .header-bottom-block  .search-icon .btn-search{
+	height: 40px;
+	width: 40px;
+}
+.header-inner.withbg button.hamburger.hamburger_nb{
+padding-top: 12px;
+}
+.header-inner.no-img{
+	background-color: #333;
+}
+.inner-banner {
+    position: relative;
+    height: 300px;
+    background-color: #444;
 }

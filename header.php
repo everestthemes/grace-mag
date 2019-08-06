@@ -39,7 +39,7 @@ do_action( 'grace_mag_site_preloader' );
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'grace-mag' ); ?></a>
 
 	<header id="gm-masterheader" class="gm-masterheader">
-    <div class="header-inner">
+    <div class="header-inner withbg no-img" style="background-image: url(http://localhost/wp-test/wp-content/uploads/2019/08/header-banner.jpg); ">
         <?php
         $display_top_header = grace_mag_mod( 'display_top_header', true );
         if( $display_top_header == true ) {
@@ -120,7 +120,7 @@ do_action( 'grace_mag_site_preloader' );
         <!--header-mid-block logo-sec-->
         <div class="header-bottom-block primary-menu">
             <div class="container">
-                <div class="menu-wrap">
+                <div class="menu-wrap clearfix">
                    <?php
                     /**
                     * Hook - grace_mag_header_canvas_menu_button.
@@ -143,6 +143,14 @@ do_action( 'grace_mag_site_preloader' );
                     */
                     do_action( 'grace_mag_header_mobile_menu' );
                     ?>
+
+                    <div class="search-icon">
+                        <button class="btn-style btn-search" type="button"><i class="fa fa-search"></i></button>
+                        <div id="header-search">
+                            <form role="" class="search-form" search"="" method="get" id="search-form" action="">
+                                <input type="search" name="s" placeholder="Type Something" value""="" autofocus=""><input type="submit" id="submit" value="Search"></form>
+                        </div>
+                    </div><!--// top search-section -->
                 </div>
                 <!--menu wrap-->
             </div>

@@ -180,16 +180,8 @@ if( ! class_exists( 'Grace_Mag_Halfwidth_News_Widget' ) ) :
                     
                                     if( $count == 1 ) {
                                     ?>
-                                    <div class="layout-bdy5">
-                                        <?php
-                                        if( has_post_thumbnail() ) {
-                                        ?>
-                                        <figure class="img-hover"> 
-                                            <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
-                                        </figure>
-                                        <?php
-                                        }
-                                        ?>
+                                    <div class="layout-bdy5 has-background-img"  style="background-image: url(http://localhost/wp-test/wp-content/uploads/2019/05/uk-uiyu-ty.jpg);">
+                                       
                                         <div class="caption">
                                             <h4 class="sm-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="meta">

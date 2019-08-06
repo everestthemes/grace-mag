@@ -2,29 +2,7 @@
   jQuery(document).ready( function($) {
     
     $(document).ready(function() {
-    //sticky header
-  /*  "use strict";
-    exSticky();
-    $(window).scroll(exSticky);
-
-    function exSticky() {
-        var height = $(window).scrollTop(),
-            stickyHeight = $('.header').outerHeight(),
-            scroll = $(window).scrollTop(),
-            slowscroll = scroll / 2;
-        $('body').removeClass('sticky');
-        if (height > 0) {
-            $('body').addClass('sticky');
-            $('.banner-img').css({
-                //          transform: "translateY(" + slowscroll + "px)"
-            });
-        } else {
-            $('body').removeClass('sticky');
-            $('.banner-img').css({
-                //           transform: "translateY(0)"
-            });
-        }
-    }*/
+ 
 
  $("#webticker").webTicker();
 
@@ -220,7 +198,14 @@ $('.gm-slider2').slick({
   });
 
  
- 
+ //Show or hide the button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('.scrollup').fadeIn(1000);
+        } else {
+            $('.scrollup').fadeOut(1000);
+        }
+    });
 
 
 })(jQuery);
