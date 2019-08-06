@@ -68,7 +68,7 @@ if ( ! function_exists( 'grace_mag_comments_no' ) ) :
                     <?php 
                     if( get_comments_number() <= 1 ) {
                         if( get_comments_number() == 0 ) {
-                            echo esc_html__( 'Leave a comment', 'grace-mag' );
+                            echo esc_html__( '0 comment', 'grace-mag' );
                         } else {
                             /* translators: %s: comments number. */
                             printf( esc_html__( "%s comment", 'grace-mag' ), absint( get_comments_number() ) ); 
