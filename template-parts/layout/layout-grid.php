@@ -98,8 +98,6 @@ $sidebar_position = grace_mag_sidebar_position();
 
                         endwhile;
 
-                        grace_mag_pagination();
-
                     else :
 
                         get_template_part( 'template-parts/content', 'none' );
@@ -109,6 +107,7 @@ $sidebar_position = grace_mag_sidebar_position();
                     ?>
                     </div>
                     <!--inner-row-->
+                    <?php grace_mag_pagination(); ?>
                 </div><!--col-lg-8-->
                 <?php
                 

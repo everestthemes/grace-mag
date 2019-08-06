@@ -234,6 +234,32 @@ endif;
 add_action( 'grace_mag_header_mobile_menu', 'grace_mag_header_mobile_menu_action', 10 );
 
 /**
+ * Header search hook declaration
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_header_search_action' ) ) :
+
+ 	function grace_mag_header_search_action() {
+        
+        $main_header_display_search = grace_mag_mod( 'main_header_display_search', true );
+        
+        if( $main_header_display_search == true ) {
+        
+        ?>
+ 		<div class="search-icon">
+            <button class="btn-style btn-search" type="button"><i class="fa fa-search"></i></button>
+            <div id="header-search">
+                <?php get_search_form(); ?>
+            </div>
+        </div><!--// top search-section -->
+        <?php
+        }
+ 	}
+endif;
+add_action( 'grace_mag_header_search', 'grace_mag_header_search_action', 10 );
+
+/**
  * Header mobile menu hook declaration
  *
  * @since 1.0.0
@@ -266,6 +292,110 @@ if( ! function_exists( 'grace_mag_header_canvas_menu_action' ) ) :
  	}
 endif;
 add_action( 'grace_mag_header_canvas_menu', 'grace_mag_header_canvas_menu_action', 10 );
+
+/**
+ * Footer container hook declaration
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_footer_container_action' ) ) :
+
+ 	function grace_mag_footer_container_action() {
+        
+        ?>
+ 		<div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <?php
+                    //footer left area
+                    if( is_active_sidebar( 'grace-mag-footer-left' ) ) {
+
+                        dynamic_sidebar( 'grace-mag-footer-left' );
+                    }
+                    ?>
+                </div>
+                <!--col-lg-4-->
+                <div class="col-12 col-lg-4">
+                    <?php
+                    //footer middle area
+                    if( is_active_sidebar( 'grace-mag-footer-middle' ) ) {
+
+                        dynamic_sidebar( 'grace-mag-footer-middle' );
+                    }
+                    ?>
+                </div>
+                <!--col-lg-4-->
+                <div class="col-12 col-lg-4">
+                    <?php
+                    //footer right area
+                    if( is_active_sidebar( 'grace-mag-footer-right' ) ) {
+
+                        dynamic_sidebar( 'grace-mag-footer-right' );
+                    }
+                    ?>
+                </div>
+                <!--col-lg-4-->
+            </div>
+            <!--row-->
+        </div>
+        <?php
+ 	}
+endif;
+add_action( 'grace_mag_footer_container', 'grace_mag_footer_container_action', 10 );
+
+/**
+ * Footer copyright text hook declaration
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_footer_copyright_action' ) ) :
+
+ 	function grace_mag_footer_copyright_action() {
+        
+        ?>
+ 		<div class="copy-right">
+            <div class="container">
+                <div class="copy-content">
+                    <p>
+                    <?php 
+                    $footer_copyright_text = grace_mag_mod( 'copyright_text', '' );
+                    if( !empty( $footer_copyright_text ) ) {
+                        /* translators: 1: Copyright Text 2: Theme name, 3: Theme author. */
+                        printf( esc_html__( '%1$s %2$s by %3$s','grace-mag' ), $footer_copyright_text, 'Grace Mag', '<a href="'. esc_url( 'https://everestthemes.com' ) . '">Everestthemes</a>' );
+                    } else {
+                        /* translators: 1: Theme name, 2: Theme author. */
+                        printf( esc_html__( '%1$s by %2$s', 'grace-mag' ), 'Grace Mag', '<a href="'. esc_url( 'https://everestthemes.com' ) . '">Everestthemes</a>' );
+                    }
+                    ?> 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <?php
+ 	}
+endif;
+add_action( 'grace_mag_footer_copyright', 'grace_mag_footer_copyright_action', 10 );
+
+/**
+ * Footer scroll top hook declaration
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_footer_scroll_top_action' ) ) :
+
+ 	function grace_mag_footer_scroll_top_action() {
+        
+        $display_scroll_top = grace_mag_mod( 'display_scroll_top', true );
+        
+        if( $display_scroll_top == true ) {
+        
+        ?>
+ 		<a href="#" class="scrollup"><i class="fa fa-long-arrow-up"></i></a>
+        <?php
+        }
+ 	}
+endif;
+add_action( 'grace_mag_footer_scroll_top', 'grace_mag_footer_scroll_top_action', 10 );
 
 
 
