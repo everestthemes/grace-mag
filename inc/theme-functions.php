@@ -231,3 +231,20 @@ if ( ! function_exists( 'grace_mag_recommended_plugins' ) ) :
 
 endif;
 add_action( 'tgmpa_register', 'grace_mag_recommended_plugins' );
+
+/**
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ */
+function grace_mag_search_form( $form ) {
+    $form = '<form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >
+        <span class="screen-reader-text">' . _x( 'Search for:', 'label', 'grace-mag' ) . '</span>
+        <input type="search" class="search-field" placeholder="' . esc_attr_x( 'Type Something', 'placeholder', 'grace-mag' ) . '" value="' . get_search_query() . '" name="s" />
+        <input type="submit" id="submit" value="Search">
+    </form>';
+ 
+    return $form;
+}
+add_filter( 'get_search_form', 'grace_mag_search_form' );

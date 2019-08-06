@@ -38,9 +38,17 @@ do_action( 'grace_mag_site_preloader' );
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'grace-mag' ); ?></a>
 
-	<header id="gm-masterheader" class="gm-masterheader">
-    <div class="header-inner withbg no-img" style="background-image: url(http://localhost/wp-test/wp-content/uploads/2019/08/header-banner.jpg); ">
+<header id="gm-masterheader" class="gm-masterheader">
+    <?php
+    if( has_header_image() ) {
+        ?>
+        <div class="header-inner withbg" style="background-image: url( <?php header_image(); ?> );">
         <?php
+        } else {
+        ?>
+        <div class="header-inner">
+        <?php
+        }
         $display_top_header = grace_mag_mod( 'display_top_header', true );
         if( $display_top_header == true ) {
         ?>
@@ -50,7 +58,7 @@ do_action( 'grace_mag_site_preloader' );
                     <div class="col-12 col-lg-4">
                         <?php
                         /**
-                        * Hook - grace_mag_header_current_date_action.
+                        * Hook - grace_mag_header_current_date.
                         *
                         * @hooked grace_mag_header_current_date_action - 10
                         */
@@ -60,7 +68,7 @@ do_action( 'grace_mag_site_preloader' );
                     <div class="col-12 col-lg-5">
                         <?php
                         /**
-                        * Hook - grace_mag_header_breaking_news_action.
+                        * Hook - grace_mag_header_breaking_news.
                         *
                         * @hooked grace_mag_header_breaking_news_action - 10
                         */
@@ -70,7 +78,7 @@ do_action( 'grace_mag_site_preloader' );
                     <div class="col-12 col-lg-3">
                         <?php
                         /**
-                        * Hook - grace_mag_header_social_links_action.
+                        * Hook - grace_mag_header_social_links.
                         *
                         * @hooked grace_mag_header_social_links_action - 10
                         */
@@ -93,7 +101,7 @@ do_action( 'grace_mag_site_preloader' );
                         <div class="logo-area">
                         <?php
                         /**
-                        * Hook - grace_mag_header_custom_logo_action.
+                        * Hook - grace_mag_header_custom_logo.
                         *
                         * @hooked grace_mag_header_custom_logo_action - 10
                         */
@@ -105,7 +113,7 @@ do_action( 'grace_mag_site_preloader' );
                     <div class="col-7 col-md-9 col-lg-8">
                         <?php
                         /**
-                        * Hook - grace_mag_header_advertisement_action.
+                        * Hook - grace_mag_header_advertisement.
                         *
                         * @hooked grace_mag_header_advertisement_action - 10
                         */
@@ -142,15 +150,14 @@ do_action( 'grace_mag_site_preloader' );
                     * @hooked grace_mag_header_mobile_menu_action - 10
                     */
                     do_action( 'grace_mag_header_mobile_menu' );
+                    
+                    /**
+                    * Hook - grace_mag_header_search.
+                    *
+                    * @hooked grace_mag_header_search_action - 10
+                    */
+                    do_action( 'grace_mag_header_search' );
                     ?>
-
-                    <div class="search-icon">
-                        <button class="btn-style btn-search" type="button"><i class="fa fa-search"></i></button>
-                        <div id="header-search">
-                            <form role="" class="search-form" search"="" method="get" id="search-form" action="">
-                                <input type="search" name="s" placeholder="Type Something" value""="" autofocus=""><input type="submit" id="submit" value="Search"></form>
-                        </div>
-                    </div><!--// top search-section -->
                 </div>
                 <!--menu wrap-->
             </div>
