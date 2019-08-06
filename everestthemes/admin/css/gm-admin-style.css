@@ -4,51 +4,80 @@ Widget at Apperence > widgets
 
 .rad,
 .ckb{
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 /* RADIO & CHECKBOX STYLES */
 /* DEFAULT <i> STYLE */
 .rad input[type=radio],
 .ckb > i{ 
-  display: inline-block;
-  vertical-align: middle;
-  width:  16px;
-  height: 16px;
-  border-radius: 50%;
-  transition: 0.2s;
-  box-shadow: inset 0 0 0 8px #fff;
-  border: 1px solid gray;
-  background: gray;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    transition: 0.2s;
+    box-shadow: inset 0 0 0 8px #fff;
+    border: 1px solid gray;
+    background: gray;
 }
-/* CHECKBOX OVERWRITE STYLES */
-.ckb > i {
-  width: 25px;
-  border-radius: 3px;
-}
+
 .rad input[type=radio]:hover{ 
-  box-shadow: inset 0 0 0 3px #fff;
-  background: gray;
+    box-shadow: inset 0 0 0 3px #fff;
+    background: gray;
 }
 .rad input[type=radio]:checked{ 
-  box-shadow: inset 0 0 0 3px #fff;
-  background: #1e8cbe;
+    box-shadow: inset 0 0 0 3px #fff;
+    transition: 0.2s;
 }
+
+/* CHECKBOX OVERWRITE STYLES */
+.ckb > i {
+    width: 25px;
+    border-radius: 3px;
+}
+
 /* CHECKBOX */
 .ckb > input + i:after{
-  content: "";
-  display: block;
-  height: 12px;
-  width:  12px;
-  margin: 2px;
-  border-radius: inherit;
-  transition: inherit;
-  background: gray;
+    content: "";
+    display: block;
+    height: 12px;
+    width:  12px;
+    margin: 2px;
+    border-radius: inherit;
+    transition: inherit;
+    background: gray;
 }
+
 .ckb > input:checked + i:after{ 
-  margin-left: 11px;
-  background:  #1e8cbe;
+    margin-left: 11px;
+    background:  #1e8cbe;
+}
+
+@media screen and (max-width: 782px) {
+    
+    .rad input[type=radio],
+    .ckb > i {
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        transition: 0.2s;
+        box-shadow: inset 0 0 0 8px #fff;
+        background: gray;
+    }
+    
+    .rad input[type=radio]:hover{ 
+        box-shadow: inset 0 0 0 3px #fff;
+        background: gray;
+    }
+    
+    .rad input[type=radio]:checked{ 
+        box-shadow: inset 0 0 0 8px #fff;
+        background:  #1e8cbe;
+        display: inline-block;
+        vertical-align: middle;
+        transition: 0.2s;
+    }
+    
 }
