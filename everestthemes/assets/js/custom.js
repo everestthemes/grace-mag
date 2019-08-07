@@ -205,5 +205,33 @@ $('.gm-slider2').slick({
         }
     });
 
+//make left or right div sticky 
+    var left_height = $(".left_post_area").height();
+    var right_height = $(".right_post_area").height();
+   
+   if(left_height > right_height){
+    $(".right_post_area").addClass("sticky-content");
+   }else{
+      $(".left_post_area").addClass("sticky-content");
+   }
+
+
+  $(window).bind('scroll', function() {
+     if(left_height > right_height){
+       if($(window).scrollTop() >= $('.left_post_area').offset().top + $('.left_post_area').outerHeight() - window.innerHeight) {
+          $(".right_post_area").removeClass("sticky-content");
+       }else{
+          $(".right_post_area").addClass("sticky-content");
+       }
+     }else{
+       if($(window).scrollTop() >= $('.right_post_area').offset().top + $('.right_post_area').outerHeight() - window.innerHeight) {
+          $(".left_post_area").removeClass("sticky-content");
+       }else{
+          $(".left_post_area").addClass("sticky-content");
+       }
+    }
+   
+});
+
 
 })(jQuery);
