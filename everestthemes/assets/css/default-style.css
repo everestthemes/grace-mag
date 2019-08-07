@@ -612,7 +612,8 @@ input.wpcf7-form-control.wpcf7-submit:hover{
 
 }
 .widget_search .search-form .search-submit,
-.form-submit .submit{
+.form-submit .submit,
+.widget_search .search-form #submit{
 	width:100%;
 	height:45px;
 	background-color: #fff;
@@ -914,4 +915,5 @@ padding-top: 12px;
 .no-results #submit:hover{
 	opacity: 0.8;
 }
+
 
