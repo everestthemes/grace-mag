@@ -11,6 +11,8 @@ $display_posted_time = grace_mag_posted_time_option();
 
 $display_comment_no = grace_mag_comment_no_option();
 
+$display_post_tags = grace_mag_post_tags_option();
+
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-layout1-content">
@@ -52,6 +54,8 @@ $display_comment_no = grace_mag_comment_no_option();
         </div><!--post-layout1-bdy-->
 
         <?php
+        
+        grace_mag_tags_meta( $display_post_tags );
 
         grace_mag_post_navigation();
 
