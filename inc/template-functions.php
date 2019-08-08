@@ -482,3 +482,20 @@ if( ! function_exists( 'grace_mag_comment_no_option' ) ) :
  	}
 endif;
 
+/**
+ * Function to return customizer option for post tags
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_post_tags_option' ) ) :
+
+ 	function grace_mag_post_tags_option() {
+        
+        $display_post_tags = false;
+            
+        $display_post_tags = grace_mag_mod( 'post_single_display_tags', true );
+        
+        return $display_post_tags;
+ 	}
+endif;
+

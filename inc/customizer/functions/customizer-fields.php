@@ -340,6 +340,21 @@ grace_mag_add_field(
 );
 
 grace_mag_add_field( 
+    'post_single_display_tags', //id
+    "Display Post Tags", //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'post_single_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field( 
     'post_single_display_author_section', //id
     "Display Section", //label
     '', //desc
