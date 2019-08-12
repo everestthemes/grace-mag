@@ -435,7 +435,6 @@ select#archives-dropdown-4,
 }
 .widget_archive>ul>li a{
 	text-align: left;
-    float: left;
 }
 #archives-3.widget_archive>ul>li a{
 	float: none;
@@ -736,6 +735,14 @@ color: #333;
     padding-top:9px;
 
 }
+.gm-pagination .nav-links .prev.page-numbers
+{ 
+    color: #999;
+    background-color: transparent;
+    margin-right:15px; 
+    height: auto;
+    width: auto;
+}
 .gm-pagination .nav-links .page-numbers:hover,
 .gm-pagination .nav-links  .page-numbers.current{
 	background:#999;
@@ -744,7 +751,8 @@ color: #333;
 color:#999;
 background-color: transparent;
 }
-.gm-pagination .nav-links .next.page-numbers:hover{
+.gm-pagination .nav-links .next.page-numbers:hover,
+.gm-pagination .nav-links .prev.page-numbers:hover{
 	color: #333;
 }
 
@@ -871,6 +879,10 @@ background-color: transparent;
 .header-inner.withbg .top-bar{
 	padding:6px 0;
 }
+.top-bar{
+	padding:8px 0;
+}
+
 .header-inner.withbg .header-bottom-block  .search-icon .btn-search{
 	height: 40px;
 	width: 40px;
