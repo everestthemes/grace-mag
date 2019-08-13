@@ -271,6 +271,36 @@ grace_mag_add_field(
     '4' //default
 );
 
+grace_mag_add_field( 
+    'banner_bg_image', //id
+    "Upload Background Image", //label
+    'Uploaded image will be display in the background of banner.', //desc
+    '', //type ( text, number, url, select, ios )
+    'banner_section', //section
+    '', //choices
+    'grace_mag_active_banner', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'upload', //control ( image, toggle, slider, multiple, color, upload )
+    '' //default
+);
+
+grace_mag_add_field( 
+    'banner_bg_opacity', //id
+    "Set Background Opacity", //label
+    '', //desc
+    '', //type ( text, number, url, select, ios )
+    'banner_section', //section
+    '', //choices
+    'grace_mag_active_banner', //active_callback
+    '0', //min
+    '100', //max
+    '1', //step
+    'slider', //control ( image, toggle, slider, multiple, color, upload )
+    '80' //default
+);
+
 /*-----------------------------------------------------------------------------
 							SITE PAGES PANEL OPTIONS 
 -----------------------------------------------------------------------------*/
