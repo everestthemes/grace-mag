@@ -927,5 +927,8 @@ padding-top: 12px;
 .no-results #submit:hover{
 	opacity: 0.8;
 }
-
+.primary-content-area .meta .posted-date a:hover,
+.slider-caption .meta .posted-date a:hover{
+    color: #eee;
+}
 
