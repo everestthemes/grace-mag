@@ -29,6 +29,11 @@ function grace_mag_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/controls/class-customizer-toggle-control.php';
     
     /**
+	 * Load custom customizer control for slider control
+	 */
+	require get_template_directory() . '/inc/customizer/controls/class-customizer-slider-control.php';
+    
+    /**
 	 * Load customizer functions for sanitization of input values of contol fields
 	 */
 	require get_template_directory() . '/inc/customizer/functions/sanitize-callback.php';
@@ -115,6 +120,37 @@ function grace_mag_customize_partial_blogname() {
 function grace_mag_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
+
+/**
+ * Function to load dynamic styles.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return null
+ */
+function dynamic_style() {
+    
+    ?>
+    <style type="text/css">  
+    <?php
+    
+    $banner_bg_opacity = grace_mag_mod( 'banner_bg_opacity', 80 );
+    
+    $banner_opacity_value = $banner_bg_opacity/100;
+    
+    ?>
+        
+    .banner-slider:before {
+        
+        content: '';
+        background-color: <?php echo esc_attr( 'rgb(0, 0, 0, ' . $banner_opacity_value . ')' ); ?>;
+    }
+    
+    </style>
+        
+    <?php  
+}
+add_action( 'wp_head', 'dynamic_style' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

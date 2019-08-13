@@ -9,9 +9,10 @@
 $banner_query = grace_mag_banner_posts_query();
 if( $banner_query -> have_posts() ) {
 
+$banner_bg_image = grace_mag_mod( 'banner_bg_image', '' );
 ?>
 <!--Banner section-->
-<div class="banner-slider lrg-padding">
+<div class="banner-slider lrg-padding"<?php grace_mag_has_image_url( $banner_bg_image ); ?>>
     <div class="container">
         <div class="row">
                 <div class="col-12 col-lg-8">

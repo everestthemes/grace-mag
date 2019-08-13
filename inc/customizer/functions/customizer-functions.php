@@ -170,6 +170,16 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
                     ) );
 
 				}
+                
+                if( $control == 'slider' ) {
+                    
+                    $wp_customize->add_setting( $field_id, array(
+                        'capability'          => 'edit_theme_options',
+                        'sanitize_callback'   => $theme_prefix . '_sanitize_range',
+                        'default'             => $default,
+                    ) );
+
+				}
 				
 				break;
 
@@ -189,7 +199,7 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 					$control_args['input_attrs'] = array(
 						'min' => $min,
 						'max' => $max,
-						'step' => $step
+						'step' => $step,
 					);	
 				}
 
@@ -206,7 +216,7 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 					$control_args['input_attrs'] = array(
 						'min' => $min,
 						'max' => $max,
-						'step' => $step
+						'step' => $step,
 					);
 
 				}
@@ -235,6 +245,12 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
             case 'upload':
 
 				$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, $field_id, $control_args ) );
+
+				break;
+                
+            case 'slider':
+
+				$wp_customize->add_control( new Grace_Mag_Slider_Custom_Control( $wp_customize, $field_id, $control_args ) );
 
 				break;
 			
