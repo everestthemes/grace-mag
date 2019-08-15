@@ -264,7 +264,7 @@ if( ! class_exists( 'Grace_Mag_Halfwidth_News_Widget' ) ) :
 
             ?>
             
-            <p>
+            <p class="layout-options-image">
                 <label for="<?php echo esc_attr( $this->get_field_id('layout') ); ?>">
                     <strong><?php esc_html_e('Chooose Layout', 'grace-mag'); ?></strong>
                 </label>
@@ -280,7 +280,7 @@ if( ! class_exists( 'Grace_Mag_Halfwidth_News_Widget' ) ) :
                     <input 
                       type="radio" name="<?php echo esc_attr( $this->get_field_name('layout') ); ?>"
                       id="<?php echo esc_attr( $this->get_field_id('layout') ); ?>" class="input-hidden" <?php checked($instance['layout'],$key); ?> value="<?php echo esc_attr( $key ); ?>">
-                    <img src="<?php echo esc_url( $halfwidth_layout ); ?>" />
+                    <img class="rad-image" src="<?php echo esc_url( $halfwidth_layout ); ?>" />
                 </label>
                 
                 <?php
@@ -316,6 +316,15 @@ if( ! class_exists( 'Grace_Mag_Halfwidth_News_Widget' ) ) :
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
                     <strong><?php esc_html_e('No of Posts', 'grace-mag'); ?></strong>
+                    <span class="description-layout half_one <?php echo ($instance['layout']=='half_one') ? 'active-layout' : ''; ?>">
+                        <?php echo esc_html__( 'Use your desired number to show posts.', 'grace-mag' ); ?>
+                    </span>
+                    <span class="description-layout half_two <?php echo ($instance['layout']=='half_two') ? 'active-layout' : ''; ?>">
+                        <?php echo esc_html__( 'Use your desired number to show posts.', 'grace-mag' ); ?>
+                    </span>
+                    <span class="description-layout half_three <?php echo ($instance['layout']=='half_three') ? 'active-layout' : ''; ?>">
+                        <?php echo esc_html__( 'You can use maximum upto 4 number of posts.', 'grace-mag' ); ?>
+                    </span>
                 </label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>" name="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>" type="number" value="<?php echo esc_attr( $instance['post_no'] ); ?>" />   
             </p>

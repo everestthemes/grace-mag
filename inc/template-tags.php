@@ -65,19 +65,7 @@ if ( ! function_exists( 'grace_mag_comments_no' ) ) :
                         <i class="fa fa-comment"></i>
                     </em>
                     <a href="<?php the_permalink(); ?>">
-                    <?php 
-                    if( get_comments_number() <= 1 ) {
-                        if( get_comments_number() == 0 ) {
-                            echo esc_html__( '0', 'grace-mag' );
-                        } else {
-                            /* translators: %s: comments number. */
-                            printf( esc_html__( "%s", 'grace-mag' ), absint( get_comments_number() ) ); 
-                        }
-                    } else {
-                        /* translators: %s: comments number. */
-                        printf( esc_html__( "%s", 'grace-mag' ), absint( get_comments_number() ) ); 
-                    }
-                    ?>
+                    <?php echo esc_html( absint( get_comments_number() ) ); ?>
                     </a>
                 </span>
 	          	<?php

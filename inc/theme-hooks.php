@@ -51,8 +51,8 @@ if( ! function_exists( 'grace_mag_header_current_date_action' ) ) :
         if( $top_header_display_today_date == true ) {
         
             $type = 'l, jS F Y';
-        
-            $time = current_time( $type, $gmt = 0 );
+            
+            $time = date_i18n( $type, current_time( 'timestamp', 1 ) );
 
             ?>
             <div class="current-date">

@@ -180,9 +180,9 @@ if( ! function_exists( 'grace_mag_single_sidebar_position' ) ) {
 
 	function grace_mag_single_sidebar_position() {
 
-		global $theme_prefix;
+		global $grace_mag_theme_prefix;
 
-		$sidebar_position_key = $theme_prefix . '_sidebar_position';
+		$sidebar_position_key = $grace_mag_theme_prefix . '_sidebar_position';
 
 		$single_sidebar_position = get_post_meta( get_the_ID(), $sidebar_position_key, true );
 
@@ -363,7 +363,7 @@ if( ! function_exists( 'grace_mag_post_navigation' ) ) {
                 ?>
                 <div class="nav-previous">
                     <span><?php echo esc_html__( 'Prev post', 'grace-mag' ); ?></span>
-                    <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>"><?php echo esc_attr( $previous_post->post_title ); ?></a>
+                    <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>"><?php echo esc_html( $previous_post->post_title ); ?></a>
                 </div>
                 <?php
                 endif;
@@ -372,7 +372,7 @@ if( ! function_exists( 'grace_mag_post_navigation' ) ) {
                 ?>
                 <div class="nav-next">
                     <span><?php echo esc_html__( 'Next post', 'grace-mag' ); ?></span>
-                    <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo esc_attr( $next_post->post_title ); ?></a>
+                    <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo esc_html( $next_post->post_title ); ?></a>
                 </div>
                 <?php
                 endif;

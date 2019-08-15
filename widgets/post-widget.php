@@ -163,7 +163,7 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
                     <input 
                       type="radio" name="<?php echo esc_attr( $this->get_field_name('layout') ); ?>"
                       id="<?php echo esc_attr( $this->get_field_id('layout') ); ?>" class="input-hidden" <?php checked($instance['layout'],$key); ?> value="<?php echo esc_attr( $key ); ?>">
-                    <img src="<?php echo esc_url( $post_layout ); ?>" />
+                    <img class="rad-image" src="<?php echo esc_url( $post_layout ); ?>" />
                 </label>
                 
                 <?php

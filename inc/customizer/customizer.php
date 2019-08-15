@@ -12,7 +12,7 @@
  */
 function grace_mag_customize_register( $wp_customize ) {
     
-    global $theme_prefix;
+    global $grace_mag_theme_prefix;
     
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -47,20 +47,31 @@ function grace_mag_customize_register( $wp_customize ) {
 	require_once trailingslashit( get_template_directory() ) . '/inc/customizer/upgrade-to-pro/upgrade.php';
 
 	$wp_customize->register_section_type( 'Grace_Mag_Customize_Section_Upsell' );
+    
+    $wp_customize->add_section(
+        new Grace_Mag_Customize_Section_Upsell( $wp_customize, 'grace_mag_pro', 
+            array(
+                'title'         => esc_html__( 'Grace Mag Pro', 'grace-mag' ),
+                'button_text'   => esc_html__( 'Buy Pro', 'grace-mag' ),
+                'button_url'    => 'https://everestthemes.com/themes/grace-mag-pro/',
+                'priority'      => 1,
+                )
+        )
+    );
 
-	// Register sections.
-	$wp_customize->add_section(
-		new Grace_Mag_Customize_Section_Upsell(
-			$wp_customize,
-			'theme_upsell',
-			array(
-				'title'    => esc_html__( 'Grace Mag Pro', 'grace-mag' ),
-				'pro_text' => esc_html__( 'Buy Now', 'grace-mag' ),
-				'pro_url'  => 'https://everestthemes.com/themes/grace-mag-pro/',
-				'priority' => 1,
-			)
-		)
-	);
+//	// Register sections.
+//	$wp_customize->add_section(
+//		new Grace_Mag_Customize_Section_Upsell(
+//			$wp_customize,
+//			'theme_upsell',
+//			array(
+//				'title'    => esc_html__( 'Grace Mag Pro', 'grace-mag' ),
+//				'pro_text' => esc_html__( 'Buy Now', 'grace-mag' ),
+//				'pro_url'  => 'https://everestthemes.com/themes/grace-mag-pro/',
+//				'priority' => 1,
+//			)
+//		)
+//	);
     
     /**
 	 * Load customizer functions for loading control field's choices, declaration of panel, section 

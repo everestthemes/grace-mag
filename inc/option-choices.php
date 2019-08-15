@@ -59,8 +59,8 @@ if( !function_exists( 'grace_mag_fullwidth_layouts_array' ) ) :
 	function grace_mag_fullwidth_layouts_array() {
 
         $fullwidth = array(
-            'full_one'            => esc_url( 'https://via.placeholder.com/100' ),
-            'full_two'            => esc_url( 'https://via.placeholder.com/100' ),
+            'full_one'            => get_template_directory_uri() . '/everestthemes/admin/images/full_one.png',
+            'full_two'            => get_template_directory_uri() . '/everestthemes/admin/images/full_two.png',
         );
 
         return $fullwidth;
@@ -75,9 +75,9 @@ if( !function_exists( 'grace_mag_halfwidth_layouts_array' ) ) :
 	function grace_mag_halfwidth_layouts_array() {
 
         $halfwidth = array(
-            'half_one'            => esc_url( 'https://via.placeholder.com/100' ),
-            'half_two'            => esc_url( 'https://via.placeholder.com/100' ),
-            'half_three'          => esc_url( 'https://via.placeholder.com/100' ),
+            'half_one'            => get_template_directory_uri() . '/everestthemes/admin/images/half_one.png',
+            'half_two'            => get_template_directory_uri() . '/everestthemes/admin/images/half_two.png',
+            'half_three'          => get_template_directory_uri() . '/everestthemes/admin/images/half_three.png',
         );
 
         return $halfwidth;
@@ -92,8 +92,8 @@ if( !function_exists( 'grace_mag_post_layouts_array' ) ) :
 	function grace_mag_post_layouts_array() {
 
         $post = array(
-            'post_one'            => esc_url( 'https://via.placeholder.com/100' ),
-            'post_two'            => esc_url( 'https://via.placeholder.com/100' ),
+            'post_one'            => get_template_directory_uri() . '/everestthemes/admin/images/post_one.png',
+            'post_two'            => get_template_directory_uri() . '/everestthemes/admin/images/post_two.png',
         );
 
         return $post;

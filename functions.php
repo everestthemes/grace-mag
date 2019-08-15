@@ -18,9 +18,9 @@ if ( ! function_exists( 'grace_mag_setup' ) ) :
 	function grace_mag_setup() {
         
         /* Theme Prefix Define*/
-		global $theme_prefix;
+		global $grace_mag_theme_prefix;
 
-		$theme_prefix = 'grace_mag';
+		$grace_mag_theme_prefix = 'grace_mag';
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -241,15 +241,15 @@ function grace_mag_scripts() {
     
     wp_enqueue_style( 'grace-mag-reset', get_template_directory_uri() . '/everestthemes/assets/css/reset.css' );
     
-	wp_enqueue_style( 'grace-mag-bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/everestthemes/assets/css/bootstrap.min.css');
     
-	wp_enqueue_style( 'grace-mag-font-awesome', '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/everestthemes/assets/css/font-awesome.min.css' );
     
-	wp_enqueue_style( 'grace-mag-slick', get_template_directory_uri() . '/everestthemes/assets/css/slick.css' );
+	wp_enqueue_style( 'slick', get_template_directory_uri() . '/everestthemes/assets/css/slick.css' );
     
-	wp_enqueue_style( 'grace-mag-webticker', get_template_directory_uri() . '/everestthemes/assets/css/webticker.css' );
+	wp_enqueue_style( 'webticker', get_template_directory_uri() . '/everestthemes/assets/css/webticker.css' );
     
-	wp_enqueue_style( 'grace-mag-fancybox', get_template_directory_uri() . '/everestthemes/assets/css/jquery.fancybox.min.css' );
+	wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/everestthemes/assets/css/jquery.fancybox.min.css' );
     
 	wp_enqueue_style( 'grace-mag-custom', get_template_directory_uri() . '/everestthemes/assets/css/custom.css' );
 
@@ -257,17 +257,13 @@ function grace_mag_scripts() {
     
 	wp_enqueue_style( 'grace-mag-responsive', get_template_directory_uri() . '/everestthemes/assets/css/responsive.css' );
     
-    wp_enqueue_script( 'grace-mag-bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array(), null, true );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/everestthemes/assets/js/bootstrap.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
     
-    wp_enqueue_script( 'grace-mag-webticker', get_template_directory_uri() . '/everestthemes/assets/js/webticker.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
+    wp_enqueue_script( 'webticker', get_template_directory_uri() . '/everestthemes/assets/js/webticker.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
     
-    wp_enqueue_script( 'grace-mag-slick', get_template_directory_uri() . '/everestthemes/assets/js/slick.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
+    wp_enqueue_script( 'slick', get_template_directory_uri() . '/everestthemes/assets/js/slick.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
     
-    wp_enqueue_script( 'grace-mag-fancybox', get_template_directory_uri() . '/everestthemes/assets/js/jquery.fancybox.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
-    
-    
-
-	wp_enqueue_script( 'grace-mag-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/everestthemes/assets/js/jquery.fancybox.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 
 	wp_enqueue_script( 'grace-mag-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

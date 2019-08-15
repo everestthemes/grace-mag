@@ -165,7 +165,7 @@ span.edit-link a:before {
 /*
 ===================================================
 =
-= Wordpress Gallery
+= WordPress Gallery
 =
 =====================================================================
 */
@@ -932,3 +932,57 @@ padding-top: 12px;
     color: #eee;
 }
 
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 3em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 3em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry-tags .post-tags {
+    margin-bottom:30px;
+}
+.entry-tags .post-tags a {
+    background-color:#eee;
+    padding:5px 15px;
+    margin-right:10px;
+    display:inline-block;
+}
