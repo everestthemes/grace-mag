@@ -380,7 +380,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
 
             ?>
             
-            <p>
+            <p class="layout-options-image">
                 <label for="<?php echo esc_attr( $this->get_field_id('layout') ); ?>">
                     <strong><?php esc_html_e('Chooose Layout', 'grace-mag'); ?></strong>
                 </label>
@@ -396,7 +396,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                     <input 
                       type="radio" name="<?php echo esc_attr( $this->get_field_name('layout') ); ?>"
                       id="<?php echo esc_attr( $this->get_field_id('layout') ); ?>" class="input-hidden" <?php checked($instance['layout'],$key); ?> value="<?php echo esc_attr( $key ); ?>">
-                    <img src="<?php echo esc_url( $fullwidth_layout ); ?>" />
+                    <img class="rad-image" src="<?php echo esc_url( $fullwidth_layout ); ?>" />
                 </label>
                 
                 <?php
@@ -432,6 +432,12 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
                     <strong><?php esc_html_e('No of Posts', 'grace-mag'); ?></strong>
+                    <span class="description-layout full_one <?php echo ($instance['layout']=='full_one') ? 'active-layout' : ''; ?>">
+                        <?php echo esc_html__( 'You can use maximum upto 9 number of posts.', 'grace-mag' ); ?>
+                    </span>
+                    <span class="description-layout full_two <?php echo ($instance['layout']=='full_two') ? 'active-layout' : ''; ?>">
+                        <?php echo esc_html__( 'You can use maximum upto 5 number of posts.', 'grace-mag' ); ?>
+                    </span>
                 </label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>" name="<?php echo esc_attr( $this->get_field_name('post_no') ); ?>" type="number" value="<?php echo esc_attr( $instance['post_no'] ); ?>" />   
             </p>

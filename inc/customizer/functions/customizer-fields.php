@@ -14,7 +14,7 @@ $sidebar_position = grace_mag_sidebar_position_array( 'image' );
 
 grace_mag_add_section( 
     'site_preloader_section', //id
-    'Site Preloader', //title
+    esc_html__( 'Site Preloader', 'grace-mag'), //title
     '', //desc
     '', //panel
     5 //priority
@@ -22,7 +22,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'display_site_preloader', //id
-    "Display Preloader", //label
+    esc_html__( "Display Preloader", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'site_preloader_section', //section
@@ -52,7 +52,7 @@ grace_mag_add_panel(
 
 grace_mag_add_section( 
     'site_logo_section', //id
-    'Site Logo', //title
+    esc_html__( 'Site Logo', 'grace-mag'), //title
     '', //desc
     'site_header', //panel
     10 //priority
@@ -64,7 +64,7 @@ grace_mag_add_section(
 
 grace_mag_add_section( 
     'site_favicon_section', //id
-    'Site Favicon', //title
+    esc_html__( 'Site Favicon', 'grace-mag'), //title
     '', //desc
     'site_header', //panel
     10 //priority
@@ -76,7 +76,7 @@ grace_mag_add_section(
 
 grace_mag_add_section( 
     'top_header_section', //id
-    'Top Header', //title
+    esc_html__( 'Top Header', 'grace-mag'), //title
     '', //desc
     'site_header', //panel
     10 //priority
@@ -84,7 +84,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'display_top_header', //id
-    'Display Top Header', //label
+    esc_html__( 'Display Top Header', 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'top_header_section', //section
@@ -99,7 +99,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'top_header_display_today_date', //id
-    "Display Today's Date", //label
+    esc_html__( "Display Today's Date", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'top_header_section', //section
@@ -114,7 +114,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'top_header_display_news_ticker', //id
-    "Display News Ticker", //label
+    esc_html__( "Display News Ticker", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'top_header_section', //section
@@ -129,7 +129,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'top_header_news_ticker_category', //id
-    'Post Category', //label
+    esc_html__( 'Post Category', 'grace-mag'), //label
     '', //desc
     'select', //type ( text, number, url, select, ios )
     'top_header_section', //section
@@ -144,8 +144,8 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'top_header_news_ticker_post_number', //id
-    'No. of Posts Items', //label
-    'Maximum 5 items and minimum 2 items can be set for news ticker.', //desc
+    esc_html__( 'No. of Posts Items', 'grace-mag'), //label
+    esc_html__( 'Maximum 5 items and minimum 2 items can be set for news ticker.', 'grace-mag'), //desc
     'number', //type ( text, number, url, select, ios )
     'top_header_section', //section
     '', //choices
@@ -159,7 +159,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'top_header_display_social_links', //id
-    "Display Social Links", //label
+    esc_html__( "Display Social Links", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'top_header_section', //section
@@ -178,7 +178,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'main_header_section', //id
-    'Main Header', //title
+    esc_html__( 'Main Header', 'grace-mag'), //title
     '', //desc
     'site_header', //panel
     10 //priority
@@ -186,7 +186,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'main_header_display_canvas', //id
-    "Display Canvas Sidebar", //label
+    esc_html__( "Display Canvas Sidebar", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'main_header_section', //section
@@ -201,7 +201,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'main_header_display_search', //id
-    "Display Search Icon", //label
+    esc_html__( "Display Search Icon", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'main_header_section', //section
@@ -220,7 +220,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'banner_section', //id
-    'Site Banner', //title
+    esc_html__( 'Site Banner', 'grace-mag'), //title
     '', //desc
     '', //panel
     10 //priority
@@ -228,7 +228,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'display_banner', //id
-    "Display Banner", //label
+    esc_html__( "Display Banner", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'banner_section', //section
@@ -243,7 +243,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'banner_category', //id
-    'Post Category', //label
+    esc_html__( 'Post Category', 'grace-mag'), //label
     '', //desc
     'select', //type ( text, number, url, select, ios )
     'banner_section', //section
@@ -258,8 +258,8 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'banner_post_number', //id
-    'No. of Posts Items', //label
-    'Maximum 5 items and minimum 3 items can be set for banner.', //desc
+    esc_html__( 'No. of Posts Items', 'grace-mag'), //label
+    esc_html__( 'Maximum 5 items and minimum 3 items can be set for banner.', 'grace-mag'), //desc
     'number', //type ( text, number, url, select, ios )
     'banner_section', //section
     '', //choices
@@ -273,8 +273,8 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'banner_bg_image', //id
-    "Upload Background Image", //label
-    'Uploaded image will be display in the background of banner.', //desc
+    esc_html__( "Upload Background Image", 'grace-mag'), //label
+    esc_html__( 'Uploaded image will be display in the background of banner.', 'grace-mag'), //desc
     '', //type ( text, number, url, select, ios )
     'banner_section', //section
     '', //choices
@@ -288,7 +288,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'banner_bg_opacity', //id
-    "Set Background Opacity", //label
+    esc_html__( "Set Background Opacity", 'grace-mag'), //label
     '', //desc
     '', //type ( text, number, url, select, ios )
     'banner_section', //section
@@ -307,7 +307,7 @@ grace_mag_add_field(
 
 grace_mag_add_panel( 
     'site_pages', //id
-    'Site Pages', //title
+    esc_html__( 'Site Pages', 'grace-mag'), //title
     '', //desc
     20 //priority
 );
@@ -318,7 +318,7 @@ grace_mag_add_panel(
 
 grace_mag_add_section( 
     'post_single_section', //id
-    'Post Single', //title
+    esc_html__( 'Post Single', 'grace-mag'), //title
     '', //desc
     'site_pages', //panel
     10 //priority
@@ -326,7 +326,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'post_single_display_featured_image', //id
-    "Display Featured Image", //label
+    esc_html__( "Display Featured Image", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -341,7 +341,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_display_posted_date', //id
-    "Display Posted Date", //label
+    esc_html__( "Display Posted Date", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -356,7 +356,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_display_comment_number', //id
-    "Display Comment No", //label
+    esc_html__( "Display Comment No", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -371,7 +371,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_display_tags', //id
-    "Display Post Tags", //label
+    esc_html__( "Display Post Tags", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -386,7 +386,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_display_author_section', //id
-    "Display Section", //label
+    esc_html__( "Display Section", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -401,7 +401,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_display_related_posts_section', //id
-    "Display Section", //label
+    esc_html__( "Display Section", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -416,7 +416,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_related_posts_section_title', //id
-    "Section Title", //label
+    esc_html__( "Section Title", 'grace-mag'), //label
     '', //desc
     'text', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -431,7 +431,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_display_related_posted_date', //id
-    "Display Posted Date", //label
+    esc_html__( "Display Posted Date", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -446,7 +446,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_display_related_posts_comment_number', //id
-    "Display Comment No", //label
+    esc_html__( "Display Comment No", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'post_single_section', //section
@@ -461,8 +461,8 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'post_single_related_posts_post_number', //id
-    "No of Post Items", //label
-    'Maximum 3 items and minimum 1 items can be set on related posts.', //desc
+    esc_html__( "No of Post Items", 'grace-mag'), //label
+    esc_html__( 'Maximum 3 items and minimum 1 items can be set on related posts.', 'grace-mag'), //desc
     'number', //type ( text, number, url, select, ios )
     'post_single_section', //section
     '', //choices
@@ -480,7 +480,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'page_single_section', //id
-    'Page Single', //title
+    esc_html__( 'Page Single', 'grace-mag'), //title
     '', //desc
     'site_pages', //panel
     10 //priority
@@ -488,7 +488,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'page_single_display_featured_image', //id
-    "Display Featured Image", //label
+    esc_html__( "Display Featured Image", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'page_single_section', //section
@@ -507,7 +507,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'blog_page_section', //id
-    'Blog Page', //title
+    esc_html__( 'Blog Page', 'grace-mag'), //title
     '', //desc
     'site_pages', //panel
     10 //priority
@@ -515,7 +515,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'blog_page_display_featured_image', //id
-    "Display Featured Image", //label
+    esc_html__( "Display Featured Image", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'blog_page_section', //section
@@ -530,7 +530,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'blog_page_display_posted_time', //id
-    "Display Posted Time", //label
+    esc_html__( "Display Posted Time", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'blog_page_section', //section
@@ -545,7 +545,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'blog_page_display_comment_number', //id
-    "Display Comment No", //label
+    esc_html__( "Display Comment No", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'blog_page_section', //section
@@ -579,7 +579,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'archive_page_section', //id
-    'Archive Page', //title
+    esc_html__( 'Archive Page', 'grace-mag'), //title
     '', //desc
     'site_pages', //panel
     10 //priority
@@ -587,7 +587,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'archive_page_display_featured_image', //id
-    "Display Featured Image", //label
+    esc_html__( "Display Featured Image", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'archive_page_section', //section
@@ -602,7 +602,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'archive_page_display_posted_time', //id
-    "Display Posted Time", //label
+    esc_html__( "Display Posted Time", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'archive_page_section', //section
@@ -617,7 +617,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'archive_page_display_comment_number', //id
-    "Display Comment No", //label
+    esc_html__( "Display Comment No", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'archive_page_section', //section
@@ -651,7 +651,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'search_page_section', //id
-    'Search Page', //title
+    esc_html__( 'Search Page', 'grace-mag'), //title
     '', //desc
     'site_pages', //panel
     10 //priority
@@ -659,7 +659,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'search_page_display_featured_image', //id
-    "Display Featured Image", //label
+    esc_html__( "Display Featured Image", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'search_page_section', //section
@@ -674,7 +674,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'search_page_display_posted_time', //id
-    "Display Posted Time", //label
+    esc_html__( "Display Posted Time", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'search_page_section', //section
@@ -689,7 +689,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'search_page_display_comment_number', //id
-    "Display Comment No", //label
+    esc_html__( "Display Comment No", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'search_page_section', //section
@@ -723,7 +723,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'common_page_section', //id
-    'Common Options', //title
+    esc_html__( 'Common Options', 'grace-mag'), //title
     '', //desc
     'site_pages', //panel
     10 //priority
@@ -732,7 +732,7 @@ grace_mag_add_section(
 grace_mag_add_field( 
     'common_page_background_image', //id
     "", //label
-    'Uploaded image will be shown in Archive Page, Search Page, Post Single and Page Single.', //desc
+    esc_html__( 'Uploaded image will be shown in Archive Page, Search Page, Post Single and Page Single.', 'grace-mag'), //desc
     '', //type ( text, number, url, select, ios )
     'common_page_section', //section
     '', //choices
@@ -750,7 +750,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'breadcrumb_section', //id
-    'Breadcrumb', //title
+    esc_html__( 'Breadcrumb', 'grace-mag'), //title
     '', //desc
     '', //panel
     20 //priority
@@ -758,7 +758,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'display_breadcrumb', //id
-    "Display Breadcrumb", //label
+    esc_html__( "Display Breadcrumb", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'breadcrumb_section', //section
@@ -777,7 +777,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'site_sidebar_section', //id
-    'Site Sidebar', //title
+    esc_html__( 'Site Sidebar', 'grace-mag'), //title
     '', //desc
     '', //panel
     20 //priority
@@ -785,7 +785,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'enable_sticky_sidebar', //id
-    "Enable Sticky Sidebar", //label
+    esc_html__( "Enable Sticky Sidebar", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'site_sidebar_section', //section
@@ -804,7 +804,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'site_footer_section', //id
-    'Site Footer', //title
+    esc_html__( 'Site Footer', 'grace-mag'), //title
     '', //desc
     '', //panel
     20 //priority
@@ -812,8 +812,8 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'display_scroll_top', //id
-    "Display Scroll Top", //label
-    'This option lets you to display or hide scroll to top link floating at right corner.', //desc
+    esc_html__( "Display Scroll Top", 'grace-mag'), //label
+    esc_html__( 'This option lets you to display or hide scroll to top link floating at right corner.', 'grace-mag'), //desc
     'ios', //type ( text, number, url, select, ios )
     'site_footer_section', //section
     '', //choices
@@ -844,7 +844,7 @@ $wp_customize->add_control( 'grace_mag_copyright_text', array(
 
 grace_mag_add_section( 
     'social_links_section', //id
-    'Social Links', //title
+    esc_html__( 'Social Links', 'grace-mag'), //title
     '', //desc
     '', //panel
     20 //priority
@@ -852,7 +852,7 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'facebook_link', //id
-    "Facebook Link", //label
+    esc_html__( "Facebook Link", 'grace-mag'), //label
     '', //desc
     'url', //type ( text, number, url, select, ios )
     'social_links_section', //section
@@ -867,7 +867,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'instagram_link', //id
-    "Instagram Link", //label
+    esc_html__( "Instagram Link", 'grace-mag'), //label
     '', //desc
     'url', //type ( text, number, url, select, ios )
     'social_links_section', //section
@@ -882,7 +882,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'twitter_link', //id
-    "Twitter Link", //label
+    esc_html__( "Twitter Link", 'grace-mag'), //label
     '', //desc
     'url', //type ( text, number, url, select, ios )
     'social_links_section', //section
@@ -897,7 +897,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'youtube_link', //id
-    "Youtube Link", //label
+    esc_html__( "Youtube Link", 'grace-mag'), //label
     '', //desc
     'url', //type ( text, number, url, select, ios )
     'social_links_section', //section
@@ -912,7 +912,7 @@ grace_mag_add_field(
 
 grace_mag_add_field( 
     'display_rss_feed', //id
-    "Display RSS Feed", //label
+    esc_html__( "Display RSS Feed", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'social_links_section', //section
@@ -931,7 +931,7 @@ grace_mag_add_field(
 
 grace_mag_add_section( 
     'excerpt_length_section', //id
-    'Excerpt Length', //title
+    esc_html__( 'Excerpt Length', 'grace-mag'), //title
     '', //desc
     '', //panel
     20 //priority
@@ -939,8 +939,8 @@ grace_mag_add_section(
 
 grace_mag_add_field( 
     'excerpt_length', //id
-    "Excerpt Length", //label
-    'Maximum excerpt length 40 and minimum excerpt length 20 can be set.', //desc
+    esc_html__( "Excerpt Length", 'grace-mag'), //label
+    esc_html__( 'Maximum excerpt length 40 and minimum excerpt length 20 can be set.', 'grace-mag'), //desc
     'number', //type ( text, number, url, select, ios )
     'excerpt_length_section', //section
     '', //choices

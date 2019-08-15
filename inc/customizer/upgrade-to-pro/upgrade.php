@@ -1,20 +1,15 @@
 <?php
 /**
- * Custom Customizer Controls.
+ * Customize Section Button Class.
  *
- * @package Grace_Mag
+ * Adds a custom "button" section to the WordPress customizer.
+ *
+ * @author    WPTRT <themes@wordpress.org>
+ * @copyright 2019 WPTRT
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+ * @link      https://github.com/WPTRT/customize-section-button
  */
 
-if ( ! class_exists( 'WP_Customize_Control' ) ) {
-	return null;
-}
-
-/**
- * Upsell customizer section.
- *
- * @since  1.0.0
- * @access public
- */
 class Grace_Mag_Customize_Section_Upsell extends WP_Customize_Section {
 
 	/**
@@ -24,7 +19,7 @@ class Grace_Mag_Customize_Section_Upsell extends WP_Customize_Section {
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'upsell';
+	public $type = 'wptrt-button';
 
 	/**
 	 * Custom button text to output.
@@ -33,29 +28,52 @@ class Grace_Mag_Customize_Section_Upsell extends WP_Customize_Section {
 	 * @access public
 	 * @var    string
 	 */
-	public $pro_text = '';
+	public $button_text = '';
 
 	/**
-	 * Custom pro button URL.
+	 * Custom button URL to output.
 	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @var    string
 	 */
-	public $pro_url = '';
+	public $button_url = '';
+
+	/**
+	 * Default priority of the section.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @var    string
+	 */
+	public $priority = 999;
 
 	/**
 	 * Add custom parameters to pass to the JS via JSON.
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @return void
+	 * @return array
 	 */
 	public function json() {
-		$json = parent::json();
 
-		$json['pro_text'] = $this->pro_text;
-		$json['pro_url']  = esc_url( $this->pro_url );
+		$json       = parent::json();
+		$theme      = wp_get_theme();
+		$button_url = $this->button_url;
+
+		// Fall back to the `Theme URI` defined in `style.css`.
+		if ( ! $this->button_url && $theme->get( 'ThemeURI' ) ) {
+
+			$button_url = $theme->get( 'ThemeURI' );
+
+		// Fall back to the `Author URI` defined in `style.css`.
+		} elseif ( ! $this->button_url && $theme->get( 'AuthorURI' ) ) {
+
+			$button_url = $theme->get( 'AuthorURI' );
+		}
+
+		$json['button_text'] = $this->button_text ? $this->button_text : $theme->get( 'Name' );
+		$json['button_url']  = esc_url( $button_url );
 
 		return $json;
 	}
@@ -74,8 +92,8 @@ class Grace_Mag_Customize_Section_Upsell extends WP_Customize_Section {
 			<h3 class="accordion-section-title">
 				{{ data.title }}
 
-				<# if ( data.pro_text && data.pro_url ) { #>
-					<a href="{{ data.pro_url }}" class="button button-secondary alignright" target="_blank">{{ data.pro_text }}</a>
+				<# if ( data.button_text && data.button_url ) { #>
+					<a href="{{ data.button_url }}" class="button button-secondary alignright" target="_blank" rel="external nofollow noopener noreferrer">{{ data.button_text }}</a>
 				<# } #>
 			</h3>
 		</li>

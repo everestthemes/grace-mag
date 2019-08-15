@@ -59,13 +59,13 @@ if ( !function_exists( 'grace_mag_mod' ) ) {
     
     function grace_mag_mod( $id, $default ) {
 
-        global $theme_prefix;
+        global $grace_mag_theme_prefix;
 
         if( empty( $id || $default ) ) {
             return;
         }
 
-        $field_id = $theme_prefix . '_' . $id;
+        $field_id = $grace_mag_theme_prefix . '_' . $id;
 
         $theme_mod = '';
 
@@ -85,6 +85,11 @@ if ( !function_exists( 'grace_mag_mod' ) ) {
  * Customize Readmore Link.
  */
 function post_excerpt_more( $more ) {
+    
+    if( is_admin() ) {
+        return $more;
+    }
+    
   	return '...';
 }
 add_filter( 'excerpt_more', 'post_excerpt_more' );
@@ -215,11 +220,6 @@ if ( ! function_exists( 'grace_mag_recommended_plugins' ) ) :
                 'required' => false,
             ),
             array(
-                'name'     => esc_html__( 'Universal Google AdSense And Ads Manager', 'grace-mag' ),
-                'slug'     => 'universal-google-adsense-and-ads-manager',
-                'required' => false,
-            ),
-            array(
                 'name'     => esc_html__( 'Contact Form 7', 'grace-mag' ),
                 'slug'     => 'contact-form-7',
                 'required' => false,
@@ -239,10 +239,10 @@ add_action( 'tgmpa_register', 'grace_mag_recommended_plugins' );
  * @return string Modified form HTML.
  */
 function grace_mag_search_form( $form ) {
-    $form = '<form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >
-        <span class="screen-reader-text">' . _x( 'Search for:', 'label', 'grace-mag' ) . '</span>
+    $form = '<form role="search" method="get" id="search-form" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" >
+        <span class="screen-reader-text">' . esc_html_x( 'Search for:', 'label', 'grace-mag' ) . '</span>
         <input type="search" class="search-field" placeholder="' . esc_attr_x( 'Type Something', 'placeholder', 'grace-mag' ) . '" value="' . get_search_query() . '" name="s" />
-        <input type="submit" id="submit" value="Search">
+        <input type="submit" id="submit" value="' . esc_attr_x( 'Search', 'value', 'grace-mag' ) . '">
     </form>';
  
     return $form;

@@ -81,3 +81,19 @@ Widget at Apperence > widgets
     }
     
 }
+
+.rad .rad-image {
+    height: 100px;
+    width: 100px;
+    padding: 5px 0px;
+}
+
+/* Description for layouts*/
+
+.description-layout{
+    display:none;
+}
+
+.description-layout.active-layout{
+    display:block;
+}

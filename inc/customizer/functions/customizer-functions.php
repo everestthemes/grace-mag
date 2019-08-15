@@ -14,9 +14,9 @@ if( ! function_exists( 'grace_mag_add_panel' ) ) {
 
 		global $wp_customize;
 
-		global $theme_prefix;
+		global $grace_mag_theme_prefix;
 
-		$panel_id = $theme_prefix . '_' . $id;
+		$panel_id = $grace_mag_theme_prefix . '_' . $id;
 
 		if( $priority == ''  ) {
 
@@ -42,11 +42,11 @@ if( ! function_exists( 'grace_mag_add_section' ) ) {
 
 		global $wp_customize;
 
-		global $theme_prefix;
+		global $grace_mag_theme_prefix;
 
-		$section_id = $theme_prefix . '_' . $id;
+		$section_id = $grace_mag_theme_prefix . '_' . $id;
 
-		$panel_id = $theme_prefix . '_' . $panel;
+		$panel_id = $grace_mag_theme_prefix . '_' . $panel;
 
 		$section_args = array(
 			'title'	=> $title,
@@ -74,11 +74,11 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 
 		global $wp_customize;
 
-		global $theme_prefix;
+		global $grace_mag_theme_prefix;
 
-		$field_id = $theme_prefix . '_' . $id;
+		$field_id = $grace_mag_theme_prefix . '_' . $id;
 
-		$section_id = $theme_prefix . '_' . $section;
+		$section_id = $grace_mag_theme_prefix . '_' . $section;
 
 		$control_args = array(
 			'label' => $label,
@@ -114,7 +114,7 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
                     
                     $wp_customize->add_setting( $field_id, array(
                         'capability'          => 'edit_theme_options',
-                        'sanitize_callback'   => $theme_prefix . '_sanitize_range',
+                        'sanitize_callback'   => $grace_mag_theme_prefix . '_sanitize_range',
                         'default'             => $default,
                     ) );
 
@@ -122,7 +122,7 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
                     
                     $wp_customize->add_setting( $field_id, array(
                         'capability'          => 'edit_theme_options',
-                        'sanitize_callback'   => $theme_prefix . '_sanitize_number',
+                        'sanitize_callback'   => $grace_mag_theme_prefix . '_sanitize_number',
                         'default'             => $default,
                     ) );
 				}
@@ -143,7 +143,7 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
                 
                 $wp_customize->add_setting( $field_id, array(
                     'capability'          => 'edit_theme_options',
-                    'sanitize_callback'   => $theme_prefix . '_sanitize_select',
+                    'sanitize_callback'   => $grace_mag_theme_prefix . '_sanitize_select',
                     'default'             => $default,
                 ) );
 				
@@ -175,7 +175,7 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
                     
                     $wp_customize->add_setting( $field_id, array(
                         'capability'          => 'edit_theme_options',
-                        'sanitize_callback'   => $theme_prefix . '_sanitize_range',
+                        'sanitize_callback'   => $grace_mag_theme_prefix . '_sanitize_range',
                         'default'             => $default,
                     ) );
 

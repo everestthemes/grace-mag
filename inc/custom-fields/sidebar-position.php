@@ -46,9 +46,9 @@ if( ! class_exists( 'Grace_Mag_Sidebar_Position_Custom_Field' ) ) :
 
 			global $post;
 
-			global $theme_prefix;
+			global $grace_mag_theme_prefix;
 
-			$sidebar_position_key = $theme_prefix . '_sidebar_position';
+			$sidebar_position_key = $grace_mag_theme_prefix . '_sidebar_position';
 
 			$sidebar_position = get_post_meta( $post->ID, $sidebar_position_key, true );
 
@@ -73,7 +73,7 @@ if( ! class_exists( 'Grace_Mag_Sidebar_Position_Custom_Field' ) ) :
 			        		<?php
 			        		foreach( $choices as $key => $choice ) {
 			        			?>
-			        			<option value="<?php echo esc_attr( $key ); ?>" <?php if( $key == $sidebar_position ) { esc_attr_e( 'selected', 'grace-mag' ); } ?>><?php echo esc_html( $choice ); ?></option>
+			        			<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $sidebar_position, $key ); ?>><?php echo esc_html( $choice ); ?></option>
 			        			<?php
 			        		}
 			        		?>
@@ -108,9 +108,9 @@ if( ! class_exists( 'Grace_Mag_Sidebar_Position_Custom_Field' ) ) :
 		        return;
 		    } 
 
-		    global $theme_prefix;
+		    global $grace_mag_theme_prefix;
 
-			$sidebar_position_key = $theme_prefix . '_sidebar_position';
+			$sidebar_position_key = $grace_mag_theme_prefix . '_sidebar_position';
 
 		    if( isset( $_POST['sidebar_position'] ) ) {
 
