@@ -103,6 +103,14 @@ add_action( 'after_setup_theme', 'grace_mag_setup' );
  *
  * @global int $content_width
  */
+ 
+ /**
+ * Add editor CSS to style to the WordPress visual post / page editor.
+ *
+ * pulls in all of our front-end css.
+ */
+ add_editor_style('/everestthemes/assets/css/editor-style.css');
+ 
 function grace_mag_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.

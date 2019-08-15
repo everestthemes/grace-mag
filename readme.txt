@@ -7,12 +7,12 @@ Tested up to: 5.2.2
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: Custom Background, Custom Colors, Custom Header, Custom Logo, Custom Menu, Editor Style, Entertainment, Featured Image Header, Featured Images, Footer Widgets, Full Width Template, Grid Layout, News, Portfolio, Right Sidebar, Theme Options, Threaded Comments, Translation Ready, Two Columns
 
 
 == Description ==
 
-Description
+Grace Mag is a free WordPress theme that is perfect for your news sites and magazine sites. Grace magazine is suitable for creating the magazine, blog,  news and personal sites. Grace magazine is responsive to all types of screen. Grace News and magazine theme is highly customizable from WordPress live customizer. This theme is simple, well optimized for SEO and requiring no effort to customize. The responsive layout of the theme gives your website an excellent look at all device and screen resolutions.
 
 
 == License ==
@@ -40,10 +40,13 @@ Grace Mag is distributed under the terms of the GNU GPL
 
 == Screenshot ==
 
-1. https://stocksnap.io/photo/QYGOYPVLNC (http://creativecommons.org/publicdomain/zero/1.0 - CCO)
+Logo Image & Advertisement Image ( Self created GPLv2 or later )
+   
+https://www.pexels.com/photo/attractive-beautiful-beautiful-girl-beauty-458766/
 
-4. Logo Image & Advertisement Image ( Self created GPLv2 or later )
+https://www.pexels.com/photo/adult-bike-biker-daylight-434490/
 
+https://www.pexels.com/photo/man-in-red-jacket-playing-ice-skates-during-day-time-47356/
 
 == Installation ==
 
@@ -61,12 +64,6 @@ Grace Mag includes support for contact form7
 
 == Changelog ==
 
-= 1.0.2 - July 23 2019 =
-* Added wp_body_open function
-* Fix : traslation of missing text
 
-= 1.0.1 - July 8 2019 =
-* Upgrade to pro link added
-
-= 1.0.0 - July 7 2019 =
+= 1.0.0 - August 15 2019 =
 * Initial release
