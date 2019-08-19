@@ -931,4 +931,6 @@ padding-top: 12px;
 .slider-caption .meta .posted-date a:hover{
     color: #eee;
 }
-
+.widget_text .textwidget img{
+margin-bottom:0;
+}
