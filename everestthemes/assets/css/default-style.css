@@ -842,6 +842,7 @@ background-color: transparent;
 }
 .header-inner.withbg {
 	background-repeat: no-repeat;
+	background-size:cover;
 	position: relative;
 }
 .header-inner.withbg:before{

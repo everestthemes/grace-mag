@@ -2227,14 +2227,17 @@ color: #999;
 .author-box {
     margin-bottom: 30px;
 }
+.top-wrap.clearfix {
+    display: flex;
+    align-items: center;
+}
 
 .author-thumb {
     height: 100px;
     width: 100px;
     margin-right: 30px;
-    float: left;
-
 }
+
 
 .author-thumb img {
     height: 100px;
