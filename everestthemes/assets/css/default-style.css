@@ -843,6 +843,8 @@ background-color: transparent;
 .header-inner.withbg {
 	background-repeat: no-repeat;
 	position: relative;
+	background-size:cover;
+
 }
 .header-inner.withbg:before{
 	position: absolute;
