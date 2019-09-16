@@ -62,7 +62,12 @@
  	color: #333;
  }
 
-
+a:focus,
+button:focus,
+input:focus,
+.search-icon .btn-search:focus{
+border-bottom:1px dotted red;
+}
  @keyframes animate{
 
 		0%{
