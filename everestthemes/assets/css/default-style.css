@@ -62,12 +62,7 @@
  	color: #333;
  }
 
-a:focus,
-button:focus,
-input:focus,
-.search-icon .btn-search:focus{
-border-bottom:1px dotted red;
-}
+
  @keyframes animate{
 
 		0%{
@@ -170,7 +165,7 @@ span.edit-link a:before {
 /*
 ===================================================
 =
-= Wordpress Gallery
+= WordPress Gallery
 =
 =====================================================================
 */
@@ -847,8 +842,9 @@ background-color: transparent;
 }
 .header-inner.withbg {
 	background-repeat: no-repeat;
-	background-size:cover;
 	position: relative;
+	background-size:cover;
+
 }
 .header-inner.withbg:before{
 	position: absolute;
@@ -937,6 +933,58 @@ padding-top: 12px;
 .slider-caption .meta .posted-date a:hover{
     color: #eee;
 }
-.widget_text .textwidget img{
-margin-bottom:0;
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 3em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 3em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry-tags .post-tags {
+    margin-bottom:30px;
+}
+.entry-tags .post-tags a {
+    background-color:#eee;
+    padding:5px 15px;
+    margin-right:10px;
+    display:inline-block;
 }
