@@ -1,8 +1,7 @@
 @media (min-width: 992px) {
 
-    .site-navigation ul li .sub-menu,
-    .site-navigation ul li .children,
-    .site-navigation ul li.menu-item-has-children {
+.header-inner.withbg .header-bottom-block .main_navigation ul li.menu-item-has-children .sub-menu {
+
         display: block;
         opacity: 1;
         visibility: visible;
@@ -10,23 +9,22 @@
         z-index: 1;
 
     }
-
-    a:focus,
+a:focus,
     button:focus,
     input:focus {
         border-bottom: 1px dotted #000;
     }
 
-    .site-navigation ul li:hover > .sub-menu,
-    .site-navigation ul li:focus > .sub-menu,
-    .site-navigation ul li:hover > .children,
-    .site-navigation ul li:focus > .children,
-    .site-navigation ul li.menu-item-has-children:hover > .sub-menu,
-    .site-navigation ul li.menu-item-has-children:focus > .sub-menu,
-    .site-navigation >ul >li >a:hover,
-    .site-navigation >ul >li >a:focus {
-        z-index: 10;
+
+.header-inner.withbg .header-bottom-block .main_navigation ul >li.menu-item-has-children:hover > .sub-menu,
+.header-inner.withbg .header-bottom-block .main_navigation ul >li.menu-item-has-children:focus > .sub-menu,
+.header-inner.withbg .header-bottom-block .main_navigation ul>li.menu-item-has-children:focus-within > .sub-menu {
+
+        z-index: 100000000;
         clip: auto;
+        visibility: visible;
+        opacity: 1;
+        display: block;
     }
 }
 
