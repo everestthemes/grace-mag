@@ -180,6 +180,16 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
                     ) );
 
 				}
+                
+                if( $control == 'color' ) {
+                    
+                    $wp_customize->add_setting( $field_id, array(
+                        'capability'          => 'edit_theme_options',
+                        'sanitize_callback'   => 'sanitize_hex_color',
+                        'default'             => $default,
+                    ) );
+
+				}
 				
 				break;
 
@@ -251,6 +261,12 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
             case 'slider':
 
 				$wp_customize->add_control( new Grace_Mag_Slider_Custom_Control( $wp_customize, $field_id, $control_args ) );
+
+				break;
+                
+            case 'color':
+
+				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $field_id, $control_args ) );
 
 				break;
 			

@@ -9,6 +9,45 @@ $categories = grace_mag_categories_array();
 $sidebar_position = grace_mag_sidebar_position_array( 'image' );
 
 /*-----------------------------------------------------------------------------
+							GLOBAL COLOR PANEL OPTIONS 
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_panel( 
+    'global_color', //id
+    esc_html__( 'Global Color', 'grace-mag' ), //title
+    '', //desc
+    5 //priority
+);
+
+
+/*-----------------------------------------------------------------------------
+							THEME COLOR SECTION OPTIONS
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_section( 
+    'theme_color_section', //id
+    esc_html__( 'Theme Color', 'grace-mag' ), //title
+    '', //desc
+    'global_color', //panel
+    10 //priority
+);
+
+grace_mag_add_field( 
+    'primary_color', //id
+    esc_html__( "Primary Color", 'grace-mag' ), //label
+    '', //desc
+    '', //type ( text, number, url, select, ios )
+    'theme_color_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'color', //control ( image, toggle, slider, multiple, color, upload )
+    '#e01212' //default
+);
+
+/*-----------------------------------------------------------------------------
 							SITE PRELOADER SECTION OPTIONS
 -----------------------------------------------------------------------------*/
 
@@ -41,7 +80,7 @@ grace_mag_add_field(
 
 grace_mag_add_panel( 
     'site_header', //id
-    'Site Header', //title
+    esc_html__( 'Site Header', 'grace-mag' ), //title
     '', //desc
     10 //priority
 );
