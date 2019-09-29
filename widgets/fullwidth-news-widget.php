@@ -29,6 +29,8 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
 
             $layout = !empty( $instance[ 'layout' ] ) ? $instance[ 'layout' ] : 'full_one';
             
+            $post_type = !empty( $instance[ 'post_type' ] ) ? $instance[ 'post_type' ] : 'recent_posts';
+            
             $select_cat    = !empty( $instance['select_cat'] ) ? $instance['select_cat'] : 0;
 
             $post_args = array(
@@ -37,6 +39,11 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
             
             if( absint( $select_cat ) > 0) {
                 $post_args['cat'] = absint( $select_cat );
+            }
+            
+            if( $post_type == 'popular_posts' ) {
+                
+                $post_args['orderby'] = 'comment_count';
             }
 
             if( absint( $posts_no ) > 0 ) {
@@ -371,12 +378,15 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                 'title'        => '',
                 'post_no'      => 9,
                 'layout'       => 'full_one',
+                'post_type'    => 'recent_posts',
                 'select_cat'   => 0,
             );
 
             $instance = wp_parse_args( (array) $instance, $defaults );
             
             $fullwidth_layouts = grace_mag_fullwidth_layouts_array();
+            
+            $post_types = grace_mag_post_types_array();
 
             ?>
             
@@ -403,6 +413,26 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                 }
                 ?>
                 
+            </p>
+            
+            <p>
+                <label for="<?php echo esc_attr( $this->get_field_name( 'post_type' ) ); ?>">
+                    <strong><?php esc_html_e( 'Post Type' , 'grace-mag' ); ?></strong>
+                </label>
+                <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_type' ) ); ?>">
+                <?php
+                    
+                foreach( $post_types as $key => $post_type ){
+                    ?>
+                    <option value="<?php echo esc_attr( $key ); ?>" <?php selected( $instance['post_type'], $key ); ?>>
+                        <?php 
+                            echo esc_html( $post_type );
+                        ?>
+                    </option>
+                    <?php
+                }
+                ?>
+                </select>
             </p>
 
             <p>
@@ -456,6 +486,8 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
             $instance['post_no']      = absint( $new_instance['post_no'] );
 
             $instance['layout']       = sanitize_text_field( $new_instance['layout'] );
+            
+            $instance['post_type']    = sanitize_text_field( $new_instance['post_type'] );
 
             return $instance;
         }

@@ -100,3 +100,19 @@ if( !function_exists( 'grace_mag_post_layouts_array' ) ) :
 
 	}
 endif;
+
+if( !function_exists( 'grace_mag_post_types_array' ) ) :
+	/*
+	 * Function to get post type
+	 */
+	function grace_mag_post_types_array() {
+
+        $post_type = array(
+            'recent_posts'   => esc_html__( 'Recent Posts', 'grace-mag' ),
+            'popular_posts'  => esc_html__( 'Popular Posts', 'grace-mag' ),
+        );
+        
+        return $post_type;
+
+	}
+endif;

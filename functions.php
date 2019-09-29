@@ -88,6 +88,13 @@ if ( ! function_exists( 'grace_mag_setup' ) ) :
 			'flex-height' => true,
 		) );
         
+         /**
+         * Add editor CSS to style to the WordPress visual post / page editor.
+         *
+         * pulls in all of our front-end css.
+         */
+         add_editor_style('/everestthemes/assets/css/editor-style.css');
+        
         // Add support for gutenberg
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'wp-block-styles' );
@@ -103,13 +110,6 @@ add_action( 'after_setup_theme', 'grace_mag_setup' );
  *
  * @global int $content_width
  */
- 
- /**
- * Add editor CSS to style to the WordPress visual post / page editor.
- *
- * pulls in all of our front-end css.
- */
- add_editor_style('/everestthemes/assets/css/editor-style.css');
  
 function grace_mag_content_width() {
 	// This variable is intended to be overruled from themes.
