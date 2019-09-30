@@ -16,11 +16,6 @@ function grace_mag_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
-
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'grace-mag-sidebar' ) ) {
-		$classes[] = 'no-sidebar';
-	}
     
     // Adds a class of no-sidebar when there is no sidebar present.
     $sidebar_position = grace_mag_sidebar_position();
