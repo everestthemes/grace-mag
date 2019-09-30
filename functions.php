@@ -17,7 +17,7 @@ if ( ! function_exists( 'grace_mag_setup' ) ) :
 	 */
 	function grace_mag_setup() {
         
-        /* Theme Prefix Define*/
+        /* Theme Prefix Define */
 		global $grace_mag_theme_prefix;
 
 		$grace_mag_theme_prefix = 'grace_mag';

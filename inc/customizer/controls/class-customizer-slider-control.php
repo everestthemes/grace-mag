@@ -2,7 +2,7 @@
 /**
  * Slider Custom Control
  *
- * @package gucherry-blog
+ * @package Grace_Mag
  */
 
 if( ! class_exists( 'Grace_Mag_Slider_Custom_Control' ) ) :

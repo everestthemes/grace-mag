@@ -4,7 +4,7 @@ Contributors: everestthemes
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 5.2.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, entertainment, featured-image-header, featured-images, footer-widgets, full-width-template, grid-layout, news, portfolio, right-sidebar, left-sidebar, theme-options, threaded-comments, translation-ready, two-columns, block-styles, wide-blocks
@@ -70,7 +70,14 @@ Grace Mag includes support for contact form7
 
 == Changelog ==
 
-= 1.0.1 - August 15 2019 =
+= 1.0.2 - September 30, 2019 =
+
+* Added options on custom widgets
+* Added primary color option
+* Removed unwanted codes and comments
+
+= 1.0.1 - August 15, 2019 =
+
 * Readme.txt updated
 * Style.css updated
 * Missing css added
@@ -81,5 +88,6 @@ Grace Mag includes support for contact form7
 * Added images for layouts
 * Updated language pot file
 
-= 1.0.0 - August 15 2019 =
+= 1.0.0 - August 15, 2019 =
+
 * Initial release

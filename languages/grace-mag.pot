@@ -101,7 +101,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/custom-fields/sidebar-position.php:37, inc/customizer/customizer.php:200, inc/customizer/customizer.php:202, inc/customizer/customizer.php:204
+#: inc/custom-fields/sidebar-position.php:37, inc/customizer/customizer.php:226, inc/customizer/customizer.php:228, inc/customizer/customizer.php:230
 msgid "Sidebar Position"
 msgstr ""
 
@@ -125,271 +125,287 @@ msgstr ""
 msgid "Buy Pro"
 msgstr ""
 
-#: inc/customizer/customizer.php:97
+#: inc/customizer/customizer.php:83
 msgid "Site Title Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:99
+#: inc/customizer/customizer.php:85
 msgid "Site Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:190
+#: inc/customizer/customizer.php:216
 msgid "Logo Setup"
 msgstr ""
 
-#: inc/customizer/customizer.php:191
+#: inc/customizer/customizer.php:217
 msgid "Top Header : Options"
 msgstr ""
 
-#: inc/customizer/customizer.php:192
+#: inc/customizer/customizer.php:218
 msgid "News Ticker Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:193
+#: inc/customizer/customizer.php:219
 msgid "Header Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:194
+#: inc/customizer/customizer.php:220
 msgid "Banner Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:195, inc/customizer/customizer.php:199, inc/customizer/customizer.php:201, inc/customizer/customizer.php:203
+#: inc/customizer/customizer.php:221, inc/customizer/customizer.php:225, inc/customizer/customizer.php:227, inc/customizer/customizer.php:229
 msgid "Post Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:196
+#: inc/customizer/customizer.php:222
 msgid "Author Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:197
+#: inc/customizer/customizer.php:223
 msgid "Related Posts Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:198
+#: inc/customizer/customizer.php:224
 msgid "Page Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:205
+#: inc/customizer/customizer.php:231
 msgid "Background Image"
 msgstr ""
 
 #: inc/customizer/functions/customizer-fields.php:17
+msgid "Global Color"
+msgstr ""
+
+#: inc/customizer/functions/customizer-fields.php:29
+msgid "Theme Color"
+msgstr ""
+
+#: inc/customizer/functions/customizer-fields.php:37
+msgid "Primary Color"
+msgstr ""
+
+#: inc/customizer/functions/customizer-fields.php:56
 msgid "Site Preloader"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:25
+#: inc/customizer/functions/customizer-fields.php:64
 msgid "Display Preloader"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:55
+#: inc/customizer/functions/customizer-fields.php:83
+msgid "Site Header"
+msgstr ""
+
+#: inc/customizer/functions/customizer-fields.php:94
 msgid "Site Logo"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:67
+#: inc/customizer/functions/customizer-fields.php:106
 msgid "Site Favicon"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:79
+#: inc/customizer/functions/customizer-fields.php:118
 msgid "Top Header"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:87
+#: inc/customizer/functions/customizer-fields.php:126
 msgid "Display Top Header"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:102
+#: inc/customizer/functions/customizer-fields.php:141
 msgid "Display Today's Date"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:117
+#: inc/customizer/functions/customizer-fields.php:156
 msgid "Display News Ticker"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:132, inc/customizer/functions/customizer-fields.php:246
+#: inc/customizer/functions/customizer-fields.php:171, inc/customizer/functions/customizer-fields.php:285
 msgid "Post Category"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:147, inc/customizer/functions/customizer-fields.php:261
+#: inc/customizer/functions/customizer-fields.php:186, inc/customizer/functions/customizer-fields.php:300
 msgid "No. of Posts Items"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:148
+#: inc/customizer/functions/customizer-fields.php:187
 msgid "Maximum 5 items and minimum 2 items can be set for news ticker."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:162
+#: inc/customizer/functions/customizer-fields.php:201
 msgid "Display Social Links"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:181
+#: inc/customizer/functions/customizer-fields.php:220
 msgid "Main Header"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:189
+#: inc/customizer/functions/customizer-fields.php:228
 msgid "Display Canvas Sidebar"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:204
+#: inc/customizer/functions/customizer-fields.php:243
 msgid "Display Search Icon"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:223
+#: inc/customizer/functions/customizer-fields.php:262
 msgid "Site Banner"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:231
+#: inc/customizer/functions/customizer-fields.php:270
 msgid "Display Banner"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:262
+#: inc/customizer/functions/customizer-fields.php:301
 msgid "Maximum 5 items and minimum 3 items can be set for banner."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:276
+#: inc/customizer/functions/customizer-fields.php:315
 msgid "Upload Background Image"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:277
+#: inc/customizer/functions/customizer-fields.php:316
 msgid "Uploaded image will be display in the background of banner."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:291
+#: inc/customizer/functions/customizer-fields.php:330
 msgid "Set Background Opacity"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:310
+#: inc/customizer/functions/customizer-fields.php:349
 msgid "Site Pages"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:321
+#: inc/customizer/functions/customizer-fields.php:360
 msgid "Post Single"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:329, inc/customizer/functions/customizer-fields.php:491, inc/customizer/functions/customizer-fields.php:518, inc/customizer/functions/customizer-fields.php:590, inc/customizer/functions/customizer-fields.php:662
+#: inc/customizer/functions/customizer-fields.php:368, inc/customizer/functions/customizer-fields.php:530, inc/customizer/functions/customizer-fields.php:557, inc/customizer/functions/customizer-fields.php:629, inc/customizer/functions/customizer-fields.php:701
 msgid "Display Featured Image"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:344, inc/customizer/functions/customizer-fields.php:434
+#: inc/customizer/functions/customizer-fields.php:383, inc/customizer/functions/customizer-fields.php:473
 msgid "Display Posted Date"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:359, inc/customizer/functions/customizer-fields.php:449, inc/customizer/functions/customizer-fields.php:548, inc/customizer/functions/customizer-fields.php:620, inc/customizer/functions/customizer-fields.php:692
+#: inc/customizer/functions/customizer-fields.php:398, inc/customizer/functions/customizer-fields.php:488, inc/customizer/functions/customizer-fields.php:587, inc/customizer/functions/customizer-fields.php:659, inc/customizer/functions/customizer-fields.php:731
 msgid "Display Comment No"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:374
+#: inc/customizer/functions/customizer-fields.php:413
 msgid "Display Post Tags"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:389, inc/customizer/functions/customizer-fields.php:404
+#: inc/customizer/functions/customizer-fields.php:428, inc/customizer/functions/customizer-fields.php:443
 msgid "Display Section"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:419
+#: inc/customizer/functions/customizer-fields.php:458
 msgid "Section Title"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:464
+#: inc/customizer/functions/customizer-fields.php:503
 msgid "No of Post Items"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:465
+#: inc/customizer/functions/customizer-fields.php:504
 msgid "Maximum 3 items and minimum 1 items can be set on related posts."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:483
+#: inc/customizer/functions/customizer-fields.php:522
 msgid "Page Single"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:510, template-parts/layout/layout-grid.php:69
+#: inc/customizer/functions/customizer-fields.php:549, template-parts/layout/layout-grid.php:69
 msgid "Blog Page"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:533, inc/customizer/functions/customizer-fields.php:605, inc/customizer/functions/customizer-fields.php:677
+#: inc/customizer/functions/customizer-fields.php:572, inc/customizer/functions/customizer-fields.php:644, inc/customizer/functions/customizer-fields.php:716
 msgid "Display Posted Time"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:582
+#: inc/customizer/functions/customizer-fields.php:621
 msgid "Archive Page"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:654
+#: inc/customizer/functions/customizer-fields.php:693
 msgid "Search Page"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:726
+#: inc/customizer/functions/customizer-fields.php:765
 msgid "Common Options"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:735
+#: inc/customizer/functions/customizer-fields.php:774
 msgid "Uploaded image will be shown in Archive Page, Search Page, Post Single and Page Single."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:753
+#: inc/customizer/functions/customizer-fields.php:792
 msgid "Breadcrumb"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:761
+#: inc/customizer/functions/customizer-fields.php:800
 msgid "Display Breadcrumb"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:780
+#: inc/customizer/functions/customizer-fields.php:819
 msgid "Site Sidebar"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:788
+#: inc/customizer/functions/customizer-fields.php:827
 msgid "Enable Sticky Sidebar"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:807
+#: inc/customizer/functions/customizer-fields.php:846
 msgid "Site Footer"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:815
+#: inc/customizer/functions/customizer-fields.php:854
 msgid "Display Scroll Top"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:816
+#: inc/customizer/functions/customizer-fields.php:855
 msgid "This option lets you to display or hide scroll to top link floating at right corner."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:835
+#: inc/customizer/functions/customizer-fields.php:874
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:836
+#: inc/customizer/functions/customizer-fields.php:875
 msgid "You can use <a> & <span> tags with the copyright and credit text."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:847
+#: inc/customizer/functions/customizer-fields.php:886
 msgid "Social Links"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:855
+#: inc/customizer/functions/customizer-fields.php:894
 msgid "Facebook Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:870
+#: inc/customizer/functions/customizer-fields.php:909
 msgid "Instagram Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:885
+#: inc/customizer/functions/customizer-fields.php:924
 msgid "Twitter Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:900
+#: inc/customizer/functions/customizer-fields.php:939
 msgid "Youtube Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:915
+#: inc/customizer/functions/customizer-fields.php:954
 msgid "Display RSS Feed"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:934, inc/customizer/functions/customizer-fields.php:942
+#: inc/customizer/functions/customizer-fields.php:973, inc/customizer/functions/customizer-fields.php:981
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:943
+#: inc/customizer/functions/customizer-fields.php:982
 msgid "Maximum excerpt length 40 and minimum excerpt length 20 can be set."
 msgstr ""
 
@@ -397,19 +413,27 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: inc/template-functions.php:62
+#: inc/option-choices.php:111
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/option-choices.php:112
+msgid "Popular Posts"
+msgstr ""
+
+#: inc/template-functions.php:57
 msgid "Breaking News"
 msgstr ""
 
-#: inc/template-functions.php:339
+#: inc/template-functions.php:334
 msgid "Pages:"
 msgstr ""
 
-#: inc/template-functions.php:365
+#: inc/template-functions.php:360
 msgid "Prev post"
 msgstr ""
 
-#: inc/template-functions.php:374
+#: inc/template-functions.php:369
 msgid "Next post"
 msgstr ""
 
@@ -1031,31 +1055,35 @@ msgstr ""
 msgid "Fullwidth News Widget"
 msgstr ""
 
-#: widgets/fullwidth-news-widget.php:385, widgets/halfwidth-news-widget.php:269, widgets/post-widget.php:152
+#: widgets/fullwidth-news-widget.php:395, widgets/halfwidth-news-widget.php:279, widgets/post-widget.php:162
 msgid "Chooose Layout"
 msgstr ""
 
-#: widgets/fullwidth-news-widget.php:410, widgets/halfwidth-news-widget.php:294, widgets/post-widget.php:177
+#: widgets/fullwidth-news-widget.php:420, widgets/halfwidth-news-widget.php:304, widgets/post-widget.php:187
+msgid "Post Type"
+msgstr ""
+
+#: widgets/fullwidth-news-widget.php:440, widgets/halfwidth-news-widget.php:324, widgets/post-widget.php:207
 msgid "Title"
 msgstr ""
 
-#: widgets/fullwidth-news-widget.php:417, widgets/halfwidth-news-widget.php:301, widgets/post-widget.php:184
+#: widgets/fullwidth-news-widget.php:447, widgets/halfwidth-news-widget.php:331, widgets/post-widget.php:214
 msgid "Select Category"
 msgstr ""
 
-#: widgets/fullwidth-news-widget.php:426, widgets/halfwidth-news-widget.php:310, widgets/post-widget.php:193
+#: widgets/fullwidth-news-widget.php:456, widgets/halfwidth-news-widget.php:340, widgets/post-widget.php:223
 msgid "Select To Show Category Posts"
 msgstr ""
 
-#: widgets/fullwidth-news-widget.php:434, widgets/halfwidth-news-widget.php:318, widgets/post-widget.php:201
+#: widgets/fullwidth-news-widget.php:464, widgets/halfwidth-news-widget.php:348, widgets/post-widget.php:231
 msgid "No of Posts"
 msgstr ""
 
-#: widgets/fullwidth-news-widget.php:436
+#: widgets/fullwidth-news-widget.php:466
 msgid "You can use maximum upto 9 number of posts."
 msgstr ""
 
-#: widgets/fullwidth-news-widget.php:439
+#: widgets/fullwidth-news-widget.php:469
 msgid "You can use maximum upto 5 number of posts."
 msgstr ""
 
@@ -1067,11 +1095,11 @@ msgstr ""
 msgid "Halfwidth News Widget"
 msgstr ""
 
-#: widgets/halfwidth-news-widget.php:320, widgets/halfwidth-news-widget.php:323
+#: widgets/halfwidth-news-widget.php:350, widgets/halfwidth-news-widget.php:353
 msgid "Use your desired number to show posts."
 msgstr ""
 
-#: widgets/halfwidth-news-widget.php:326
+#: widgets/halfwidth-news-widget.php:356
 msgid "You can use maximum upto 4 number of posts."
 msgstr ""
 

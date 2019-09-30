@@ -58,20 +58,6 @@ function grace_mag_customize_register( $wp_customize ) {
                 )
         )
     );
-
-//	// Register sections.
-//	$wp_customize->add_section(
-//		new Grace_Mag_Customize_Section_Upsell(
-//			$wp_customize,
-//			'theme_upsell',
-//			array(
-//				'title'    => esc_html__( 'Grace Mag Pro', 'grace-mag' ),
-//				'pro_text' => esc_html__( 'Buy Now', 'grace-mag' ),
-//				'pro_url'  => 'https://everestthemes.com/themes/grace-mag-pro/',
-//				'priority' => 1,
-//			)
-//		)
-//	);
     
     /**
 	 * Load customizer functions for loading control field's choices, declaration of panel, section 
@@ -156,6 +142,46 @@ function dynamic_style() {
         content: '';
         background-color: <?php echo esc_attr( 'rgb(0, 0, 0, ' . $banner_opacity_value . ')' ); ?>;
     }
+        
+    <?php
+    
+    /*-----------------------------------------------------------------------------
+                                Theme Color
+    -----------------------------------------------------------------------------*/
+    
+    $primary_color = grace_mag_mod( 'primary_color', '#e01212' );
+    
+    if( !empty( $primary_color ) ) {
+        
+        ?>
+        .title-sec h2:after,
+        .post-categories li a,
+        .gm-slider .slick-arrow,
+        .header-inner.layout2 button.hamburger.hamburger_nb
+        {
+            background-color: <?php echo esc_attr( $primary_color ); ?>;
+        }
+        
+        a:focus, a:hover,
+        .breadcrumbs .trail-items li a:hover, .recent-post-list .list-content h4 a:hover,
+        .top-social-icon li a:hover,
+        ul.newsticker li a:hover,
+        .header-inner.layout2 .top-social-icon li a:hover,
+        .header-inner.withbg .main_navigation ul li a:hover,
+        .nt_title i,
+        .copy-content a:hover
+        {
+            color: <?php echo esc_attr( $primary_color ); ?>;
+        }
+        
+        .search-icon .search-form #submit {
+            background: <?php echo esc_attr( $primary_color ); ?>;
+        }
+        <?php
+
+    }
+    
+    ?>
     
     </style>
         
