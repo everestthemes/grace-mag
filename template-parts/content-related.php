@@ -95,6 +95,7 @@ if( $display_related_posts_section == true ) {
                     </li>
                     <?php
                 endwhile;
+                wp_reset_postdata();
                 ?>
             </ul>
         </div>

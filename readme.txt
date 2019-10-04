@@ -46,13 +46,13 @@ Grace Mag is distributed under the terms of the GNU GPL
 
 == Screenshot ==
 
-Logo Image & Advertisement Image ( Self created GPLv2 or later )
+1. Logo Image & Advertisement Image ( Self created GPLv2 or later )
    
-https://www.pexels.com/photo/attractive-beautiful-beautiful-girl-beauty-458766/
+2. https://www.pexels.com/photo/attractive-beautiful-beautiful-girl-beauty-458766/
 
-https://www.pexels.com/photo/adult-bike-biker-daylight-434490/
+3. https://www.pexels.com/photo/adult-bike-biker-daylight-434490/
 
-https://www.pexels.com/photo/man-in-red-jacket-playing-ice-skates-during-day-time-47356/
+4. https://www.pexels.com/photo/man-in-red-jacket-playing-ice-skates-during-day-time-47356/
 
 == Installation ==
 
@@ -70,11 +70,14 @@ Grace Mag includes support for contact form7
 
 == Changelog ==
 
-= 1.0.2 - September 30, 2019 =
+= 1.0.2 - October 04, 2019 =
 
 * Added options on custom widgets
 * Added primary color option
 * Removed unwanted codes and comments
+* Removed contact form 7 recommendation
+* Added recommendation for Contact Form by WPForms
+* Fixed design issue
 
 = 1.0.1 - August 15, 2019 =
 

@@ -503,7 +503,7 @@ msgid "Everest Toolkit"
 msgstr ""
 
 #: inc/theme-functions.php:223
-msgid "Contact Form 7"
+msgid "Contact Form by WPForms : Drag & Drop Form Builder for WordPress"
 msgstr ""
 
 #: inc/theme-functions.php:243

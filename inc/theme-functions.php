@@ -220,8 +220,8 @@ if ( ! function_exists( 'grace_mag_recommended_plugins' ) ) :
                 'required' => false,
             ),
             array(
-                'name'     => esc_html__( 'Contact Form 7', 'grace-mag' ),
-                'slug'     => 'contact-form-7',
+                'name'     => esc_html__( 'Contact Form by WPForms : Drag & Drop Form Builder for WordPress', 'grace-mag' ),
+                'slug'     => 'wpforms-lite',
                 'required' => false,
             ),
         );
