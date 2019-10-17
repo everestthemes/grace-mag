@@ -78,6 +78,8 @@ Grace Mag includes support for contact form7
 * Removed contact form 7 recommendation
 * Added recommendation for Contact Form by WPForms
 * Fixed design issue
+* Added rtl support
+* Added sticky sidebar
 
 = 1.0.1 - August 15, 2019 =
 
