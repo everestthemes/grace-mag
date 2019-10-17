@@ -242,6 +242,8 @@ function grace_mag_scripts() {
     wp_enqueue_style( 'grace-mag-reset', get_template_directory_uri() . '/everestthemes/assets/css/reset.css' );
     
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/everestthemes/assets/css/bootstrap.min.css');
+
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/everestthemes/assets/css/bootstrap-min-rtl.css');
     
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/everestthemes/assets/css/font-awesome.min.css' );
     
