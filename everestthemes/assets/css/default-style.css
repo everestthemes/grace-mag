@@ -843,14 +843,12 @@ background-color: transparent;
 .header-inner.withbg {
 	background-repeat: no-repeat;
 	position: relative;
-	background-size:cover;
-
 }
 .header-inner.withbg:before{
 	position: absolute;
 	content: '';
 	background-color: rgba(0,0,0,0.2);
-	top: 38px;
+	top: 42px;
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -987,4 +985,75 @@ padding-top: 12px;
     padding:5px 15px;
     margin-right:10px;
     display:inline-block;
+}
+.sigle-post-content-area ol li {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+/* nested menu style */
+.main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children {
+    position: relative;
+}
+
+.main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children>.sub-menu {
+    position: absolute;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    background: #cecece;
+    right: -250px;
+    visibility: hidden;
+    opacity: 0;
+	top:0;
+}
+.header-inner.layout1  .main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children>.sub-menu,
+.header-inner.layout1  .main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children>.sub-menu{
+top:0px;
+
+}
+
+.header-inner.layout1 .main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover .sub-menu,
+.header-inner.layout2 .main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover .sub-menu  {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-inner.layout1 .main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children>.sub-menu li,
+.header-inner.layout2 .main_navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover .sub-menu {
+	top:0px;
+	margin-bottom: 0;
+}
+.cate-page-content-layout3{
+	padding-top: 60px;
+}
+
+.header-inner.layout2 .search-icon {
+    background-color: #333;
+}
+
+.substribe-sec {
+    position: relative;
+}
+
+.substribe-sec input.email-n {
+    height: 48px;
+    padding: 0 10px;
+    width: calc(100% - 80px);
+}
+
+.substribe-sec input.submit-n {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    top: 0;
+    height: 48px;
+    padding: 0 10px;
+    cursor: pointer;
 }
