@@ -5,6 +5,20 @@
 
  $("#webticker").webTicker();
 
+ if (window.matchMedia("(max-width: 991px)").matches) {
+ 
+             $(".col-lg-9").removeClass("sticky-portion");
+ 
+         } else {
+ 
+             $('.sticky-portion').theiaStickySidebar({
+ 
+               additionalMarginTop: 30
+ 
+             });
+
+        }
+
  $('.main-slider').slick({
   autoplay:true,
   fade:false,
@@ -21,6 +35,33 @@
   
 
   $('.editor-list').slick({
+  autoplay:true,
+  fade:false,
+  dots:false,
+  arrows:true,
+  slidesToShow: 1,
+  autoplaySpeed: 1000,
+  infinite: true,
+  speed: 500,
+  cssEase: 'linear',
+  prevArrow:'<button type="button" class="prev"><i class="fa fa-angle-left"></i></button>',
+  nextArrow:'<button type="button" class="next"><i class="fa fa-angle-right"></i></button>',
+  arrows:true
+  });
+        
+  $('.left-news-sec').slick({
+    dots: false,
+    autoplay:true,
+    arrows:false,
+    vertical: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+      autoplaySpeed: 3000,
+  infinite: true
+  });
+
+ $('.banner-center-slider').slick({
   autoplay:true,
   fade:false,
   dots:false,
@@ -204,34 +245,5 @@ $('.gm-slider2').slick({
             $('.scrollup').fadeOut(1000);
         }
     });
-
-//make left or right div sticky 
-    var left_height = $(".left_post_area").height();
-    var right_height = $(".right_post_area").height();
-   
-   if(left_height > right_height){
-    $(".right_post_area").addClass("sticky-content");
-   }else{
-      $(".left_post_area").addClass("sticky-content");
-   }
-
-
-  $(window).bind('scroll', function() {
-     if(left_height > right_height){
-       if($(window).scrollTop() >= $('.left_post_area').offset().top + $('.left_post_area').outerHeight() - window.innerHeight) {
-          $(".right_post_area").removeClass("sticky-content");
-       }else{
-          $(".right_post_area").addClass("sticky-content");
-       }
-     }else{
-       if($(window).scrollTop() >= $('.right_post_area').offset().top + $('.right_post_area').outerHeight() - window.innerHeight) {
-          $(".left_post_area").removeClass("sticky-content");
-       }else{
-          $(".left_post_area").addClass("sticky-content");
-       }
-    }
-   
-});
-
 
 })(jQuery);
