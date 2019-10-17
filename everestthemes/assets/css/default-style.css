@@ -843,6 +843,7 @@ background-color: transparent;
 .header-inner.withbg {
 	background-repeat: no-repeat;
 	position: relative;
+	background-size: cover;
 }
 .header-inner.withbg:before{
 	position: absolute;
@@ -861,10 +862,12 @@ background-color: transparent;
 
 .header-inner.withbg .header-bottom-block .main_navigation ul li a{
 	padding:15px;
+	transition: 0.5 ease all;
 }
 .header-inner.withbg .header-bottom-block .main_navigation ul li.menu-item-has-children .sub-menu{
 	padding-top: 0;
 	padding-bottom: 0;
+
 }
 .header-inner.withbg .main_navigation ul li a:hover{
 	color:#e01212;
@@ -872,7 +875,9 @@ background-color: transparent;
 .header-inner.withbg .header-bottom-block  .main_navigation ul li.menu-item-has-children .sub-menu li{
 	padding-bottom: 0;
 	margin-bottom:0;
+	transition: 0.5 ease all;
 }
+
 .header-inner.withbg .header-bottom-block  .search-icon{
 	top:6px;
 }
@@ -1056,4 +1061,14 @@ top:0px;
     height: 48px;
     padding: 0 10px;
     cursor: pointer;
+}
+.comment-form input#wp-comment-cookies-consent {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.secondary-widget-area {
+    margin-top: 60px;
 }
