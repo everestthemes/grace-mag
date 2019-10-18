@@ -143,5 +143,11 @@ span.edit-link a{
     margin-left: 10px;
 }
 .main-slider{
-	direction: ltr;
+	direction: rtl;
+}
+.primary-main-bdy .posted-date .meta-icon{
+	border-right:none;
+}
+.slider-caption{
+	left: auto;
 }
