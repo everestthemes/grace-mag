@@ -47,6 +47,8 @@ Grace Mag is distributed under the terms of the GNU GPL
 == Screenshot ==
 
 1. Logo Image & Advertisement Image ( Self created GPLv2 or later )
+
+2. https://pxhere.com/en/photo/950475
    
 2. https://www.pexels.com/photo/attractive-beautiful-beautiful-girl-beauty-458766/
 
