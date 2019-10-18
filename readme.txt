@@ -47,6 +47,8 @@ Grace Mag is distributed under the terms of the GNU GPL
 == Screenshot ==
 
 1. Logo Image & Advertisement Image ( Self created GPLv2 or later )
+
+2. https://pxhere.com/en/photo/950475
    
 2. https://www.pexels.com/photo/attractive-beautiful-beautiful-girl-beauty-458766/
 
@@ -80,6 +82,7 @@ Grace Mag includes support for contact form7
 * Fixed design issue
 * Added rtl support
 * Added sticky sidebar
+* Added options in customizer
 
 = 1.0.1 - August 15, 2019 =
 

@@ -7,6 +7,8 @@
  * @package Grace_Mag
  */
 
+$display_post_category = grace_mag_post_category();
+
 $display_posted_time = grace_mag_posted_time_option();
 
 $display_comment_no = grace_mag_comment_no_option();
@@ -20,6 +22,7 @@ $display_post_tags = grace_mag_post_tags_option();
         <?php grace_mag_post_thumbnail(); ?>
         <div class="post-layout1-bdy">
             <div class="meta">
+                <?php grace_mag_categories_meta( $display_post_category ); ?>
                 <?php grace_mag_posted_on( $display_posted_time ); ?>
                 <?php grace_mag_comments_no( $display_comment_no ); ?>
             </div><!--meta-->
