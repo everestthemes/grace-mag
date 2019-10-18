@@ -379,6 +379,21 @@ grace_mag_add_field(
 );
 
 grace_mag_add_field( 
+    'post_single_display_post_category', //id
+    esc_html__( "Display Post Category", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'post_single_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field( 
     'post_single_display_posted_date', //id
     esc_html__( "Display Posted Date", 'grace-mag'), //label
     '', //desc
@@ -568,6 +583,21 @@ grace_mag_add_field(
 );
 
 grace_mag_add_field( 
+    'blog_page_display_post_category', //id
+    esc_html__( "Display Post Category", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'blog_page_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field( 
     'blog_page_display_posted_time', //id
     esc_html__( "Display Posted Time", 'grace-mag'), //label
     '', //desc
@@ -640,6 +670,21 @@ grace_mag_add_field(
 );
 
 grace_mag_add_field( 
+    'archive_page_display_post_category', //id
+    esc_html__( "Display Post Category", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'archive_page_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field( 
     'archive_page_display_posted_time', //id
     esc_html__( "Display Posted Time", 'grace-mag'), //label
     '', //desc
@@ -699,6 +744,21 @@ grace_mag_add_section(
 grace_mag_add_field( 
     'search_page_display_featured_image', //id
     esc_html__( "Display Featured Image", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'search_page_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field( 
+    'search_page_display_post_category', //id
+    esc_html__( "Display Post Category", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'search_page_section', //section
