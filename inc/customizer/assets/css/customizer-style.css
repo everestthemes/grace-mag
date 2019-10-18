@@ -22,14 +22,15 @@
 .option-group-title {
 
 	padding: 7px 15px 7px 15px;
-  margin-bottom: 10px;
-  border: 1px solid #eee;
-  font-size: 14px;
-  font-weight: 500;
-  display: block;
-  text-align: center;
-  background: #555555;
-  color: #ffffff;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    background: #bf2e2e;
+    color: #ffffff;
+    border-radius: 20px;
 }
 
 .customize-control.customize-control-ios label {
