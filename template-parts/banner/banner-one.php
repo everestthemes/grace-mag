@@ -31,7 +31,7 @@ $banner_bg_image = grace_mag_mod( 'banner_bg_image', '' );
                             ?>
                             <div class="slides"<?php grace_mag_has_image_url( $banner_image_url ); ?>>
                                 <div class="slider-caption">
-                                    <h2 class="l-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                    <h1 class="l-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                                     <div class="meta">
                                         <?php grace_mag_posted_on( true ); ?>
                                         <?php grace_mag_comments_no( true ); ?>

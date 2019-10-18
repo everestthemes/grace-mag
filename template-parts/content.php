@@ -18,7 +18,7 @@ $display_post_tags = grace_mag_post_tags_option();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-layout1-content">
-        <h2 class="single-title"><?php the_title(); ?></h2>
+        <h1 class="single-title"><?php the_title(); ?></h1>
         <?php grace_mag_post_thumbnail(); ?>
         <div class="post-layout1-bdy">
             <div class="meta">
