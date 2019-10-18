@@ -408,6 +408,41 @@ if( ! function_exists( 'grace_mag_breadcrumb' ) ) :
 endif;
 
 /**
+ * Function to return customizer option for post category
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_post_category' ) ) :
+
+ 	function grace_mag_post_category() {
+        
+        $display_posted_time = false;
+        
+        if( is_single() ) {
+            
+            $display_post_category = grace_mag_mod( 'post_single_display_post_category', true );
+        }
+        
+        if( is_home() ) {
+            
+            $display_post_category = grace_mag_mod( 'blog_page_display_post_category', true );
+        }
+        
+        if( is_archive() ) {
+            
+            $display_post_category = grace_mag_mod( 'archive_page_display_post_category', true );
+        }
+        
+        if( is_search() ) {
+            
+            $display_post_category = grace_mag_mod( 'search_page_display_post_category', true );
+        }
+        
+        return $display_post_category;
+ 	}
+endif;
+
+/**
  * Function to return customizer option for posted time
  *
  * @since 1.0.0

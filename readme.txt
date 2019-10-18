@@ -82,6 +82,7 @@ Grace Mag includes support for contact form7
 * Fixed design issue
 * Added rtl support
 * Added sticky sidebar
+* Added options in customizer
 
 = 1.0.1 - August 15, 2019 =
 

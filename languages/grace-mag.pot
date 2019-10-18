@@ -281,131 +281,135 @@ msgstr ""
 msgid "Post Single"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:368, inc/customizer/functions/customizer-fields.php:530, inc/customizer/functions/customizer-fields.php:557, inc/customizer/functions/customizer-fields.php:629, inc/customizer/functions/customizer-fields.php:701
+#: inc/customizer/functions/customizer-fields.php:368, inc/customizer/functions/customizer-fields.php:545, inc/customizer/functions/customizer-fields.php:572, inc/customizer/functions/customizer-fields.php:659, inc/customizer/functions/customizer-fields.php:746
 msgid "Display Featured Image"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:383, inc/customizer/functions/customizer-fields.php:473
+#: inc/customizer/functions/customizer-fields.php:383, inc/customizer/functions/customizer-fields.php:587, inc/customizer/functions/customizer-fields.php:674, inc/customizer/functions/customizer-fields.php:761
+msgid "Display Post Category"
+msgstr ""
+
+#: inc/customizer/functions/customizer-fields.php:398, inc/customizer/functions/customizer-fields.php:488
 msgid "Display Posted Date"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:398, inc/customizer/functions/customizer-fields.php:488, inc/customizer/functions/customizer-fields.php:587, inc/customizer/functions/customizer-fields.php:659, inc/customizer/functions/customizer-fields.php:731
+#: inc/customizer/functions/customizer-fields.php:413, inc/customizer/functions/customizer-fields.php:503, inc/customizer/functions/customizer-fields.php:617, inc/customizer/functions/customizer-fields.php:704, inc/customizer/functions/customizer-fields.php:791
 msgid "Display Comment No"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:413
+#: inc/customizer/functions/customizer-fields.php:428
 msgid "Display Post Tags"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:428, inc/customizer/functions/customizer-fields.php:443
+#: inc/customizer/functions/customizer-fields.php:443, inc/customizer/functions/customizer-fields.php:458
 msgid "Display Section"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:458
+#: inc/customizer/functions/customizer-fields.php:473
 msgid "Section Title"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:503
+#: inc/customizer/functions/customizer-fields.php:518
 msgid "No of Post Items"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:504
+#: inc/customizer/functions/customizer-fields.php:519
 msgid "Maximum 3 items and minimum 1 items can be set on related posts."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:522
+#: inc/customizer/functions/customizer-fields.php:537
 msgid "Page Single"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:549, template-parts/layout/layout-grid.php:69
+#: inc/customizer/functions/customizer-fields.php:564, template-parts/layout/layout-grid.php:69
 msgid "Blog Page"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:572, inc/customizer/functions/customizer-fields.php:644, inc/customizer/functions/customizer-fields.php:716
+#: inc/customizer/functions/customizer-fields.php:602, inc/customizer/functions/customizer-fields.php:689, inc/customizer/functions/customizer-fields.php:776
 msgid "Display Posted Time"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:621
+#: inc/customizer/functions/customizer-fields.php:651
 msgid "Archive Page"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:693
+#: inc/customizer/functions/customizer-fields.php:738
 msgid "Search Page"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:765
+#: inc/customizer/functions/customizer-fields.php:825
 msgid "Common Options"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:774
+#: inc/customizer/functions/customizer-fields.php:834
 msgid "Uploaded image will be shown in Archive Page, Search Page, Post Single and Page Single."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:792
+#: inc/customizer/functions/customizer-fields.php:852
 msgid "Breadcrumb"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:800
+#: inc/customizer/functions/customizer-fields.php:860
 msgid "Display Breadcrumb"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:819
+#: inc/customizer/functions/customizer-fields.php:879
 msgid "Site Sidebar"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:827
+#: inc/customizer/functions/customizer-fields.php:887
 msgid "Enable Sticky Sidebar"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:846
+#: inc/customizer/functions/customizer-fields.php:906
 msgid "Site Footer"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:854
+#: inc/customizer/functions/customizer-fields.php:914
 msgid "Display Scroll Top"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:855
+#: inc/customizer/functions/customizer-fields.php:915
 msgid "This option lets you to display or hide scroll to top link floating at right corner."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:874
+#: inc/customizer/functions/customizer-fields.php:934
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:875
+#: inc/customizer/functions/customizer-fields.php:935
 msgid "You can use <a> & <span> tags with the copyright and credit text."
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:886
+#: inc/customizer/functions/customizer-fields.php:946
 msgid "Social Links"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:894
+#: inc/customizer/functions/customizer-fields.php:954
 msgid "Facebook Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:909
+#: inc/customizer/functions/customizer-fields.php:969
 msgid "Instagram Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:924
+#: inc/customizer/functions/customizer-fields.php:984
 msgid "Twitter Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:939
+#: inc/customizer/functions/customizer-fields.php:999
 msgid "Youtube Link"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:954
+#: inc/customizer/functions/customizer-fields.php:1014
 msgid "Display RSS Feed"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:973, inc/customizer/functions/customizer-fields.php:981
+#: inc/customizer/functions/customizer-fields.php:1033, inc/customizer/functions/customizer-fields.php:1041
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/functions/customizer-fields.php:982
+#: inc/customizer/functions/customizer-fields.php:1042
 msgid "Maximum excerpt length 40 and minimum excerpt length 20 can be set."
 msgstr ""
 
@@ -472,7 +476,7 @@ msgstr ""
 #. translators: %s: Name of current post. Only visible to screen readers
 #. translators: %s: Name of current post. Only visible to screen readers
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:144, template-parts/content-page.php:30, template-parts/content.php:39
+#: inc/template-tags.php:144, template-parts/content-page.php:30, template-parts/content.php:42
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
