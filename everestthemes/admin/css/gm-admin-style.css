@@ -2,6 +2,14 @@
 Widget at Apperence > widgets 
 */
 
+.widgets-holder-wrap [id*="grace-mag-"] .widget-top {
+
+    background: #94dccf;
+    color: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
 .rad,
 .ckb{
     cursor: pointer;
