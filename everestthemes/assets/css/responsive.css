@@ -20,7 +20,7 @@ a:focus,
 .header-inner.withbg .header-bottom-block .main_navigation ul >li.menu-item-has-children:focus > .sub-menu,
 .header-inner.withbg .header-bottom-block .main_navigation ul>li.menu-item-has-children:focus-within > .sub-menu {
 
-        z-index: 100000000;
+        z-index: 10;
         clip: auto;
         visibility: visible;
         opacity: 1;
