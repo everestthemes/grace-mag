@@ -215,6 +215,10 @@ single page/post
 .post-navigation {
     display: inline-flex;
 }
+.side-canvas{
+	left: auto;
+	right: -100%;
+}
 /* ===============================
 Rtl responsive
 ================================= */
@@ -237,7 +241,9 @@ Rtl responsive
     }
 }
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+
+}
 
 @media (max-width: 992px) {
     .mobile-menu-icon {
@@ -251,6 +257,10 @@ Rtl responsive
     }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
 
-@media (max-width: 480px) {}
+}
+
+@media (max-width: 480px) {
+	
+}

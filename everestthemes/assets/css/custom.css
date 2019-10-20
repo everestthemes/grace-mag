@@ -1302,7 +1302,9 @@ margin-bottom:5px;
     margin-top: 15px;
 }
 
-
+.right_post_area {
+    padding-top: 60px;
+}
 
 .title-sec.green h2:after {
     background-color: #08a54a;
@@ -1679,6 +1681,9 @@ margin-bottom:30px;
     color: #171717;
 }
 
+.full-layout5-aside{
+  margin-bottom: -30px;
+}
 .full-layout5-aside ul li .sub-title {
     margin-top: 15px;
 }
