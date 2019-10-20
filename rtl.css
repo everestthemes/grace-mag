@@ -219,6 +219,9 @@ single page/post
 	left: auto;
 	right: -100%;
 }
+.side-canvas.gm-canvas-show{
+	right: 0;
+}
 /* ===============================
 Rtl responsive
 ================================= */
@@ -262,5 +265,5 @@ Rtl responsive
 }
 
 @media (max-width: 480px) {
-	
+
 }
