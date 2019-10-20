@@ -182,6 +182,8 @@ span.edit-link a {
 
 .slider-caption {
     left: auto;
+    direction: rtl;
+    right: 0;
 }
 /* ===============================
 single page/post
