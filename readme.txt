@@ -3,7 +3,7 @@
 Contributors: everestthemes
 Requires at least: 5.0
 Requires PHP: 5.6
-Tested up to: 5.2.2
+Tested up to: 5.3
 Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Tags: custom-background, custom-colors, custom-header, custom-logo, custom-menu,
 
 == Description ==
 
-Grace Mag is a free WordPress theme that is perfect for your news sites and magazine sites. Grace magazine is suitable for creating the magazine, blog, news and personal sites. Grace magazine is responsive to all types of screen. Grace News and magazine theme is highly customizable from WordPress live customizer. This theme is simple, well optimized for SEO and requiring no effort to customize. The responsive layout of the theme gives your website an excellent look at all device and screen resolutions.
+Grace Mag is a free WordPress theme that is perfect for your news sites and magazine sites. Grace magazine is suitable for creating the magazine, blog, news and personal sites. Grace magazine is responsive to all types of screens. Grace News and magazine theme is highly customizable from WordPress live customizer. This theme is simple, well optimized for SEO and requiring no effort to customize. The responsive layout of the theme gives your website an excellent look at all devices and screen resolutions. It is a Speed & SEO optimized theme which helps your website perform well in search engine ranking. Furthermore, it is cross-browser compatible and looks beautiful on any device and screen sizes.
 
 
 == License ==
@@ -49,12 +49,10 @@ Grace Mag is distributed under the terms of the GNU GPL
 1. Logo Image & Advertisement Image ( Self created GPLv2 or later )
 
 2. https://pxhere.com/en/photo/950475
-   
-2. https://www.pexels.com/photo/attractive-beautiful-beautiful-girl-beauty-458766/
 
-3. https://www.pexels.com/photo/adult-bike-biker-daylight-434490/
+3. https://pxhere.com/en/photo/1454849
 
-4. https://www.pexels.com/photo/man-in-red-jacket-playing-ice-skates-during-day-time-47356/
+4. https://pxhere.com/en/photo/1545119
 
 == Installation ==
 
@@ -68,34 +66,3 @@ Grace Mag is distributed under the terms of the GNU GPL
 = Does this theme support any plugins? =
 
 Grace Mag includes support for contact form7
-
-
-== Changelog ==
-
-= 1.0.2 - October 04, 2019 =
-
-* Added options on custom widgets
-* Added primary color option
-* Removed unwanted codes and comments
-* Removed contact form 7 recommendation
-* Added recommendation for Contact Form by WPForms
-* Fixed design issue
-* Added rtl support
-* Added sticky sidebar
-* Added options in customizer
-
-= 1.0.1 - August 15, 2019 =
-
-* Readme.txt updated
-* Style.css updated
-* Missing css added
-* UGAAM plugin recommendation removed
-* Customizer Upsell file changed
-* Fixed missing translatation text
-* Unused files deleted
-* Added images for layouts
-* Updated language pot file
-
-= 1.0.0 - August 15, 2019 =
-
-* Initial release

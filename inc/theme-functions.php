@@ -219,11 +219,6 @@ if ( ! function_exists( 'grace_mag_recommended_plugins' ) ) :
                 'slug'     => 'everest-toolkit',
                 'required' => false,
             ),
-            array(
-                'name'     => esc_html__( 'Contact Form by WPForms : Drag & Drop Form Builder for WordPress', 'grace-mag' ),
-                'slug'     => 'wpforms-lite',
-                'required' => false,
-            ),
         );
 
         tgmpa( $plugins );

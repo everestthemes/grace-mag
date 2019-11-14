@@ -289,6 +289,13 @@ add_action( 'wp_enqueue_scripts', 'grace_mag_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Load welcome section to admin.
+ */
+if ( is_admin() ) {
+    require get_template_directory().'/inc/welcome/welcome-config.php';
+}
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/theme-functions.php';

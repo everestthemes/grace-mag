@@ -1,0 +1,29 @@
+=== v1.0.2 : November 14, 2019 ===
+
+- Added options on custom widgets
+- Added primary color option
+- Removed unwanted codes and comments
+- Removed contact form 7 recommendation
+- Fixed design issue
+- Added rtl support
+- Added sticky sidebar
+- Added options in customizer
+- Added welcome page
+- Screenshot changed
+- Image license, Description updated
+
+=== v1.0.1 : August 15, 2019 ===
+
+- Readme.txt updated
+- Style.css updated
+- Missing css added
+- UGAAM plugin recommendation removed
+- Customizer Upsell file changed
+- Fixed missing translatation text
+- Unused files deleted
+- Added images for layouts
+- Updated language pot file
+
+=== v1.0.0 : August 15, 2019 ===
+
+- Initial release
