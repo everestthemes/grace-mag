@@ -159,7 +159,7 @@
                     $welcome_admin_notice_header, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                     $welcome_admin_notice_picture, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                     $welcome_admin_notice_recommendation, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                    $welcome_admin_notice_setup_list, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                    $welcome_admin_notice_setup_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 );
             }
 
