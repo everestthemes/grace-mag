@@ -58,7 +58,7 @@
 }
 
 .et-welcome-admin-notice-column-container img {
-    margin-top: 23px;
+    margin-top: 30px;
     width: calc(100% - 40px);
     border: 1px solid #f3f4f5;
 }
@@ -295,6 +295,11 @@ table.comparison-table img {
     width: auto;
 }
 
+.compare-table.table-responsive th:first-child,
+.compare-table.table-responsive td:first-child {
+    text-align: left;
+}
+
 a.buy-pro-btn {
     display: block;
     background: #b92424;
@@ -467,25 +472,27 @@ a.buy-pro-btn:hover {
 }
 
 /* nav tab */
-.inner-header-wrapp{
+.inner-header-wrapp {
     position: relative;
 }
 
-.et-welcome-header{
+.et-welcome-header {
     background-image: url(http://localhost/wpblanktest/wp-content/uploads/2019/11/2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
-.et-welcome-header:before{
+
+.et-welcome-header:before {
     position: absolute;
     content: '';
-    left:0;
+    left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
+
 .nav-tab-wrapper {
     background-color: #2e313d;
     border: none;
@@ -557,4 +564,86 @@ a.buy-pro-btn:hover {
     text-shadow: none;
     background: #2d97cb;
     border-color: #0073aa #006799 #006799;
+}
+
+.welcome-section-wrapper span.et-welcome-dashicons.dashicons.dashicons-info.special_icon {
+    box-sizing: content-box;
+}
+
+span.et-welcome-dashicons.dashicons.dashicons-info.special_icon {
+    display: inline-block;
+    background-color: #51b74a;
+    padding: 10px;
+    width: 90%;
+    text-align: left;
+    color: #ffffff;
+    line-height: 0.5;
+    border-radius: 4px;
+    position: relative;
+    padding-left: 40px;
+
+}
+
+.dashicons-info:before {
+    content: "\f348";
+    position: absolute;
+    left: 15px;
+    top: 13px;
+
+}
+
+span.et-welcome-dashicons.dashicons.dashicons-info.special_icon.old-style {
+    background-color: #efb71c;
+}
+
+
+.box-content .button.button-primary.btn {
+    text-decoration: none;
+    background: #e94c4c;
+    color: #fff;
+    display: inline-block;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+}
+
+.box-content .button.button-primary.btn:hover {
+    background: #ce3535;
+}
+
+.et-welcome-admin-notice-wrapper.notice.notice-success.is-dismissible {
+    text-align: center;
+}
+
+.et-welcome-admin-notice-wrapper.notice.notice-success.is-dismissible h2 {
+    background-color: #51b74a;
+    display: inline-block;
+    color: #fff;
+    padding: 15px 60px;
+    ;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.et-welcome-admin-notice-column.et-welcome-admin-notice-starter-sites {
+    background-color: #e94c4c;
+    padding: 15px;
+    margin:30px;
+
+}
+
+.et-welcome-admin-notice-column.et-welcome-admin-notice-starter-sites h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 0.8;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.et-welcome-admin-notice-column.et-welcome-admin-notice-starter-sites p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
 }
