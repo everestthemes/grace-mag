@@ -73,4 +73,7 @@ $display_post_tags = grace_mag_post_tags_option();
 
         ?>
     </div><!--post-layout1-content-->
+
 </article>
+
+

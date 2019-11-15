@@ -246,4 +246,14 @@ $('.gm-slider2').slick({
         }
     });
 
+
+     //Show or hide the button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('.read-also').fadeIn(1000);
+        } else {
+            $('.read-also').fadeOut(1000);
+        }
+    });
+
 })(jQuery);

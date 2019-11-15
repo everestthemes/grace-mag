@@ -44,6 +44,76 @@ do_action( 'grace_mag_footer_scroll_top' );
 ?>
 </div><!-- #page -->
 
+<!-- start read also section -->
+        <div class="read-also">
+        <div class="gm-also-wrap">
+            <h3 class="gm-also-tt">
+                Read Also
+                <a class="penci-close-rltpopup">x<span></span><span></span></a>
+            </h3>
+        </div><!--gm-also-wrap-->
+        <div class="read-also-wrap">
+        <div class="read-also-content">
+            <div class="read-img-holder">
+                <figure>
+                    <img src="http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-600x400.jpg" class="attachment-grace-mag-thumbnail-one size-grace-mag-thumbnail-one wp-post-image" alt="Get best glasses for using laptops and pc" srcset="http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-600x400.jpg 600w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-300x200.jpg 300w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-768x512.jpg 768w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-1024x682.jpg 1024w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-1200x800.jpg 1200w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1.jpg 1280w" >
+                </figure>
+            </div><!--read-img-holder-->
+            <div class="read-also-bdy">
+                <div class="gm-sub-cate"> 
+                    <small>
+                        <ul class="post-categories">
+                            <li><a href="#" rel="category">Technology</a></li>
+                        </ul>
+                    </small> 
+                </div>
+                <h3 class="sub-title">
+                    <a href="#">Gadgets you must have before leaving</a>
+                </h3>
+            </div>
+        </div><!--read-also-content-->
+          <div class="read-also-content">
+            <div class="read-img-holder">
+                <figure>
+                    <img src="http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-600x400.jpg" class="attachment-grace-mag-thumbnail-one size-grace-mag-thumbnail-one wp-post-image" alt="Get best glasses for using laptops and pc" srcset="http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-600x400.jpg 600w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-300x200.jpg 300w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-768x512.jpg 768w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-1024x682.jpg 1024w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-1200x800.jpg 1200w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1.jpg 1280w" >
+                </figure>
+            </div><!--read-img-holder-->
+            <div class="read-also-bdy">
+                <div class="gm-sub-cate"> 
+                    <small>
+                        <ul class="post-categories">
+                            <li><a href="#" rel="category">Technology</a></li>
+                        </ul>
+                    </small> 
+                </div>
+                <h3 class="sub-title">
+                    <a href="#">Gadgets you must have before leaving</a>
+                </h3>
+            </div>
+        </div><!--read-also-content-->
+          <div class="read-also-content">
+            <div class="read-img-holder">
+                <figure>
+                    <img src="http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-600x400.jpg" class="attachment-grace-mag-thumbnail-one size-grace-mag-thumbnail-one wp-post-image" alt="Get best glasses for using laptops and pc" srcset="http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-600x400.jpg 600w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-300x200.jpg 300w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-768x512.jpg 768w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-1024x682.jpg 1024w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1-1200x800.jpg 1200w, http://localhost/dev/wp-content/uploads/2019/08/brunette-clothes-fashion-58592-1.jpg 1280w" >
+                </figure>
+            </div><!--read-img-holder-->
+            <div class="read-also-bdy">
+                <div class="gm-sub-cate"> 
+                    <small>
+                        <ul class="post-categories">
+                            <li><a href="#" rel="category">Technology</a></li>
+                        </ul>
+                    </small> 
+                </div>
+                <h3 class="sub-title">
+                    <a href="#">Gadgets you must have before leaving</a>
+                </h3>
+            </div>
+        </div><!--read-also-content-->
+    </div>
+    </div><!--read-also-->
+<!-- end read also section -->
+
 <?php wp_footer(); ?>
 
 </body>
