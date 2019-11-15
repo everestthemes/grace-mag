@@ -11,8 +11,9 @@
             <div class="box-content">
                 <ul class="et-list clearfix">
                     <li>
-                        <span class="et-welcome-dashicons dashicons dashicons-info"></span>
-                        <?php esc_html_e( 'Fresh Starter', 'grace-mag' ); ?>
+                        <span class="et-welcome-dashicons dashicons dashicons-info special_icon">
+                             <?php esc_html_e( 'Fresh Starter', 'grace-mag' ); ?>
+                        </span>
                         <p><?php esc_html_e( 'If you have fresh installed theme then, we recommend you to import the demo content which will looks like live demos. This will help you to customize your theme and edit options easily.', 'grace-mag' ); ?></p>
                         <p><?php esc_html_e( 'Want to import demo now ?', 'grace-mag' ); ?></p>
                         <?php
@@ -32,8 +33,9 @@
                         <a href="<?php echo esc_url( admin_url( 'themes.php?page='. $page_link )); ?>" class="button button-primary"><?php echo  esc_html( $page_text ); ?></a>
                     </li>
                     <li>
-                        <span class="et-welcome-dashicons dashicons dashicons-info"></span>
-                        <?php esc_html_e( 'Old User', 'grace-mag' ); ?>
+                        <span class="et-welcome-dashicons dashicons dashicons-info special_icon old-style">
+                             <?php esc_html_e( 'Old User', 'grace-mag' ); ?>
+                        </span>
                         <p><?php esc_html_e( 'If you are old WordPress user and does exist your post or page contents, then we recommend you to follow customizer links setp by step to customize theme.', 'grace-mag' ); ?></p>
                         <p><?php esc_html_e( 'If you still want to import demo content and settings, then you can follow the link above.', 'grace-mag' ); ?></p>
                     </li>

@@ -238,7 +238,7 @@
                         <div class="box-header et-box-header"><?php esc_html_e('Buy Pro','grace-mag'); ?></div>
                         <div class="box-content">
                             <p><?php esc_html_e('Get advance options to customize your site and more layouts.','grace-mag'); ?></p>
-                            <a href="<?php echo esc_url( $pro_link );?>" class="button button-primary" target="_blank"><?php esc_html_e('Pro Details','grace-mag'); ?></a>
+                            <a href="<?php echo esc_url( $pro_link );?>" class="button button-primary btn" target="_blank"><?php esc_html_e('Pro Details','grace-mag'); ?></a>
                         </div>
                     </div>
 
