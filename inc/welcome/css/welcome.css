@@ -97,6 +97,14 @@
     .et-welcome-admin-notice-wrapper .et-welcome-admin-notice-image {
         display: none;
     }
+    a.ti-return-dashboard.button.button-secondary.button-hero.install-now {
+    display: inline-table;
+}
+.et-welcome-admin-notice-column-container a.button.button-hero.button-secondary, 
+.et-welcome-admin-notice-column-container a.button.button-hero.button-primary,
+.et-welcome-admin-notice-column-container a.button.button-hero.button-primary{
+    padding:0px 18px;
+}
 }
 
 @media screen and (max-width: 870px) {
@@ -646,4 +654,24 @@ span.et-welcome-dashicons.dashicons.dashicons-info.special_icon.old-style {
     color: #fff;
     font-size: 16px;
     line-height: 1.2;
+}
+.et-welcome-admin-notice-column.et-welcome-admin-notice-recommendation {
+
+    background-color: #333;
+    padding: 15px;
+    margin: 30px;
+}
+.et-welcome-admin-notice-column.et-welcome-admin-notice-recommendation  p{ 
+  color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.et-welcome-admin-notice-column.et-welcome-admin-notice-recommendation  h3{ 
+  color: #fff;
+    font-size: 24px;
+    line-height: 0.8;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
