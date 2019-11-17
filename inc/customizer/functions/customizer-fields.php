@@ -912,7 +912,7 @@ grace_mag_add_field(
     '', //max
     '', //step
     '', //control ( image, toggle, slider, multiple, color, upload )
-    true //default
+    '' //default
 );
 
 grace_mag_add_field(
