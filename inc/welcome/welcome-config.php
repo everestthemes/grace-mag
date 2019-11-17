@@ -25,6 +25,7 @@
                 'Search Page Layouts' => array('1 Layout', '2 Layouts'),
                 'Single Post Layouts' => array('1 Layout', '2 Layouts'),
                 'Single Page Layouts' => array('1 Layout', '2 Layouts'),
+                'Sticky News Options' => array('Normal', 'Advance'),
                 'Widget Options' => array('Normal', 'Advance'),
                 'Full Width Widget' => array('2 Layouts', '7 Layouts'),
                 'Half Width Widget' => array('3 Layouts', '4 Layouts'),
