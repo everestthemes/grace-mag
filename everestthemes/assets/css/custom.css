@@ -2877,6 +2877,9 @@ banner-layout3
     position: fixed;
     bottom: 0;
     left:0;
+    height: 45px;
+    transition: 1s ease all;
+    display: none;
 }
 
 .gm-also-tt {
@@ -2947,4 +2950,11 @@ banner-layout3
 }
 .read-also-content:last-child{
     margin-bottom: 0;
+}
+.read-also.open {
+    height: 310px;
+    bottom:0;
+    position: fixed;
+    left:0;
+
 }
