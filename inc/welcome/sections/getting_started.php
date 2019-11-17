@@ -88,6 +88,11 @@
                             'icon' 	=> 'dashicons dashicons-images-alt',
                         ),
                         array(
+                            'label' => __( 'Sticky News Settings', 'grace-mag' ),
+                            'url' 	=> add_query_arg( array( 'autofocus' => array( 'section' => 'grace_mag_sticky_news_section' ) ), $url ),
+                            'icon' 	=> 'dashicons dashicons-welcome-view-site',
+                        ),
+                        array(
                             'label' => __( 'Breadcrumb Settings', 'grace-mag' ),
                             'url' 	=> add_query_arg( array( 'autofocus' => array( 'section' => 'grace_mag_breadcrumb_section' ) ), $url ),
                             'icon' 	=> 'dashicons dashicons-migrate',

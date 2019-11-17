@@ -84,6 +84,7 @@ function grace_mag_customize_register( $wp_customize ) {
     $wp_customize->get_control( 'background_color' )->section = 'background_image';
     $wp_customize->get_section( 'background_image' )->title = esc_html__( 'Site Background', 'grace-mag' );
     $wp_customize->get_control( 'header_image' )->priority = 30;
+    $wp_customize->get_section( 'static_front_page' )->priority = 2;
    
     $wp_customize->get_control( 'custom_logo' )->section = 'grace_mag_site_logo_section';
     $wp_customize->get_control( 'blogname' )->section = 'grace_mag_site_logo_section';
@@ -229,6 +230,7 @@ function grace_mag_enqueues() {
         'search_page_display_featured_image' => esc_html__( 'Post Content', 'grace-mag' ),
         'search_page_sidebar_position' => esc_html__( 'Sidebar Position', 'grace-mag' ),
         'common_page_background_image' => esc_html__( 'Background Image', 'grace-mag' ),
+        'sticky_news_title' => esc_html__( 'Sticky News Content', 'grace-mag' ),
     );
     wp_localize_script( 'grace-mag-customizer-script', 'grace_mag', $title_array );
 

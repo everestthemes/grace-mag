@@ -28,6 +28,7 @@
         customizer_label( 'grace_mag_search_page_display_featured_image', grace_mag.search_page_display_featured_image );
 		customizer_label( 'grace_mag_search_page_sidebar_position', grace_mag.search_page_sidebar_position );
 		customizer_label( 'grace_mag_common_page_background_image', grace_mag.common_page_background_image );
+		customizer_label( 'grace_mag_sticky_news_title', grace_mag.sticky_news_title );
 
 		/**
 		 *	Toogle Custom Control's Script

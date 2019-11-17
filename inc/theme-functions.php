@@ -202,6 +202,35 @@ if( !function_exists( 'grace_mag_banner_posts_query' ) ) {
     }         
 }
 
+/**
+ * Sticky News Query
+ */
+if( !function_exists( 'grace_mag_sticky_news_query' ) ) {
+
+    function grace_mag_sticky_news_query() {
+
+        $sticky_news_category = grace_mag_mod( 'sticky_news_category', '' );
+
+        $sticky_news_post_number = grace_mag_mod( 'sticky_news_post_number', 3 );
+
+        $sticky_news_args = array(
+          'post_type'      => 'post',
+        );
+
+        if( !empty( $sticky_news_category ) ) {
+            $sticky_news_args['category_name'] = $sticky_news_category;
+        }
+
+        if( !empty( $sticky_news_post_number ) ) {
+            $sticky_news_args['posts_per_page'] = absint( $sticky_news_post_number );
+        }
+
+        $sticky_news_query = new WP_Query( $sticky_news_args );
+
+        return $sticky_news_query;
+    }
+}
+
 /*
  * Hook - Plugin Recommendation
  */

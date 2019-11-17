@@ -1,3 +1,8 @@
+=== v1.0.3 : November 17, 2019 ===
+
+- Added sticky news
+- Updated welcome page
+
 === v1.0.2 : November 14, 2019 ===
 
 - Added options on custom widgets
