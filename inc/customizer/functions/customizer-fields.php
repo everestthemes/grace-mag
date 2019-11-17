@@ -918,7 +918,7 @@ grace_mag_add_field(
 grace_mag_add_field(
     'sticky_news_post_number', //id
     esc_html__( 'No. of Posts Items', 'grace-mag'), //label
-    esc_html__( 'Maximum 3 items and minimum 1 items can be set for banner.', 'grace-mag'), //desc
+    esc_html__( 'Maximum 3 items and minimum 1 items can be set for sticky news.', 'grace-mag'), //desc
     'number', //type ( text, number, url, select, ios )
     'sticky_news_section', //section
     '', //choices
