@@ -844,6 +844,108 @@ grace_mag_add_field(
 );
 
 /*-----------------------------------------------------------------------------
+							STICKY NEWS SECTION OPTIONS
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_section(
+    'sticky_news_section', //id
+    esc_html__( 'Sticky News', 'grace-mag'), //title
+    '', //desc
+    '', //panel
+    20 //priority
+);
+
+grace_mag_add_field(
+    'display_front_sticky_news', //id
+    esc_html__( "Display On Front Page", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'sticky_news_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field(
+    'display_single_sticky_news', //id
+    esc_html__( "Display On Single Post", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'sticky_news_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field(
+    'sticky_news_title', //id
+    esc_html__( 'Sticky News Title', 'grace-mag'), //label
+    '', //desc
+    'text', //type ( text, number, url, select, ios )
+    'sticky_news_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color, upload )
+    'Read Also' //default
+);
+
+grace_mag_add_field(
+    'sticky_news_category', //id
+    esc_html__( 'Post Category', 'grace-mag'), //label
+    '', //desc
+    'select', //type ( text, number, url, select, ios )
+    'sticky_news_section', //section
+    $categories, //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field(
+    'sticky_news_post_number', //id
+    esc_html__( 'No. of Posts Items', 'grace-mag'), //label
+    esc_html__( 'Maximum 3 items and minimum 1 items can be set for banner.', 'grace-mag'), //desc
+    'number', //type ( text, number, url, select, ios )
+    'sticky_news_section', //section
+    '', //choices
+    '', //active_callback
+    '1', //min
+    '3', //max
+    '1', //step
+    '', //control ( image, toggle, slider, multiple, color, upload )
+    '3' //default
+);
+
+grace_mag_add_field(
+    'display_sticky_news_category', //id
+    esc_html__( "Display Posts Category", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'sticky_news_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    false //default
+);
+
+/*-----------------------------------------------------------------------------
 							BREADCRUMB SECTION OPTIONS
 -----------------------------------------------------------------------------*/
 

@@ -397,29 +397,84 @@ if( ! function_exists( 'grace_mag_footer_scroll_top_action' ) ) :
 endif;
 add_action( 'grace_mag_footer_scroll_top', 'grace_mag_footer_scroll_top_action', 10 );
 
+/**
+ * Sticky news hook declaration
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_sticky_news_action' ) ) :
 
+ 	function grace_mag_sticky_news_action() {
 
+        $display_sticky_news = false;
 
+        if( is_front_page() ) {
 
+            $display_sticky_news = grace_mag_mod( 'display_front_sticky_news', true );
+        }
 
+        if( is_single() ) {
 
+            $display_sticky_news = grace_mag_mod( 'display_single_sticky_news', true );
+        }
 
+        if( $display_sticky_news == true ) {
 
+            $sticky_news_title = grace_mag_mod( 'sticky_news_title', 'Read also' );
 
+            $display_sticky_news_category = grace_mag_mod( 'display_sticky_news_category', false );
 
+            ?>
+            <!-- start read also section -->
+            <div class="read-also">
+                <?php
+                if( !empty( $sticky_news_title ) ) {
+                ?>
+                <div class="gm-also-wrap">
+                    <h3 class="gm-also-tt"><?php echo esc_html( $sticky_news_title ); ?>
+                        <a class="penci-close-rltpopup">x<span></span><span></span></a>
+                    </h3>
+                </div><!--gm-also-wrap-->
+                <?php
+                }
 
+                $sticky_news_query = grace_mag_sticky_news_query();
 
+                if( $sticky_news_query -> have_posts() ) {
+                ?>
+                <div class="read-also-wrap">
+                    <?php
 
+                    while( $sticky_news_query -> have_posts() ) {
 
+                        $sticky_news_query -> the_post();
 
-
-
-
-
-
-
-
-
-
-
-
+                        ?>
+                        <div class="read-also-content">
+                            <div class="read-img-holder">
+                                <figure>
+                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                </figure>
+                            </div><!--read-img-holder-->
+                            <div class="read-also-bdy">
+                                <?php grace_mag_categories_meta( $display_sticky_news_category ); ?>
+                                <h3 class="sub-title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h3>
+                            </div>
+                        </div><!--read-also-content-->
+                        <?php
+                    }
+                    wp_reset_postdata();
+                    ?>
+                </div>
+                <?php
+                }
+            ?>
+            </div><!--read-also-->
+            <!-- end read also section -->
+            <?php
+        }
+ 	}
+endif;
+add_action( 'grace_mag_sticky_news', 'grace_mag_sticky_news_action', 50 );
