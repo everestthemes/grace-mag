@@ -185,6 +185,28 @@ span.edit-link a {
     direction: rtl;
     right: 0;
 }
+.primary-main-bdy .caption{
+
+    left:auto;
+    right:0;
+}
+
+div.wpcf7-validation-errors,
+ div.wpcf7-acceptance-missing{
+    border:none;
+ }
+ div.wpcf7-response-output{
+    margin:0;
+    padding:0;
+ }
+ .wpcf7 .wpcf7-form .wpcf7-form-control{
+    padding-left: 0;
+ }
+ .wpcf7 .wpcf7-form p{
+    clear:both;
+    text-align: right;
+    display: block;
+ }
 /* ===============================
 single page/post
 ================================= */
@@ -194,6 +216,13 @@ single page/post
 }
 .post-navigation .nav-links .nav-next {
     text-align: left;
+}
+.post-navigation {
+    display: block;
+}
+.post-navigation .nav-links .nav-previous {
+    border-left: 1px solid #ddd;
+  border-right:none;
 }
 .author-thumb {
     margin-left: 30px;
@@ -223,6 +252,16 @@ single page/post
 }
 .side-canvas.gm-canvas-show{
 	right: 0;
+}
+.secondary-widget-area .recent-post-sec .wid-title:before{
+    display: none;
+}
+.search-icon .search-form [type=search] {
+    width: calc(100% - 60px);
+}
+.comment-author.vcard img{
+    margin-right: 0;
+    margin-left: 10px;
 }
 /* ===============================
 Rtl responsive
