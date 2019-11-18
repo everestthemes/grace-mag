@@ -8,7 +8,7 @@
 
 $sidebar_position = grace_mag_sidebar_position();
 ?>
-<div class="category-page">
+<div id="content" class="site-content category-page">
     <?php
     
     if( is_archive() || is_search() ) {
