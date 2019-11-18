@@ -207,6 +207,9 @@ div.wpcf7-validation-errors,
     text-align: right;
     display: block;
  }
+.footer-bg .textwidget img{
+    margin-bottom: 0;
+ }
 /* ===============================
 single page/post
 ================================= */
