@@ -1072,3 +1072,31 @@ top:0px;
 .secondary-widget-area {
     margin-top: 60px;
 }
+/* navigation  */
+
+@media ( min-width: 993px ) {
+
+
+    .main_navigation ul li .sub-menu, 
+    .main_navigation ul li .menu-item-has-children
+  {
+
+        display:block;
+        clip: rect(1px, 1px, 1px, 1px);
+        visibility: visible;
+        opacity:1;
+    }
+
+    .main_navigation ul li:hover > .sub-menu, 
+    .main_navigation ul li:hover > .menu-item-has-children,
+    .main_navigation ul li:focus > .sub-menu, 
+    .main_navigation ul li:focus > .menu-item-has-children,
+    .main_navigation ul li:focus-within > .sub-menu,
+    .main_navigation ul li:hover > .sub-menu
+     {
+        
+        clip: auto;
+        visibility: visible;
+        opacity:1;
+    }
+}

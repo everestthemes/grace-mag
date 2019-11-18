@@ -8,6 +8,11 @@
 get_header();
 
 grace_mag_banner_template();
+?>
+
+<div id="content" class="site-content"> 
+
+<?php
 
 //fullwidth top news area
 if( is_active_sidebar( 'grace-mag-fullwidth-top-news-area' ) ) {
@@ -70,5 +75,8 @@ if( is_active_sidebar( 'grace-mag-fullwidth-bottom-news-area' ) ) {
 
     dynamic_sidebar( 'grace-mag-fullwidth-bottom-news-area' );
 }
+?> 
+</div>
+<?php
 
 get_footer();
