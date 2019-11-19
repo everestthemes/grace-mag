@@ -462,10 +462,10 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
                     <strong><?php esc_html_e('No of Posts', 'grace-mag'); ?></strong>
-                    <span class="description-layout full_one <?php echo ($instance['layout']=='full_one') ? 'active-layout' : ''; ?>">
+                    <span class="description-layout full_one <?php echo esc_attr( ($instance['layout']=='full_one') ? 'active-layout' : '' ); ?>">
                         <?php echo esc_html__( 'You can use maximum upto 9 number of posts.', 'grace-mag' ); ?>
                     </span>
-                    <span class="description-layout full_two <?php echo ($instance['layout']=='full_two') ? 'active-layout' : ''; ?>">
+                    <span class="description-layout full_two <?php echo esc_attr( ($instance['layout']=='full_two') ? 'active-layout' : '' ); ?>">
                         <?php echo esc_html__( 'You can use maximum upto 5 number of posts.', 'grace-mag' ); ?>
                     </span>
                 </label>

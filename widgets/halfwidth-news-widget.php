@@ -346,13 +346,13 @@ if( ! class_exists( 'Grace_Mag_Halfwidth_News_Widget' ) ) :
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id('post_no') ); ?>">
                     <strong><?php esc_html_e('No of Posts', 'grace-mag'); ?></strong>
-                    <span class="description-layout half_one <?php echo ($instance['layout']=='half_one') ? 'active-layout' : ''; ?>">
+                    <span class="description-layout half_one <?php echo esc_attr( ($instance['layout']=='half_one') ? 'active-layout' : '' ); ?>">
                         <?php echo esc_html__( 'Use your desired number to show posts.', 'grace-mag' ); ?>
                     </span>
-                    <span class="description-layout half_two <?php echo ($instance['layout']=='half_two') ? 'active-layout' : ''; ?>">
+                    <span class="description-layout half_two <?php echo esc_attr( ($instance['layout']=='half_two') ? 'active-layout' : '' ); ?>">
                         <?php echo esc_html__( 'Use your desired number to show posts.', 'grace-mag' ); ?>
                     </span>
-                    <span class="description-layout half_three <?php echo ($instance['layout']=='half_three') ? 'active-layout' : ''; ?>">
+                    <span class="description-layout half_three <?php echo esc_attr( ($instance['layout']=='half_three') ? 'active-layout' : '' ); ?>">
                         <?php echo esc_html__( 'You can use maximum upto 4 number of posts.', 'grace-mag' ); ?>
                     </span>
                 </label>

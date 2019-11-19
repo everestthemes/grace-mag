@@ -18,7 +18,7 @@
                         <p><?php esc_html_e( 'Want to import demo now ?', 'grace-mag' ); ?></p>
                         <?php
 
-                        if( is_plugin_active( 'everest-toolkit/everest-toolkit.php' ) ) {
+                        if( class_exists( 'Everest_Toolkit' ) ) {
 
                             $page_link = $this->import_demo_page;
                             $page_text = esc_html__( 'Import Demo', 'grace-mag' );
