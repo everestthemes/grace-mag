@@ -62,7 +62,7 @@ if( ! function_exists( 'grace_mag_news_ticker_template' ) ) {
                     $news_ticker_query -> the_post();
                     ?>
                     <li>
-                        <a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                     </li>
                     <?php
                 }
