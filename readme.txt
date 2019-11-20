@@ -4,7 +4,7 @@ Contributors: everestthemes
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 5.3
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, entertainment, featured-image-header, featured-images, footer-widgets, full-width-template, grid-layout, news, portfolio, right-sidebar, left-sidebar, theme-options, threaded-comments, translation-ready, two-columns, block-styles, wide-blocks
@@ -40,6 +40,8 @@ Grace Mag is distributed under the terms of the GNU GPL
 * Webticker https://github.com/mazedigital/Web-Ticker, Copyright (c) 23-MAY-2013 Jonathan Mifsud, [ GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 * Font Awesome http://fontawesome.io/license/, [SIL OFL 1.1, MIT, CC](http://scripts.sil.org/OFL, http://opensource.org/licenses/mit-license.html, https://creativecommons.org/licenses/by/4.0/)
+
+* Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar, Copyright (c) 2014 Liviu Cristian Mirea Ghiban, [MIT](http://opensource.org/licenses/MIT)
 
 * Images Included, full-one.png, full_two.png, half_one.png, half-two.png, half_three.png, post_one.png, post_two.png, sidebar_left.png, sidebar_right.png, and sidebar_none.png, self created GPLv2
 

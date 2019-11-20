@@ -1,3 +1,10 @@
+=== v1.0.4 : November 19, 2019 ===
+
+- Updated RTL
+- Fixed minor issues
+- Updated license
+- Added non minified files
+
 === v1.0.3 : November 17, 2019 ===
 
 - Added sticky news

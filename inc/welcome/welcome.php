@@ -82,7 +82,7 @@
                 $slug       = $this->theme_slug;
                 $theme_page = $this->theme_page;
 
-                if( is_plugin_active( 'everest-toolkit/everest-toolkit.php' ) ) {
+                if( class_exists( 'Everest_Toolkit' ) ) {
 
                     $plugin_page = $theme_page;
                     $plugin_text = esc_html__( 'Already Activated', 'grace-mag' );
