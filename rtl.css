@@ -210,6 +210,10 @@ div.wpcf7-validation-errors,
 .footer-bg .textwidget img{
     margin-bottom: 0;
  }
+ .canvas-recent-post .title-sec .md-title,
+ .footer-bg .title-sec .md-title{
+    margin-top: 0;
+ }
 /* ===============================
 single page/post
 ================================= */
