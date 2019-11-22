@@ -141,11 +141,22 @@ if( ! function_exists( 'grace_mag_add_field' ) ) {
 
 			case 'select':
                 
-                $wp_customize->add_setting( $field_id, array(
-                    'capability'          => 'edit_theme_options',
-                    'sanitize_callback'   => $grace_mag_theme_prefix . '_sanitize_select',
-                    'default'             => $default,
-                ) );
+                if( $control == 'select-font' ) {
+
+                    $wp_customize->add_setting( $field_id, array(
+                        'capability'          => 'edit_theme_options',
+                        'sanitize_callback'   => 'sanitize_text_field',
+                        'default'             => $default,
+                    ) );
+
+				} else {
+
+					$wp_customize->add_setting( $field_id, array(
+	                    'capability'          => 'edit_theme_options',
+	                    'sanitize_callback'   => $grace_mag_theme_prefix . '_sanitize_select',
+	                    'default'             => $default,
+	                ) );
+				}
 				
 				break;
 
