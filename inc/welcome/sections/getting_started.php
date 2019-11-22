@@ -52,7 +52,7 @@
                         <span class="et-welcome-dashicons dashicons dashicons-admin-home special_icon">
                              <?php esc_html_e( 'Home Page Setup', 'grace-mag' ); ?>
                         </span>
-                        <div class="et-demo-how-to-do-row">
+                        <div class="et-demo-how-to-do-row  how-to-do-wrap">
                             <div class="et-demo-how-to-do-col">
                                 <figure>
                                     <img src="<?php echo esc_url( get_template_directory_uri() . '/inc/welcome/images/grace-mag-setup-homepage-template.png' ); ?>">
