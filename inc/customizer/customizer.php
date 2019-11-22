@@ -182,7 +182,47 @@ function dynamic_style() {
 
     }
     
-    ?>
+    $fonts = grace_mag_fonts_array();
+
+    /*-----------------------------------------------------------------------------
+                                Body Typo
+    -----------------------------------------------------------------------------*/
+
+    $global_font_family = grace_mag_mod( 'global_font_family', 'Roboto:400,400i,500,500i,700,700i' );
+    $global_line_height = grace_mag_mod( 'global_line_height', '1.5' );
+    $global_letter_spacing = grace_mag_mod( 'global_letter_spacing', '0px' );
+
+     ?>
+    body
+    {
+
+        <?php
+
+        if( !empty( $global_font_family ) ) {
+
+            ?>
+            font-family: <?php echo esc_attr( $fonts[ $global_font_family ] ); ?>;
+            <?php
+        }
+
+        if( !empty( $global_line_height ) ) {
+
+            ?>
+            line-height: <?php echo esc_attr( $global_line_height ); ?>;
+            <?php
+
+        }
+
+        if( !empty( $global_letter_spacing ) ) {
+
+            ?>
+            letter-spacing: <?php echo esc_attr( $global_letter_spacing ); ?>;
+            <?php
+
+        }
+
+        ?>
+    }
     
     </style>
         

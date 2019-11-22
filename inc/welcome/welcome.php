@@ -124,7 +124,7 @@
 
                 $ob_recom_btn = sprintf(
                     /* translators: %1$s - button url, %2$s - button text */
-                    '<a href="%1$s" target="_blank" class="ti-return-dashboard  button button-secondary button-hero install-now" ><span>%2$s</span></a>',
+                    '<a href="%1$s" class="ti-return-dashboard  button button-secondary button-hero install-now" ><span>%2$s</span></a>',
                     esc_url( admin_url( 'themes.php?page=' . $plugin_page ) ), $plugin_text
                 );
 
