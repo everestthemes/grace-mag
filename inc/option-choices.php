@@ -116,3 +116,40 @@ if( !function_exists( 'grace_mag_post_types_array' ) ) :
 
 	}
 endif;
+
+if( !function_exists( 'grace_mag_fonts_array' ) ) :
+	/**
+	 * Function to load choices of google font family.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return array
+	 */
+	function grace_mag_fonts_array() {
+
+		$fonts = array(
+
+			'Concert+One' => esc_html( 'Concert One' ),
+			'Josefin+Sans:400,400i,600,600i,700,700i' => esc_html( 'Josefin Sans' ),
+			'Lato:400,400i,700,700i' => esc_html( 'Lato' ),
+			'Lobster' => esc_html( 'Lobster' ),
+			'Lora:400,400i,700,700i' => esc_html( 'Lora' ),
+			'Milonga' => esc_html( 'Milonga' ),
+			'Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i' => esc_html( 'Montserrat' ),
+			'Mukta:400,500,600,700,800' => esc_html( 'Mukta' ),
+			'Muli:400,400i,600,600i,700,700i,800,800i' => esc_html( 'Muli' ),
+			'Nunito:400,400i,600,600i,700,700i,800,800i' => esc_html( 'Nunito' ),
+			'Nunito+Sans:400,400i,600,600i,700,700i' => esc_html( 'Nunito Sans' ),
+			'Oswald:400,500,600,700' => esc_html( 'Oswald' ),
+			'Oxygen:400,700' => esc_html( 'Oxygen' ),
+			'Playfair+Display:400,400i,700,700i' => esc_html( 'Playfair Display' ),
+			'Poppins:400,400i,500,500i,600,600i,700,700i,800,800i' => esc_html( 'Poppins' ),
+			'PT+Sans:400,400i,700,700i' => esc_html( 'PT Sans' ),
+			'Raleway:400,400i,500,500i,600,600i,700,700i,800,800i' => esc_html( 'Raleway' ),
+			'Roboto:400,400i,500,500i,700,700i' => esc_html( 'Roboto' ),
+			'Roboto+Condensed:400,400i,700,700i' => esc_html( 'Roboto Condensed' ),
+			'Ubuntu:400,400i,500,500i,700,700i' => esc_html( 'Ubuntu' )
+		);
+		return $fonts;
+	}
+endif;

@@ -256,6 +256,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			// Set the current WordPress version.
 			$this->wp_version = $GLOBALS['wp_version'];
 
+            $theme_setup_page = 'welcome-page';
+
 			// Announce that the class is ready, and pass the object (for advanced use).
 			do_action_ref_array( 'tgmpa_init', array( $this ) );
 
@@ -2644,7 +2646,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function no_items() {
-			echo esc_html__( 'No plugins to install, update or activate.', 'grace-mag' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'grace-mag' ) . '</a>';
+			echo esc_html__( 'No plugins to install, update or activate.', 'grace-mag' ) . ' <a href="' . esc_url( admin_url( 'themes.php?page=welcome-page' ) ) . '"> ' . esc_html__( 'Return to Setup Page', 'grace-mag' ) . '</a>';
 			echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 		}
 

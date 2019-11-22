@@ -22,6 +22,8 @@ if ( !function_exists( 'grace_mag_fonts_url' ) ) :
         $fonts     = array();
         $subsets   = 'latin,latin-ext';
 
+        $font_options = grace_mag_selected_fonts();
+
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
         if ('off' !== _x('on', 'Roboto font: on or off', 'grace-mag')) {
 
@@ -39,6 +41,20 @@ if ( !function_exists( 'grace_mag_fonts_url' ) ) :
         if ('off' !== _x('on', 'Josefin Sans font: on or off', 'grace-mag')) {
 
             $fonts[] = 'Josefin+Sans:400,400i,600,600i,700,700i';
+        }
+
+        $font_options = array_unique( $font_options );
+
+        foreach ( $font_options as $f) {
+
+            $f_family = explode(':', $f);
+
+            $f_family = str_replace('+', ' ', $f_family);
+
+            $font_family = ( !empty( $f_family[1]) ) ? $f_family[1] : '';
+
+            $fonts[] = $f_family[0].':'.$font_family;
+
         }
 
         if ( $fonts ) {
@@ -272,3 +288,25 @@ function grace_mag_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'grace_mag_search_form' );
+
+/*
+ * Function to get selected dynamic google fonts
+ */
+if( !function_exists( 'grace_mag_selected_fonts' ) ) {
+
+	function grace_mag_selected_fonts() {
+
+		$fonts = array();
+
+        $global_font_family = grace_mag_mod( 'global_font_family', 'Roboto:400,400i,500,500i,700,700i' );
+
+        if( !empty( $global_font_family ) ) {
+
+        	$fonts[] = $global_font_family;
+        }
+
+		$fonts = array_unique( $fonts );
+
+		return $fonts;
+	}
+}

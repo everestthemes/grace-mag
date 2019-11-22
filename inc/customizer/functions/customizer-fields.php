@@ -7,6 +7,7 @@
 
 $categories = grace_mag_categories_array();
 $sidebar_position = grace_mag_sidebar_position_array( 'image' );
+$fonts = grace_mag_fonts_array();
 
 /*-----------------------------------------------------------------------------
 							GLOBAL COLOR PANEL OPTIONS 
@@ -46,6 +47,65 @@ grace_mag_add_field(
     'color', //control ( image, toggle, slider, multiple, color, upload )
     '#e01212' //default
 );
+
+
+/*-----------------------------------------------------------------------------
+							GLOBAL TYPO SECTION OPTIONS
+-----------------------------------------------------------------------------*/
+
+grace_mag_add_section(
+    'global_typo_section', //id
+    esc_html__( 'Global Typography', 'grace-mag' ), //title
+    '', //desc
+    '', //panel
+    5 //priority
+);
+
+grace_mag_add_field(
+    'global_font_family', //id
+    esc_html__( "Font Family", 'grace-mag' ), //label
+    '', //desc
+    'select', //type ( text, number, url, select, ios )
+    'global_typo_section', //section
+    $fonts, //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'select-font', //control ( image, toggle, slider, multiple, color, upload )
+    'Roboto:400,400i,500,500i,700,700i' //default
+);
+
+grace_mag_add_field(
+    'global_line_height', //id
+    esc_html__( "Line Height", 'grace-mag' ), //label
+    esc_html__( 'You can set line height in pixel or normal. Eg: 24px, 1.3 etc.', 'grace-mag' ), //desc
+    'text', //type ( text, number, url, select, ios )
+    'global_typo_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color, upload )
+    '1.5' //default
+);
+
+grace_mag_add_field(
+    'global_letter_spacing', //id
+    esc_html__( "Letter Spacing", 'grace-mag' ), //label
+    esc_html__( 'You can set letter spacing in pixel. Eg: 1.8px.', 'grace-mag' ), //desc
+    'text', //type ( text, number, url, select, ios )
+    'global_typo_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    '', //control ( image, toggle, slider, multiple, color, upload )
+    '0px' //default
+);
+
 
 /*-----------------------------------------------------------------------------
 							SITE PRELOADER SECTION OPTIONS

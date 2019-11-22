@@ -16,9 +16,9 @@
             'features' => array(
                 'Header Layouts' => array('1 Layout','3 Layouts'),
                 'Banner Layouts' => array('1 Layout','4 Layouts'),
-                'Font Options' => array('No', 'Yes! 800+ Fonts', 'dashicons-no-alt', 'dashicons-yes'),
+                'Font Options' => array('Yes! 20 Fonts', 'Yes! 800+ Fonts', '', 'dashicons-yes'),
                 'Color Options' => array('Primary Color', 'Yes', '', 'dashicons-yes'),
-                'Typography Options' => array('No', 'Yes', 'dashicons-no-alt', 'dashicons-yes'),
+                'Typography Options' => array('Global Option', 'Yes', '', 'dashicons-yes'),
                 'Blog Page Layouts' => array('1 Layout', '3 Layouts'),
                 'Archive Page Layouts' => array('1 Layout', '2 Layouts'),
                 'Archive Page Title Layouts' => array('1 Layout', '3 Layouts'),

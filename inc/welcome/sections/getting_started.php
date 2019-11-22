@@ -34,19 +34,80 @@
                     </li>
                     <li>
                         <span class="et-welcome-dashicons dashicons dashicons-info special_icon old-style">
-                             <?php esc_html_e( 'Old User', 'grace-mag' ); ?>
+                             <?php esc_html_e( 'Old User or Existing Posts', 'grace-mag' ); ?>
                         </span>
                         <p><?php esc_html_e( 'If you are old WordPress user and does exist your post or page contents, then we recommend you to follow customizer links setp by step to customize theme.', 'grace-mag' ); ?></p>
+                        <a href="#et-customizer-links" class="button button-primary"><?php echo esc_html__( 'Customizer Links', 'grace-mag' ); ?></a>
                         <p><?php esc_html_e( 'If you still want to import demo content and settings, then you can follow the link above.', 'grace-mag' ); ?></p>
                     </li>
                 </ul>
 
             </div>
         </div>
-        <div class="et-box-wrapper et-customizer-links operation-welcome-box-white">
+        <div class="et-box-wrapper et-demo-how-to-do operation-welcome-box-white">
+            <div class="et-box-header"><?php esc_html_e( 'How To Do', 'grace-mag' ); ?></div>
+            <div class="box-content">
+                <ul class="et-list clearfix">
+                    <li>
+                        <span class="et-welcome-dashicons dashicons dashicons-admin-home special_icon">
+                             <?php esc_html_e( 'Home Page Setup', 'grace-mag' ); ?>
+                        </span>
+                        <div class="et-demo-how-to-do-row">
+                            <div class="et-demo-how-to-do-col">
+                                <figure>
+                                    <img src="<?php echo esc_url( get_template_directory_uri() . '/inc/welcome/images/grace-mag-setup-homepage-template.png' ); ?>">
+                                </figure>
+                            </div>
+                            <div class="et-demo-how-to-do-col">
+                                <h4 class="how-to-do-heading"><?php esc_html_e( 'Choosing Home Page Template', 'grace-mag' ); ?></h4>
+                                <?php
+                                /* translators: %1$s - info message, %2$s - info bold message, %3$s - info message. */
+                                echo sprintf( '<p>%1$s<strong> %2$s </strong>%3$s</p>',
+                                        esc_html__( 'Go to Pages from Admin Dashboard menu. Create or edit existing page and select', 'grace-mag' ),
+                                        esc_html__( 'Homepage Template', 'grace-mag' ),
+                                        esc_html__( 'as shown in screenshot.', 'grace-mag' )
+                                );
+
+                                ?>
+                            </div>
+                        </div>
+                        <div class="et-demo-how-to-do-row">
+                            <div class="et-demo-how-to-do-col">
+                                <figure>
+                                    <img src="<?php echo esc_url( get_template_directory_uri() . '/inc/welcome/images/grace-mag-setup-homepage-static.png' ); ?>">
+                                </figure>
+                            </div>
+                            <div class="et-demo-how-to-do-col">
+                                <h4 class="how-to-do-heading"><?php esc_html_e( 'Setting Static Page', 'grace-mag' ); ?></h4>
+                                <?php
+                                /* translators: %1$s - info message, %2$s - info bold message, %3$s - info message. */
+                                echo sprintf( '<p>%1$s<strong> %2$s </strong>%3$s</p>',
+                                        esc_html__( 'Go to Reading inside of Settings from Admin Dashboard menu. Set homepage displays as', 'grace-mag' ),
+                                        esc_html__( 'A Static Page', 'grace-mag' ),
+                                        esc_html__( 'and select the pages you created as shown in screenshot.', 'grace-mag' )
+                                );
+
+                                ?>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="et-customizer-links" class="et-box-wrapper et-customizer-links operation-welcome-box-white">
             <div class="et-box-header"><?php esc_html_e( 'Links to Customizer Settings', 'grace-mag' ); ?></div>
-            <div class="et-box-content">
-                <p><?php esc_html_e( 'Follow the links below step by setp for proper customization of theme.', 'grace-mag' ); ?></p>
+            <div class="et-box-content box-content">
+                <?php
+                /* translators: %1$s - info message, %2$s - info bold message, %3$s - info message, %4$s - info bold message. */
+                echo sprintf( '<p>%1$s<strong> %2$s </strong>%3$s<strong> %4$s </strong></p>',
+                        esc_html__( 'Follow the links below step by setp for proper customization of theme. If have any confusion, go to', 'grace-mag' ),
+                        esc_html__( 'How To Do', 'grace-mag' ),
+                        esc_html__( 'section or', 'grace-mag' ),
+                        esc_html__( 'Documentation page.', 'grace-mag' ),
+                );
+
+                ?>
                 <ul class="et-list clearfix">
                     <?php
                      $url = admin_url( 'customize.php' );
@@ -66,6 +127,11 @@
                             'label' => __( 'Theme Colors', 'grace-mag' ),
                             'url' 	=> add_query_arg( array( 'autofocus' => array( 'section' => 'grace_mag_theme_color_section' ) ), $url ),
                             'icon' 	=> 'dashicons dashicons-admin-customizer',
+                        ),
+                        array(
+                            'label' => __( 'Theme Typography', 'grace-mag' ),
+                            'url' 	=> add_query_arg( array( 'autofocus' => array( 'section' => 'grace_mag_global_typo_section' ) ), $url ),
+                            'icon' 	=> 'dashicons dashicons-editor-paste-text',
                         ),
                         array(
                             'label' => __( 'Preloader Options', 'grace-mag' ),
