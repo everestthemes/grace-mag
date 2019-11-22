@@ -58,7 +58,7 @@
                                     <img src="<?php echo esc_url( get_template_directory_uri() . '/inc/welcome/images/grace-mag-setup-homepage-template.png' ); ?>">
                                 </figure>
                             </div>
-                            <div class="et-demo-how-to-do-col">
+                            <div class="et-demo-how-to-do-col right">
                                 <h4 class="how-to-do-heading"><?php esc_html_e( 'Choosing Home Page Template', 'grace-mag' ); ?></h4>
                                 <?php
                                 /* translators: %1$s - info message, %2$s - info bold message, %3$s - info message. */
@@ -71,13 +71,13 @@
                                 ?>
                             </div>
                         </div>
-                        <div class="et-demo-how-to-do-row">
+                        <div class="et-demo-how-to-do-row how-to-do-wrap">
                             <div class="et-demo-how-to-do-col">
                                 <figure>
                                     <img src="<?php echo esc_url( get_template_directory_uri() . '/inc/welcome/images/grace-mag-setup-homepage-static.png' ); ?>">
                                 </figure>
                             </div>
-                            <div class="et-demo-how-to-do-col">
+                            <div class="et-demo-how-to-do-col right">
                                 <h4 class="how-to-do-heading"><?php esc_html_e( 'Setting Static Page', 'grace-mag' ); ?></h4>
                                 <?php
                                 /* translators: %1$s - info message, %2$s - info bold message, %3$s - info message. */
@@ -104,7 +104,7 @@
                         esc_html__( 'Follow the links below step by setp for proper customization of theme. If have any confusion, go to', 'grace-mag' ),
                         esc_html__( 'How To Do', 'grace-mag' ),
                         esc_html__( 'section or', 'grace-mag' ),
-                        esc_html__( 'Documentation page.', 'grace-mag' ),
+                        esc_html__( 'Documentation page.', 'grace-mag' )
                 );
 
                 ?>
