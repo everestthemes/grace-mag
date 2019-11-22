@@ -52,6 +52,7 @@
                         <span class="et-welcome-dashicons dashicons dashicons-admin-home special_icon">
                              <?php esc_html_e( 'Home Page Setup', 'grace-mag' ); ?>
                         </span>
+                        <h4><strong><?php echo esc_html__( 'Step One', 'grace-mag' ); ?></strong></h4>
                         <div class="et-demo-how-to-do-row  how-to-do-wrap">
                             <div class="et-demo-how-to-do-col">
                                 <figure>
@@ -71,6 +72,7 @@
                                 ?>
                             </div>
                         </div>
+                        <h4><strong><?php echo esc_html__( 'Step Two', 'grace-mag' ); ?></strong></h4>
                         <div class="et-demo-how-to-do-row how-to-do-wrap">
                             <div class="et-demo-how-to-do-col">
                                 <figure>
