@@ -269,7 +269,8 @@ a:focus,
     }
 
     .logo-area {
-        max-width: 80px;
+       max-height: 80px;
+        width:auto;
     }
 
     .search-icon {
