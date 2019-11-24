@@ -227,6 +227,7 @@ single page/post
 .post-navigation {
     display: block;
 }
+
 .post-navigation .nav-links .nav-previous {
     border-left: 1px solid #ddd;
   border-right:none;
