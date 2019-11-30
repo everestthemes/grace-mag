@@ -43,7 +43,7 @@ Grace Mag is distributed under the terms of the GNU GPL
 
 * Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar, Copyright (c) 2014 Liviu Cristian Mirea Ghiban, [MIT](http://opensource.org/licenses/MIT)
 
-* Images Included, full-one.png, full_two.png, half_one.png, half-two.png, half_three.png, post_one.png, post_two.png, sidebar_left.png, sidebar_right.png, and sidebar_none.png, self created GPLv2
+* Images Included, full-one.png, full_two.png, half_one.png, half-two.png, half_three.png, post_one.png, post_two.png, sidebar_left.png, sidebar_right.png, and sidebar_none.png, grace-mag-setup-homepage-static.png, grace-mag-setup-homepage-template.png self created GPLv2
 
 
 == Screenshot ==
