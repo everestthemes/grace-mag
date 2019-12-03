@@ -1,4 +1,4 @@
-=== v1.0.6 : November 30, 2019 ===
+=== v1.0.6 : December 03, 2019 ===
 
 - Design updated
 
