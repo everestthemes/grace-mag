@@ -13,7 +13,9 @@
 .clearfix:after {
     clear: both;
 }
-
+.themes-php .everest-toolkit-notice{
+    display: none;
+}
 .et-welcome-admin-notice-wrapper h2 {
     margin: 0;
     font-size: 21px;
@@ -45,6 +47,10 @@
     line-height: 1.4;
 }
 
+.themes-php .et-welcome-admin-notice-column-container h3 {
+    margin-top:15px;
+    margin-bottom: 5px;
+}
 .et-welcome-admin-notice-column-container p {
     color: #72777c;
 }
@@ -58,9 +64,12 @@
 }
 
 .et-welcome-admin-notice-column-container img {
-    margin-top: 30px;
-    width: calc(100% - 40px);
+    width: auto;
     border: 1px solid #f3f4f5;
+    height: 200px;
+    margin:auto;
+    margin-top: 30px;
+
 }
 
 .et-welcome-admin-notice-column-container {
@@ -75,6 +84,9 @@
 .et-welcome-admin-notice-column-container a.button.button-hero.button-primary {
     margin: 0px;
 }
+.et-welcome-admin-notice-column-container a.button.button-hero.button-secondary{
+    margin-top: 15px;
+}
 
 .et-welcome-admin-notice-column-container .et-welcome-admin-notice-column:not(.et-welcom-admin-notice-image) {
     display: -ms-grid;
@@ -83,6 +95,22 @@
     grid-template-rows: auto 100px;
 }
 
+
+.et-welcome-admin-notice-column-container .et-welcome-admin-notice-column:not(.et-welcom-admin-notice-image){
+    display:block;
+    height: 200px;
+}
+.et-welcome-admin-notice-column-container .et-welcome-admin-notice-column{
+margin-bottom:15px;
+padding-right:15px;
+}
+.et-welcome-admin-notice-column-container .et-welcome-admin-notice-column {
+    margin-bottom: 15px;
+    padding-right: 15px;
+}
+.et-welcome-admin-notice-column.et-welcome-admin-notice-starter-sites{
+    margin:15px;
+    }
 @media screen and (max-width: 1280px) {
     .et-welcome-admin-notice-wrapper .et-welcome-admin-notice-column-container {
         -ms-grid-columns: 50% 50%;
@@ -108,7 +136,14 @@
 }
 
 @media screen and (max-width: 870px) {
+    .et-welcome-admin-notice-column-container img{
+        margin-bottom: 30px;
+        margin-top:0;
 
+    }
+.et-welcome-admin-notice-column-container .et-welcome-admin-notice-column:not(.et-welcom-admin-notice-image){
+    padding-top:30px;
+}
     .et-welcome-admin-notice-wrapper .et-welcome-admin-notice-column-container {
         -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -116,6 +151,9 @@
 
     .et-welcome-admin-notice-column-container a.button.button-hero.button-primary {
         padding: 12px 36px;
+    }
+    .themes-php .et-welcome-admin-notice-column-container a.button.button-hero.button-primary{
+        padding:0 15px;
     }
 }
 
@@ -635,44 +673,44 @@ span.et-welcome-dashicons.dashicons.dashicons-info.special_icon.old-style {
 .et-welcome-admin-notice-column.et-welcome-admin-notice-starter-sites {
     background-color: #e94c4c;
     padding: 15px;
-    margin:30px;
+    margin:15px;
 
 }
 
 .et-welcome-admin-notice-column.et-welcome-admin-notice-starter-sites h3 {
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 0.8;
     border-bottom: 2px solid #fff;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .et-welcome-admin-notice-column.et-welcome-admin-notice-starter-sites p {
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.2;
 }
 .et-welcome-admin-notice-column.et-welcome-admin-notice-recommendation {
 
     background-color: #333;
     padding: 15px;
-    margin: 30px;
+    margin: 15px;
 }
 .et-welcome-admin-notice-column.et-welcome-admin-notice-recommendation  p{ 
   color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.2;
 }
 .et-welcome-admin-notice-column.et-welcome-admin-notice-recommendation  h3{ 
   color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 0.8;
     border-bottom: 2px solid #fff;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .et-demo-how-to-do  .box-content ul.et-list  li span.et-welcome-dashicons{
@@ -703,4 +741,10 @@ span.et-welcome-dashicons.dashicons.dashicons-info.special_icon.old-style {
     background: #e4e5ec;
     padding-top: 25px;
     margin-top: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    .et-welcome-admin-notice-column-container .et-welcome-admin-notice-column:not(.et-welcom-admin-notice-image){
+        height:auto;
+    }
 }
