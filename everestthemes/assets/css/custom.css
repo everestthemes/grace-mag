@@ -382,6 +382,35 @@ span.edit-link a:before {
     /* Above WP toolbar */
 }
 
+
+
+
+/*
+=====================================
+=
+= boxed style
+=
+=========================== 
+*/
+
+body.boxed {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: repeat;
+    margin: 30px 0;
+}
+body.boxed .site {
+    max-width: 1170px;
+    width: 100%;
+}
+
+body.boxed .site {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    margin: 0 auto;
+}
 /*
 =====================================
 =
