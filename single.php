@@ -9,13 +9,23 @@
 
 get_header();
 
-$background_image_url = grace_mag_mod( 'common_page_background_image', '' );
-
 $sidebar_position = grace_mag_sidebar_position();
+
+$display_breadcrumb_image = grace_mag_breadcrumb_image_option();
+
+$background_image_url = '';
+
+if( $display_breadcrumb_image == true ) {
+
+    $background_image_url = grace_mag_mod( 'common_page_background_image', '' );
+
+    if( !empty( $background_image_url ) ) {
+        ?>
+        <div class="inner-banner<?php grace_mag_has_image_class( $background_image_url ); ?>"<?php grace_mag_has_image_url( $background_image_url ); ?>></div>
+        <?php
+    }
+}
 ?>
-
-<div class="inner-banner<?php grace_mag_has_image_class( $background_image_url ); ?>"<?php grace_mag_has_image_url( $background_image_url ); ?>></div>
-
 <div id="content" class="site-content sigle-post">
     <?php grace_mag_breadcrumb(); ?>
     <div class="container">

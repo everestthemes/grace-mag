@@ -498,6 +498,21 @@ grace_mag_add_field(
     true //default
 );
 
+grace_mag_add_field(
+    'post_single_display_background_image', //id
+    esc_html__( "Display Breadcrumb Image", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'post_single_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
 grace_mag_add_field( 
     'post_single_display_author_section', //id
     esc_html__( "Display Section", 'grace-mag'), //label
@@ -603,6 +618,21 @@ grace_mag_add_section(
 grace_mag_add_field( 
     'page_single_display_featured_image', //id
     esc_html__( "Display Featured Image", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'page_single_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field(
+    'page_single_display_background_image', //id
+    esc_html__( "Display Breadcrumb Image", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'page_single_section', //section
@@ -774,6 +804,21 @@ grace_mag_add_field(
     true //default
 );
 
+grace_mag_add_field(
+    'archive_page_display_background_image', //id
+    esc_html__( "Display Breadcrumb Image", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'archive_page_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
 grace_mag_add_field( 
     'archive_page_sidebar_position', //id
     "", //label
@@ -849,6 +894,21 @@ grace_mag_add_field(
 grace_mag_add_field( 
     'search_page_display_comment_number', //id
     esc_html__( "Display Comment No", 'grace-mag'), //label
+    '', //desc
+    'ios', //type ( text, number, url, select, ios )
+    'search_page_section', //section
+    '', //choices
+    '', //active_callback
+    '', //min
+    '', //max
+    '', //step
+    'toggle', //control ( image, toggle, slider, multiple, color, upload )
+    true //default
+);
+
+grace_mag_add_field(
+    'search_page_display_background_image', //id
+    esc_html__( "Display Breadcrumb Image", 'grace-mag'), //label
     '', //desc
     'ios', //type ( text, number, url, select, ios )
     'search_page_section', //section
