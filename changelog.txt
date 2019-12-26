@@ -1,6 +1,8 @@
-=== v1.0.7 : December 23, 2019 ===
+=== v1.0.7 : December 26, 2019 ===
 
 - Fixed background color/image issuse
+- Added customizer options
+- Fixed design issue
 
 === v1.0.6 : December 03, 2019 ===
 

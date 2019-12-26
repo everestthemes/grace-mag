@@ -12,34 +12,42 @@ $sidebar_position = grace_mag_sidebar_position();
     <?php
     
     if( is_archive() || is_search() ) {
-    $background_image_url = grace_mag_mod( 'common_page_background_image', '' );
-    ?>
-    <div class="inner-banner<?php grace_mag_has_image_class( $background_image_url ); ?>"<?php grace_mag_has_image_url( $background_image_url ); ?>>
-        <div class="container">
-            <div class="gm-inner-caption">
-                <?php
-                if( is_archive() ) {
-                    
-                    the_archive_title( '<h1 class="primary-tt">', '</h1>' );
-                }
+        $background_image_url = '';
         
-                if( is_search() ) {
-                    
-                    ?>
-                    <h1 class="primary-tt">
-                        <?php
-                        /* translators: %s: search query. */
-                        printf( esc_html__( 'Search Results for: %s', 'grace-mag' ), get_search_query() );
-                        ?>
-                    </h1>
+        $display_breadcrumb_image = grace_mag_breadcrumb_image_option();
+
+        if( $display_breadcrumb_image == true ) {
+
+            $background_image_url = grace_mag_mod( 'common_page_background_image', '' );
+
+        }
+        ?>
+        <div class="inner-banner<?php grace_mag_has_image_class( $background_image_url ); ?>"<?php grace_mag_has_image_url( $background_image_url ); ?>>
+            <div class="container">
+                <div class="gm-inner-caption">
                     <?php
-                }
-                ?>
+                    if( is_archive() ) {
+
+                        the_archive_title( '<h1 class="primary-tt">', '</h1>' );
+                    }
+
+                    if( is_search() ) {
+
+                        ?>
+                        <h1 class="primary-tt">
+                            <?php
+                            /* translators: %s: search query. */
+                            printf( esc_html__( 'Search Results for: %s', 'grace-mag' ), get_search_query() );
+                            ?>
+                        </h1>
+                        <?php
+                    }
+                    ?>
+                </div>
             </div>
         </div>
-    </div>
-    <!--inner-banner-->
-    <?php
+        <!--inner-banner-->
+        <?php
     
     grace_mag_breadcrumb();
         

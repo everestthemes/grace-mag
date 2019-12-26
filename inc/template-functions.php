@@ -529,3 +529,38 @@ if( ! function_exists( 'grace_mag_post_tags_option' ) ) :
  	}
 endif;
 
+/**
+ * Function to return customizer option for breadcrumb image
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'grace_mag_breadcrumb_image_option' ) ) :
+
+ 	function grace_mag_breadcrumb_image_option() {
+
+        $display_image = false;
+
+        if( is_single() ) {
+
+            $display_image = grace_mag_mod( 'post_single_display_background_image', true );
+        }
+
+        if( is_page() ) {
+
+            $display_image = grace_mag_mod( 'page_single_display_background_image', true );
+        }
+
+        if( is_archive() ) {
+
+            $display_image = grace_mag_mod( 'archive_page_display_background_image', true );
+        }
+
+        if( is_search() ) {
+
+            $display_image = grace_mag_mod( 'search_page_display_background_image', true );
+        }
+
+        return $display_image;
+ 	}
+endif;
+

@@ -423,6 +423,11 @@ body.boxed .site {
     box-shadow: 0px 2px 2px #f1f1f1;
 }
 
+.top-ad-area {
+
+    text-align: right;
+}
+
 .header-inner.withbg .top-bar {
     box-shadow: none;
 }
