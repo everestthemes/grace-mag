@@ -520,7 +520,15 @@ a:focus,
 }
 
 @media (max-width:768px) {
-
+    body.boxed{
+        padding:15px;
+    }
+    .site-description{
+        margin-bottom: 0
+    }
+    .logo-area span.site-title a{
+        font-size: 26px;
+    }
     /*half-widget*/
     .side-category .title-sec,
     .gm-popular-post .title-sec,
