@@ -2914,6 +2914,7 @@ banner-layout3
     height: 45px;
     transition: 1s ease all;
     display: none;
+    z-index: 99;
 }
 
 .gm-also-tt {
@@ -2990,5 +2991,5 @@ banner-layout3
     bottom:0;
     position: fixed;
     left:0;
-
+    z-index: 99;
 }
