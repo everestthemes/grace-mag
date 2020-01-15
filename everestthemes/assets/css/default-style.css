@@ -767,6 +767,13 @@ background-color: transparent;
 	border-radius: 4px;
 	background-color: #fff;
 }
+.sigle-post-content-area p a{
+text-decoration:underline;
+color:#0d6ec1;
+}
+.sigle-post-content-area p a:hover{
+	color:#e01212;
+}
 .wp-block-spacer {
 	display: none;
 }
