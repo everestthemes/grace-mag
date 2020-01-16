@@ -393,12 +393,7 @@ if( ! function_exists( 'grace_mag_breadcrumb' ) ) :
  			?>
  			<div class="container">
                 <div class="breadcrumbs-sec breadcrumbs-layout1">
-                    <?php
-                    $breadcrumb_args = array(
-                        'show_browse' => false,
-                    );
-                    grace_mag_breadcrumb_trail( $breadcrumb_args );
-                    ?>
+                    <?php everestthemes_breadcrumb_trail(); ?>
                 </div>
                 <!--breadcdrum-->
             </div>
