@@ -1,4 +1,9 @@
-=== v1.0.8 : January 5, 2020 ===
+=== v1.0.9 : January 17, 2020 ===
+
+- Fixed Breadcrumb issue
+- Fixed Design issue
+
+=== v1.0.8 : January 05, 2020 ===
 
 - Fixed Google Structured Data
 

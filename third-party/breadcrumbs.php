@@ -15,11 +15,11 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  * @package   BreadcrumbTrail
- * @version   1.1.0
+ * @version   1.0.0
  * @author    Justin Tadlock <justin@justintadlock.com>
- * @copyright Copyright (c) 2008 - 2017, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2015, Justin Tadlock
  * @link      https://themehybrid.com/plugins/breadcrumb-trail
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 /**
@@ -31,12 +31,33 @@
  * @param  array $args Arguments to pass to Breadcrumb_Trail.
  * @return void
  */
-function grace_mag_breadcrumb_trail( $args = array() ) {
+function everestthemes_breadcrumb_trail( $args = array() ) {
+
+	// Return if breadcrumbs are disabled
+	if ( is_front_page() ) {
+		return;
+	}
+
+	// Yoast breadcrumbs
+	if ( function_exists( 'yoast_breadcrumb' )
+		&& true === WPSEO_Options::get( 'breadcrumbs-enable', false ) ) {
+		return yoast_breadcrumb();
+	}
+
+	// SEOPress breadcrumbs
+	if ( function_exists( 'seopress_display_breadcrumbs' ) ) {
+		return seopress_display_breadcrumbs();
+    }
+
+	// Rank Math breadcrumbs
+	if ( function_exists( 'rank_math_the_breadcrumbs' ) && RankMath\Helper::get_settings( 'general.breadcrumbs' ) ) {
+		return rank_math_the_breadcrumbs();
+  }
 
 	$breadcrumb = apply_filters( 'breadcrumb_trail_object', null, $args );
 
-	if ( ! is_object( $breadcrumb ) )
-		$breadcrumb = new Grace_Mag_Breadcrumb_Trail( $args );
+	if ( !is_object( $breadcrumb ) )
+		$breadcrumb = new Everestthemes_Breadcrumb_Trail( $args );
 
 	return $breadcrumb->trail();
 }
@@ -47,7 +68,7 @@ function grace_mag_breadcrumb_trail( $args = array() ) {
  * @since  0.6.0
  * @access public
  */
-class Grace_Mag_Breadcrumb_Trail {
+class Everestthemes_Breadcrumb_Trail {
 
 	/**
 	 * Array of items belonging to the current breadcrumb trail.
@@ -100,7 +121,7 @@ class Grace_Mag_Breadcrumb_Trail {
 	}
 
 	/**
-	 * Sets up the breadcrumb trail properties.  Calls the `Breadcrumb_Trail::add_items()` method
+	 * Sets up the breadcrumb trail properties.  Calls the `OceanWP_Breadcrumb_Trail::add_items()` method
 	 * to creat the array of breadcrumb items.
 	 *
 	 * @since  0.6.0
@@ -109,15 +130,11 @@ class Grace_Mag_Breadcrumb_Trail {
 	 *     @type string    $container      Container HTML element. nav|div
 	 *     @type string    $before         String to output before breadcrumb menu.
 	 *     @type string    $after          String to output after breadcrumb menu.
-	 *     @type string    $browse_tag     The HTML tag to use to wrap the "Browse" header text.
-	 *     @type string    $list_tag       The HTML tag to use for the list wrapper.
-	 *     @type string    $item_tag       The HTML tag to use for the item wrapper.
 	 *     @type bool      $show_on_front  Whether to show when `is_front_page()`.
 	 *     @type bool      $network        Whether to link to the network main site (multisite only).
 	 *     @type bool      $show_title     Whether to show the title (last item) in the trail.
-	 *     @type bool      $show_browse    Whether to show the breadcrumb menu header.
-	 *     @type array     $labels         Text labels. @see Breadcrumb_Trail::set_labels()
-	 *     @type array     $post_taxonomy  Taxonomies to use for post types. @see Breadcrumb_Trail::set_post_taxonomy()
+	 *     @type array     $labels         Text labels. @see OceanWP_Breadcrumb_Trail::set_labels()
+	 *     @type array     $post_taxonomy  Taxonomies to use for post types. @see OceanWP_Breadcrumb_Trail::set_post_taxonomy()
 	 *     @type bool      $echo           Whether to print or return the breadcrumbs.
 	 * }
 	 * @return void
@@ -128,13 +145,9 @@ class Grace_Mag_Breadcrumb_Trail {
 			'container'       => 'nav',
 			'before'          => '',
 			'after'           => '',
-			'browse_tag'      => 'h2',
-			'list_tag'        => 'ul',
-			'item_tag'        => 'li',
 			'show_on_front'   => true,
 			'network'         => false,
 			'show_title'      => true,
-			'show_browse'     => true,
 			'labels'          => array(),
 			'post_taxonomy'   => array(),
 			'echo'            => true
@@ -160,31 +173,20 @@ class Grace_Mag_Breadcrumb_Trail {
 	 * @access public
 	 * @return string
 	 */
-	public function trail() {
+	public function get_trail() {
 
 		// Set up variables that we'll need.
-		$breadcrumb    = '';
-		$item_count    = count( $this->items );
-		$item_position = 0;
+		$breadcrumb    	= '';
+		$separator      = '';
+		$separator      = '<span class="breadcrumb-sep">' . $separator . '</span>';
+		$item_count    	= count( $this->items );
+		$item_position 	= 0;
 
 		// Connect the breadcrumb trail if there are items in the trail.
 		if ( 0 < $item_count ) {
 
-			// Add 'browse' label if it should be shown.
-			if ( true === $this->args['show_browse'] ) {
-
-				$breadcrumb .= sprintf(
-					'<%1$s class="trail-browse">%2$s</%1$s>',
-					tag_escape( $this->args['browse_tag'] ),
-					$this->labels['browse']
-				);
-			}
-
 			// Open the unordered list.
-			$breadcrumb .= sprintf(
-				'<%s class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList">',
-				tag_escape( $this->args['list_tag'] )
-			);
+			$breadcrumb .= '<ul class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
 			// Add the number of items and item list order schema.
 			$breadcrumb .= sprintf( '<meta name="numberOfItems" content="%d" />', absint( $item_count ) );
@@ -200,38 +202,48 @@ class Grace_Mag_Breadcrumb_Trail {
 				preg_match( '/(<a.*?>)(.*?)(<\/a>)/i', $item, $matches );
 
 				// Wrap the item text with appropriate itemprop.
-				$item = ! empty( $matches ) ? sprintf( '%s<span itemprop="name">%s</span>%s', $matches[1], $matches[2], $matches[3] ) : sprintf( '<span itemprop="name">%s</span>', $item );
+				$item = !empty( $matches ) ? sprintf( '%s<span itemprop="name">%s</span>%s', $matches[1], $matches[2], $matches[3] ) : sprintf( '<span itemprop="name">%s</span>', $item );
 
 				// Wrap the item with its itemprop.
 				$item = ! empty( $matches )
-					? preg_replace( '/(<a.*?)([\'"])>/i', '$1$2 itemprop=$2item$2>', $item )
-					: sprintf( '<a href="#" itemprop="item">%s</a>', $item );
+					? preg_replace( '/(<a.*?)([\'"])>/i', '$1$2 itemtype="https://schema.org/Thing" itemprop=$2item$2>', $item )
+					: sprintf( '<a span itemprop="item" href="#">%s</span></a>', $item );
 
 				// Add list item classes.
 				$item_class = 'trail-item';
 
-				if ( 1 === $item_position && 1 < $item_count )
+				if ( 1 === $item_position && 1 < $item_count ) {
 					$item_class .= ' trail-begin';
-
-				elseif ( $item_count === $item_position )
+				} else if ( $item_count === $item_position ) {
 					$item_class .= ' trail-end';
+				}
 
 				// Create list item attributes.
-				$attributes = 'itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="' . $item_class . '"';
+				$attributes = 'class="' . $item_class . '" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"';
+
+				// Separator
+				if ( $item_count === $item_position ) {
+					$sep = '';
+				} else {
+					$sep = $separator;
+				}
 
 				// Build the meta position HTML.
-				$meta = sprintf( '<meta itemprop="position" content="%s" />', absint( $item_position ) );
+				$meta = sprintf( '<meta content="%s" itemprop="position" />', absint( $item_position ) );
 
 				// Build the list item.
-				$breadcrumb .= sprintf( '<%1$s %2$s>%3$s%4$s</%1$s>', tag_escape( $this->args['item_tag'] ),$attributes, $item, $meta );
+				$breadcrumb .= sprintf( '<li %s>%s%s%s</li>', $attributes, $item, $sep, $meta );
 			}
 
 			// Close the unordered list.
-			$breadcrumb .= sprintf( '</%s>', tag_escape( $this->args['list_tag'] ) );
+			$breadcrumb .= '</ul>';
+
+			// Postion class
+			$p_class = 'breadcrumbs';
 
 			// Wrap the breadcrumb trail.
 			$breadcrumb = sprintf(
-				'<%1$s role="navigation" aria-label="%2$s" class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">%3$s%4$s%5$s</%1$s>',
+				'<%1$s aria-label="%2$s" class="site-breadcrumbs clr'. $p_class .'" itemprop="breadcrumb">%3$s%4$s%5$s</%1$s>',
 				tag_escape( $this->args['container'] ),
 				esc_attr( $this->labels['aria_label'] ),
 				$this->args['before'],
@@ -243,10 +255,19 @@ class Grace_Mag_Breadcrumb_Trail {
 		// Allow developers to filter the breadcrumb trail HTML.
 		$breadcrumb = apply_filters( 'breadcrumb_trail', $breadcrumb, $this->args );
 
-		if ( false === $this->args['echo'] )
-			return $breadcrumb;
+		return $breadcrumb;
+	}
 
-		echo $breadcrumb;
+	/**
+	 * Echo the breadcrumb trail.
+	 *
+	 * @since  0.6.0
+	 * @access public
+	 * @return string
+	 */
+	public function trail() {
+
+		echo $this->get_trail();
 	}
 
 	/* ====== Protected Methods ====== */
@@ -261,28 +282,25 @@ class Grace_Mag_Breadcrumb_Trail {
 	protected function set_labels() {
 
 		$defaults = array(
-			'browse'              => esc_html__( 'Browse:',                               'grace-mag' ),
-			'aria_label'          => esc_attr_x( 'Breadcrumbs', 'breadcrumbs aria label', 'grace-mag' ),
-			'home'                => esc_html__( 'Home',                                  'grace-mag' ),
-			'error_404'           => esc_html__( '404 Not Found',                         'grace-mag' ),
-			'archives'            => esc_html__( 'Archives',                              'grace-mag' ),
-			// Translators: %s is the search query.
-			'search'              => esc_html__( 'Search results for: %s',                'grace-mag' ),
+			'aria_label'          	=> esc_attr_x( 'Breadcrumbs', 'breadcrumbs aria label', 'grace-mag' ),
+			'home'           		=> esc_html__( 'Home', 'grace-mag' ),
+			'error_404'           	=> esc_html__( '404 Not Found', 'grace-mag' ),
+			'archives'            	=> esc_html__( 'Archives', 'grace-mag' ),
+			// Translators: %s is the search query. The HTML entities are opening and closing curly quotes.
+			'search'           		=> esc_html__( 'Search results for: ', 'grace-mag' ),
 			// Translators: %s is the page number.
-			'paged'               => esc_html__( 'Page %s',                               'grace-mag' ),
-			// Translators: %s is the page number.
-			'paged_comments'      => esc_html__( 'Comment Page %s',                       'grace-mag' ),
+			'paged'               	=> esc_html__( 'Page %s',                               'grace-mag' ),
 			// Translators: Minute archive title. %s is the minute time format.
-			'archive_minute'      => esc_html__( 'Minute %s',                             'grace-mag' ),
+			'archive_minute'      	=> esc_html__( 'Minute %s',                             'grace-mag' ),
 			// Translators: Weekly archive title. %s is the week date format.
-			'archive_week'        => esc_html__( 'Week %s',                               'grace-mag' ),
+			'archive_week'        	=> esc_html__( 'Week %s',                               'grace-mag' ),
 
 			// "%s" is replaced with the translated date/time format.
-			'archive_minute_hour' => '%s',
-			'archive_hour'        => '%s',
-			'archive_day'         => '%s',
-			'archive_month'       => '%s',
-			'archive_year'        => '%s',
+			'archive_minute_hour' 	=> '%s',
+			'archive_hour'        	=> '%s',
+			'archive_day'         	=> '%s',
+			'archive_month'       	=> '%s',
+			'archive_year'        	=> '%s',
 		);
 
 		$this->labels = apply_filters( 'breadcrumb_trail_labels', wp_parse_args( $this->args['labels'], $defaults ) );
@@ -301,8 +319,9 @@ class Grace_Mag_Breadcrumb_Trail {
 		$defaults = array();
 
 		// If post permalink is set to `%postname%`, use the `category` taxonomy.
-		if ( '%postname%' === trim( get_option( 'permalink_structure' ), '/' ) )
-			$defaults['post'] = 'category';
+		if ( '%postname%' === trim( get_option( 'permalink_structure' ), '/' ) ) {
+			$defaults['post'] = 'tag';
+		}
 
 		$this->post_taxonomy = apply_filters( 'breadcrumb_trail_post_taxonomy', wp_parse_args( $this->args['post_taxonomy'], $defaults ) );
 	}
@@ -329,9 +348,9 @@ class Grace_Mag_Breadcrumb_Trail {
 			$this->add_network_home_link();
 			$this->add_site_home_link();
 
-			// If viewing the home/blog page.
+			// If viewing the blog page.
 			if ( is_home() ) {
-				$this->add_blog_items();
+				$this->add_home_items();
 			}
 
 			// If viewing a single post.
@@ -421,10 +440,6 @@ class Grace_Mag_Breadcrumb_Trail {
 		if ( is_singular() && 1 < get_query_var( 'page' ) && true === $this->args['show_title'] )
 			$this->items[] = sprintf( $this->labels['paged'], number_format_i18n( absint( get_query_var( 'page' ) ) ) );
 
-		// If viewing a singular post with paged comments.
-		elseif ( is_singular() && get_option( 'page_comments' ) && 1 < get_query_var( 'cpage' ) )
-			$this->items[] = sprintf( $this->labels['paged_comments'], number_format_i18n( absint( get_query_var( 'cpage' ) ) ) );
-
 		// If viewing a paged archive-type page.
 		elseif ( is_paged() && true === $this->args['show_title'] )
 			$this->items[] = sprintf( $this->labels['paged'], number_format_i18n( absint( get_query_var( 'paged' ) ) ) );
@@ -440,7 +455,7 @@ class Grace_Mag_Breadcrumb_Trail {
 	protected function add_network_home_link() {
 
 		if ( is_multisite() && ! is_main_site() && true === $this->args['network'] )
-			$this->items[] = sprintf( '<a href="%s" rel="home">%s</a>', esc_url( network_home_url() ), $this->labels['home'] );
+			$this->items[] = sprintf( '<a href="%s" rel="home" aria-label="' .$this->labels['home']. '">%s</a>', esc_url( network_home_url() ), $this->labels['home'] );
 	}
 
 	/**
@@ -452,11 +467,12 @@ class Grace_Mag_Breadcrumb_Trail {
 	 */
 	protected function add_site_home_link() {
 
+		// Vars
 		$network = is_multisite() && ! is_main_site() && true === $this->args['network'];
 		$label   = $network ? get_bloginfo( 'name' ) : $this->labels['home'];
 		$rel     = $network ? '' : ' rel="home"';
 
-		$this->items[] = sprintf( '<a href="%s"%s>%s</a>', esc_url( user_trailingslashit( home_url() ) ), $rel, $label );
+		$this->items[] = sprintf( '<a href="%s"%s aria-label="' .$this->labels['home']. '">%s</a>', esc_url( home_url() ), $rel, $label );
 	}
 
 	/**
@@ -485,31 +501,16 @@ class Grace_Mag_Breadcrumb_Trail {
 	}
 
 	/**
-	 * Adds items for the posts page (i.e., is_home()) to the items array.
+	 * Adds blog page items to the items array.
 	 *
 	 * @since  1.0.0
 	 * @access protected
 	 * @return void
 	 */
-	protected function add_blog_items() {
+	protected function add_home_items() {
 
-		// Get the post ID and post.
-		$post_id = get_queried_object_id();
-		$post    = get_post( $post_id );
-
-		// If the post has parents, add them to the trail.
-		if ( 0 < $post->post_parent )
-			$this->add_post_parents( $post->post_parent );
-
-		// Get the page title.
-		$title = get_the_title( $post_id );
-
-		// Add the posts page item.
-		if ( is_paged() )
-			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_permalink( $post_id ) ), $title );
-
-		elseif ( $title && true === $this->args['show_title'] )
-			$this->items[] = $title;
+		if ( true === $this->args['show_title'] )
+			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_the_permalink( get_option( 'page_for_posts' ) ) ), get_the_title( get_option( 'page_for_posts', true ) ) );
 	}
 
 	/**
@@ -522,29 +523,36 @@ class Grace_Mag_Breadcrumb_Trail {
 	protected function add_singular_items() {
 
 		// Get the queried post.
-		$post    = get_queried_object();
-		$post_id = get_queried_object_id();
+		$post    	= get_queried_object();
+		$post_id 	= get_queried_object_id();
 
-		// If the post has a parent, follow the parent trail.
-		if ( 0 < $post->post_parent )
-			$this->add_post_parents( $post->post_parent );
+        // If the post has a parent, follow the parent trail.
+        if ( 0 < $post->post_parent ) {
+            $this->add_post_parents( $post->post_parent );
+        }
 
-		// If the post doesn't have a parent, get its hierarchy based off the post type.
-		else
-			$this->add_post_hierarchy( $post_id );
+        // If the post doesn't have a parent, get its hierarchy based off the post type.
+        else {
+            $this->add_post_hierarchy( $post_id );
+        }
 
-		// Display terms for specific post type taxonomy if requested.
-		if ( ! empty( $this->post_taxonomy[ $post->post_type ] ) )
-			$this->add_post_terms( $post_id, $this->post_taxonomy[ $post->post_type ] );
+        if ( ! empty( $this->post_taxonomy[ $post->post_type ] ) ) {
+            $this->add_post_terms( $post_id, $this->post_taxonomy[ $post->post_type ] );
+        }
 
 		// End with the post title.
 		if ( $post_title = single_post_title( '', false ) ) {
 
-			if ( ( 1 < get_query_var( 'page' ) || is_paged() ) || ( get_option( 'page_comments' ) && 1 < absint( get_query_var( 'cpage' ) ) ) )
+			if ( 1 < get_query_var( 'page' ) || is_paged() || true === $this->args['show_title'] ) {
 				$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_permalink( $post_id ) ), $post_title );
+			}
 
-			elseif ( true === $this->args['show_title'] )
-				$this->items[] = $post_title;
+			if ( function_exists('is_wc_endpoint_url') && is_wc_endpoint_url() ){
+				$endpoint       = WC()->query->get_current_endpoint();
+				$endpoint_title = WC()->query->get_endpoint_title( $endpoint );
+
+				$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( wc_get_endpoint_url( $endpoint ) ), $endpoint_title );
+			}
 		}
 	}
 
@@ -599,12 +607,12 @@ class Grace_Mag_Breadcrumb_Trail {
 						// Get public post types that match the rewrite slug.
 						$post_types = $this->get_post_types_by_slug( $match );
 
-						if ( ! empty( $post_types ) ) {
+						if ( !empty( $post_types ) ) {
 
 							$post_type_object = $post_types[0];
 
 							// Add support for a non-standard label of 'archive_title' (special use case).
-							$label = ! empty( $post_type_object->labels->archive_title ) ? $post_type_object->labels->archive_title : $post_type_object->labels->name;
+							$label = !empty( $post_type_object->labels->archive_title ) ? $post_type_object->labels->archive_title : $post_type_object->labels->name;
 
 							// Core filter hook.
 							$label = apply_filters( 'post_type_archive_title', $label, $post_type_object->name );
@@ -636,12 +644,13 @@ class Grace_Mag_Breadcrumb_Trail {
 			} else {
 				$post_type_object = get_post_type_object( $taxonomy->object_type[0] );
 
-				$label = ! empty( $post_type_object->labels->archive_title ) ? $post_type_object->labels->archive_title : $post_type_object->labels->name;
+				$label 	= !empty( $post_type_object->labels->archive_title ) ? $post_type_object->labels->archive_title : $post_type_object->labels->name;
 
 				// Core filter hook.
-				$label = apply_filters( 'post_type_archive_title', $label, $post_type_object->name );
+				$label 	= apply_filters( 'post_type_archive_title', $label, $post_type_object->name );
+				$url 	= apply_filters( 'post_type_archive_url', get_post_type_archive_link( $post_type_object->name ) );
 
-				$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_post_type_archive_link( $post_type_object->name ) ), $label );
+				$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( $url ), $label );
 			}
 		}
 
@@ -650,11 +659,8 @@ class Grace_Mag_Breadcrumb_Trail {
 			$this->add_term_parents( $term->parent, $term->taxonomy );
 
 		// Add the term name to the trail end.
-		if ( is_paged() )
+		if ( is_paged() || true === $this->args['show_title'] )
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_term_link( $term, $term->taxonomy ) ), single_term_title( '', false ) );
-
-		elseif ( true === $this->args['show_title'] )
-			$this->items[] = single_term_title( '', false );
 	}
 
 	/**
@@ -676,20 +682,13 @@ class Grace_Mag_Breadcrumb_Trail {
 				$this->add_rewrite_front_items();
 
 			// If there's a rewrite slug, check for parents.
-			if ( ! empty( $post_type_object->rewrite['slug'] ) )
+			if ( !empty( $post_type_object->rewrite['slug'] ) )
 				$this->add_path_parents( $post_type_object->rewrite['slug'] );
 		}
 
 		// Add the post type [plural] name to the trail end.
-		if ( is_paged() || is_author() )
+		if ( is_paged() || true === $this->args['show_title'] )
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_post_type_archive_link( $post_type_object->name ) ), post_type_archive_title( '', false ) );
-
-		elseif ( true === $this->args['show_title'] )
-			$this->items[] = post_type_archive_title( '', false );
-
-		// If viewing a post type archive by author.
-		if ( is_author() )
-			$this->add_user_archive_items();
 	}
 
 	/**
@@ -710,15 +709,12 @@ class Grace_Mag_Breadcrumb_Trail {
 		$user_id = get_query_var( 'author' );
 
 		// If $author_base exists, check for parent pages.
-		if ( ! empty( $wp_rewrite->author_base ) && ! is_post_type_archive() )
+		if ( !empty( $wp_rewrite->author_base ) )
 			$this->add_path_parents( $wp_rewrite->author_base );
 
 		// Add the author's display name to the trail end.
-		if ( is_paged() )
+		if ( is_paged() || true === $this->args['show_title'] )
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_author_posts_url( $user_id ) ), get_the_author_meta( 'display_name', $user_id ) );
-
-		elseif ( true === $this->args['show_title'] )
-			$this->items[] = get_the_author_meta( 'display_name', $user_id );
 	}
 
 	/**
@@ -793,10 +789,9 @@ class Grace_Mag_Breadcrumb_Trail {
 		$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y' ) ) ), $year );
 		$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ) ), $month );
 
-		// Add the day item.
+        // Add the day item.
 		if ( is_paged() )
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_day_link( get_the_time( 'Y' ) ), get_the_time( 'm' ), get_the_time( 'd' ) ), $day );
-
 		elseif ( true === $this->args['show_title'] )
 			$this->items[] = $day;
 	}
@@ -821,11 +816,8 @@ class Grace_Mag_Breadcrumb_Trail {
 		$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y' ) ) ), $year );
 
 		// Add the week item.
-		if ( is_paged() )
+		if ( is_paged() || true === $this->args['show_title'] )
 			$this->items[] = esc_url( get_archives_link( add_query_arg( array( 'm' => get_the_time( 'Y' ), 'w' => get_the_time( 'W' ) ), home_url() ), $week, false ) );
-
-		elseif ( true === $this->args['show_title'] )
-			$this->items[] = $week;
 	}
 
 	/**
@@ -848,11 +840,8 @@ class Grace_Mag_Breadcrumb_Trail {
 		$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y' ) ) ), $year );
 
 		// Add the month item.
-		if ( is_paged() )
+		if ( is_paged() || true === $this->args['show_title'] )
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ) ), $month );
-
-		elseif ( true === $this->args['show_title'] )
-			$this->items[] = $month;
 	}
 
 	/**
@@ -871,11 +860,8 @@ class Grace_Mag_Breadcrumb_Trail {
 		$year  = sprintf( $this->labels['archive_year'],  get_the_time( esc_html_x( 'Y', 'yearly archives date format',  'grace-mag' ) ) );
 
 		// Add the year item.
-		if ( is_paged() )
+		if ( is_paged() || true === $this->args['show_title'] )
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y' ) ) ), $year );
-
-		elseif ( true === $this->args['show_title'] )
-			$this->items[] = $year;
 	}
 
 	/**
@@ -905,11 +891,8 @@ class Grace_Mag_Breadcrumb_Trail {
 	 */
 	protected function add_search_items() {
 
-		if ( is_paged() )
-			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_search_link() ), sprintf( $this->labels['search'], get_search_query() ) );
-
-		elseif ( true === $this->args['show_title'] )
-			$this->items[] = sprintf( $this->labels['search'], get_search_query() );
+		if ( is_paged() || true === $this->args['show_title'] )
+			$this->items[] = sprintf( '<a href="%s">%s%s</a>', esc_url( get_search_link() ), '<span class="breadcrumb-search">'. $this->labels['search'] .'</span>', ' &#8220;'. get_search_query() .'&#8221;' );
 	}
 
 	/**
@@ -922,7 +905,7 @@ class Grace_Mag_Breadcrumb_Trail {
 	protected function add_404_items() {
 
 		if ( true === $this->args['show_title'] )
-			$this->items[] = $this->labels['error_404'];
+			$this->items[] = '<span class="breadcrumb-error">'. $this->labels['error_404'] .'</span>';
 	}
 
 	/**
@@ -960,7 +943,7 @@ class Grace_Mag_Breadcrumb_Trail {
 		$this->add_post_hierarchy( $post_id );
 
 		// Display terms for specific post type taxonomy if requested.
-		if ( ! empty( $this->post_taxonomy[ $post->post_type ] ) )
+		if ( !empty( $this->post_taxonomy[ $post->post_type ] ) )
 			$this->add_post_terms( $post_id, $this->post_taxonomy[ $post->post_type ] );
 
 		// Merge the parent items into the items array.
@@ -968,7 +951,7 @@ class Grace_Mag_Breadcrumb_Trail {
 	}
 
 	/**
-	 * Adds a specific post's hierarchy to the items array.  The hierarchy is determined by post type's
+	 * Adds a specific post's hierarchy to the items array. The hierarchy is determined by post type's
 	 * rewrite arguments and whether it has an archive page.
 	 *
 	 * @since  1.0.0
@@ -1000,7 +983,7 @@ class Grace_Mag_Breadcrumb_Trail {
 				$this->add_rewrite_front_items();
 
 			// If there's a path, check for parents.
-			if ( ! empty( $post_type_object->rewrite['slug'] ) )
+			if ( !empty( $post_type_object->rewrite['slug'] ) )
 				$this->add_path_parents( $post_type_object->rewrite['slug'] );
 		}
 
@@ -1008,17 +991,13 @@ class Grace_Mag_Breadcrumb_Trail {
 		if ( $post_type_object->has_archive ) {
 
 			// Add support for a non-standard label of 'archive_title' (special use case).
-			$label = ! empty( $post_type_object->labels->archive_title ) ? $post_type_object->labels->archive_title : $post_type_object->labels->name;
+			$label = !empty( $post_type_object->labels->archive_title ) ? $post_type_object->labels->archive_title : $post_type_object->labels->name;
 
 			// Core filter hook.
 			$label = apply_filters( 'post_type_archive_title', $label, $post_type_object->name );
 
 			$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_post_type_archive_link( $post_type ) ), $label );
 		}
-
-		// Map the rewrite tags if there's a `%` in the slug.
-		if ( 'post' !== $post_type && ! empty( $post_type_object->rewrite['slug'] ) && false !== strpos( $post_type_object->rewrite['slug'], '%' ) )
-			$this->map_rewrite_tags( $post_id, $post_type_object->rewrite['slug'] );
 	}
 
 	/**
@@ -1105,7 +1084,7 @@ class Grace_Mag_Breadcrumb_Trail {
 		// Get parent post by the path.
 		$post = get_page_by_path( $path );
 
-		if ( ! empty( $post ) ) {
+		if ( !empty( $post ) ) {
 			$this->add_post_parents( $post->ID );
 		}
 
@@ -1132,7 +1111,7 @@ class Grace_Mag_Breadcrumb_Trail {
 						$post = get_page_by_path( trim( $path, '/' ) );
 
 						// If a parent post is found, set the $post_id and break out of the loop.
-						if ( ! empty( $post ) && 0 < $post->ID ) {
+						if ( !empty( $post ) && 0 < $post->ID ) {
 							$this->add_post_parents( $post->ID );
 							break;
 						}
@@ -1170,8 +1149,8 @@ class Grace_Mag_Breadcrumb_Trail {
 		}
 
 		// If we have parent terms, reverse the array to put them in the proper order for the trail.
-		if ( ! empty( $parents ) )
-			$this->items = array_merge( $this->items, array_reverse( $parents ) );
+		if ( !empty( $parents ) )
+			$this->items = array_merge( $this->items, $parents );
 	}
 
 	/**
@@ -1190,6 +1169,10 @@ class Grace_Mag_Breadcrumb_Trail {
 	protected function map_rewrite_tags( $post_id, $path ) {
 
 		$post = get_post( $post_id );
+
+		// If the post doesn't have the `post` post type, bail.
+		if ( 'post' !== $post->post_type )
+			return;
 
 		// Trim '/' from both sides of the $path.
 		$path = trim( $path, '/' );
@@ -1223,13 +1206,13 @@ class Grace_Mag_Breadcrumb_Trail {
 					$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_author_posts_url( $post->post_author ) ), get_the_author_meta( 'display_name', $post->post_author ) );
 
 				// If using the %category% tag, add a link to the first category archive to match permalinks.
-				elseif ( taxonomy_exists( trim( $tag, '%' ) ) ) {
+				elseif ( '%category%' == $tag ) {
 
 					// Force override terms in this post type.
 					$this->post_taxonomy[ $post->post_type ] = false;
 
 					// Add the post categories.
-					$this->add_post_terms( $post_id, trim( $tag, '%' ) );
+					$this->add_post_terms( $post_id, 'category' );
 				}
 			}
 		}
