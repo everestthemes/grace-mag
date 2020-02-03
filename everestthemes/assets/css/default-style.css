@@ -626,7 +626,7 @@ input.wpcf7-form-control.wpcf7-submit:hover{
 
 }
 .form-submit .submit{
-	width: 150px;
+	padding:0 30px;
 }
 .comments-box-entry{
 	margin-top: 60px;
