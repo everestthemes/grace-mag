@@ -4,7 +4,7 @@ Contributors: everestthemes
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 5.3.2
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, entertainment, featured-image-header, featured-images, footer-widgets, full-width-template, grid-layout, news, portfolio, right-sidebar, left-sidebar, theme-options, threaded-comments, translation-ready, two-columns, block-styles, wide-blocks
