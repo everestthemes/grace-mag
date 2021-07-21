@@ -99,6 +99,8 @@ if ( ! function_exists( 'grace_mag_setup' ) ) :
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'responsive-embeds' );
+
+		remove_theme_support( 'widgets-block-editor' );
 	}
 endif;
 add_action( 'after_setup_theme', 'grace_mag_setup' );

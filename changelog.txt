@@ -1,3 +1,7 @@
+=== v1.1.2 : Jul 21, 2021 ===
+
+- Fixed missing "Tested up to" and "Requires PHP" in stylesheet
+
 === v1.1.0 : June 18, 2020 ===
 
 - Fixed missing "Tested up to" and "Requires PHP" in stylesheet
