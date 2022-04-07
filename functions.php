@@ -349,4 +349,6 @@ require get_template_directory() . '/widgets/widgets.php';
  * Post Meta Sidebar Position for this theme.
  */
 require get_template_directory() . '/inc/custom-fields/sidebar-position.php';
+require get_template_directory() . '/inc/notice/ebwp-notice.php';
+
 
