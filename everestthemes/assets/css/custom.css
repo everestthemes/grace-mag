@@ -2586,6 +2586,46 @@ ul.newsticker li {
     color: #fff;
 }
 
+/* ------------UL and LI ------------------ */
+.sigle-post-content-area > ul > li {
+    list-style: disc outside none;
+    padding: 5px;
+  }
+  
+  .sigle-post-content-area > ul > li > ul > li {
+    list-style: disc outside none;
+    padding: 5px;
+    margin-left: 20px;
+  }
+  
+  .sigle-post-content-area > ul > li:last-child {
+    padding-bottom: 10px;
+  }
+  
+  .sigle-post-content-area > ol > li {
+    list-style: number;
+    display: list-item;
+    padding: 5px;
+    border: none;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  
+  .sigle-post-content-area ol li {
+    display: list-item !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  
+  .sigle-post-content-area > ol > li > ol > li {
+    list-style: disc;
+    display: list-item;
+    margin-top: 2px;
+    padding: 5px;
+    border: none;
+    margin-left: 20px;
+  }
+
 /* search page */
 
 .search-listing-layout1 {
