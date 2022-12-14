@@ -1083,6 +1083,7 @@ ul.newsticker li {
     left: 0px;
     padding: 15px;
     line-height: 1;
+    z-index: 12;
 }
 
 .slider-caption .l-title {
@@ -1216,6 +1217,13 @@ ul.newsticker li {
     left: 0;
 }
 
+.slide-related-post a.link-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 /* primary widget */
 /* .primary-content-area .
 {
@@ -1319,6 +1327,13 @@ ul.newsticker li {
     border-radius: 6px;
 }
 
+.primary-main-bdy a.link-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 .primary-main-bdy img {
     border-radius: 6px;
 }
@@ -1329,6 +1344,7 @@ ul.newsticker li {
     bottom: 0;
     transition: 0.5s ease all;
     padding: 15px;
+    z-index: 12;
 }
 
 .primary-main-bdy:hover .caption {
@@ -1616,12 +1632,20 @@ ul.newsticker li {
     border-radius: 6px;
 }
 
+.layout-bdy5 a.link-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 .layout-bdy5 .caption {
     position: absolute;
     left: 0px;
     bottom: 0px;
     padding: 15px;
     transition: 0.5s ease all;
+    z-index: 12;
 }
 
 .layout-bdy5:hover .caption {

@@ -37,7 +37,8 @@ $banner_bg_image = grace_mag_mod( 'banner_bg_image', '' );
                                         <?php grace_mag_comments_no( true ); ?>
                                     </div>
                                 </div>
-                            </div><!-- slides -->
+                            </div>
+                            <!-- slides -->
                             <?php
                             }
                             $count++;
@@ -60,6 +61,7 @@ $banner_bg_image = grace_mag_mod( 'banner_bg_image', '' );
                         $banner_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                         ?>
                         <div class="slide-related-post"<?php grace_mag_has_image_url( $banner_image_url ); ?>>
+                            <a class="link-overlay" href="<?php the_permalink(); ?>"></a>
                             <div class="slider-caption">
                                 <h2 class="l-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                 <div class="meta">

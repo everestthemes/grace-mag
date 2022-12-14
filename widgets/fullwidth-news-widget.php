@@ -83,6 +83,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                             $post_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                                             ?>
                                             <div class="primary-main-bdy<?php grace_mag_has_image_class( $post_image_url ); ?>"<?php grace_mag_has_image_url( $post_image_url ); ?>>
+                                                <a class="link-overlay" href="<?php the_permalink(); ?>"></a>
                                                 <div class="caption">
                                                     <?php grace_mag_categories_meta( true ); ?>
                                                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -116,7 +117,9 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 if( has_post_thumbnail() ) {
                                                 ?>
                                                 <figure>
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <a href="<?php the_permalink(); ?>">
+                                                        <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    </a>
                                                 </figure>
                                                 <?php
                                                 }
@@ -153,6 +156,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                             $post_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                                             ?>
                                             <div class="primary-main-bdy<?php grace_mag_has_image_class( $post_image_url ); ?>"<?php grace_mag_has_image_url( $post_image_url ); ?>>
+                                                <a class="link-overlay" href="<?php the_permalink(); ?>"></a>
                                                 <div class="caption">
                                                     <?php grace_mag_categories_meta( true ); ?>
                                                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -186,7 +190,9 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 if( has_post_thumbnail() ) {
                                                 ?>
                                                 <figure>
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <a href="<?php the_permalink(); ?>">
+                                                        <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    </a>
                                                 </figure>
                                                 <?php
                                                 }
@@ -223,6 +229,7 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                             $post_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
                                             ?>
                                             <div class="primary-main-bdy<?php grace_mag_has_image_class( $post_image_url ); ?>"<?php grace_mag_has_image_url( $post_image_url ); ?>>
+                                                <a class="link-overlay" href="<?php the_permalink(); ?>"></a>
                                                 <div class="caption">
                                                     <?php grace_mag_categories_meta( true ); ?>
                                                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -256,7 +263,9 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                                 if( has_post_thumbnail() ) {
                                                 ?>
                                                 <figure>
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <a href="<?php the_permalink(); ?>">
+                                                        <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    </a>
                                                 </figure>
                                                 <?php
                                                 }
@@ -313,7 +322,9 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                             ?>
                                             <li class="col-12 col-lg-6">
                                                 <figure class="img-hover">
-                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    <a href="<?php the_permalink(); ?>">
+                                                        <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                    </a>
                                                 </figure>
                                                 <h4 class="sub-title">
                                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -342,7 +353,9 @@ if( ! class_exists( 'Grace_Mag_Fullwidth_News_Widget' ) ) :
                                     <div class="col-12 col-lg-6">
                                         <div class="full-layout5-content">
                                             <figure class="img-hover">
-                                                <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                                </a>
                                             </figure>
                                             <div class="full-layout-bdy">
                                                 <?php grace_mag_categories_meta( true ); ?>

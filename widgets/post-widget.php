@@ -79,7 +79,9 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
                                 ?>
                                 <div class="col-12 col-lg-5">
                                     <figure class="img-hover">
-                                        <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                        </a>
                                     </figure>
                                 </div>
                                 <?php
@@ -120,7 +122,9 @@ if( ! class_exists( 'Grace_Mag_Post_Widget' ) ) :
                                 ?>
                                 <li class="clearfix">
                                     <figure>
-                                        <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_post_thumbnail( 'grace-mag-thumbnail-one', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) ); ?>
+                                        </a>
                                     </figure>
                                     <div class="list-content">
                                         <?php grace_mag_categories_meta( true ); ?>
