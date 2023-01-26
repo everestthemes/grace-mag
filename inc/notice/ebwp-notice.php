@@ -178,7 +178,7 @@ class Ebwp_Notice_Grace_mag {
 
 		if ( $remind ) {
 			$action_type  = 'remind';
-			$expire_after = time() + ( DAY_IN_SECONDS * $days );
+			$expire_after = ( DAY_IN_SECONDS * $days );
 
 			set_transient( $this->expire_after_transient, 1, $expire_after );
 
