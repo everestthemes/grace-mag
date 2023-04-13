@@ -1,3 +1,8 @@
+== v1.1.5 : April 13, 2023 ==
+
+- fix deprecated dynamic properties error
+- Last Update 
+
 === v1.1.4 : Jan 26, 2023 ===
 
 - Fixed missing "Tested up to" and "Requires PHP" in stylesheet

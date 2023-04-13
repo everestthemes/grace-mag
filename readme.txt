@@ -3,8 +3,8 @@
 Contributors: everestthemes
 Requires at least: 5.0
 Requires PHP: 5.6
-Tested up to: 6.1.1
-Stable tag: 1.1.4
+Tested up to: 6.1.2
+Stable tag: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, entertainment, featured-image-header, featured-images, footer-widgets, full-width-template, grid-layout, news, portfolio, right-sidebar, left-sidebar, theme-options, threaded-comments, translation-ready, two-columns, block-styles, wide-blocks
@@ -61,6 +61,8 @@ Grace Mag is distributed under the terms of the GNU GPL
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
+
+
 
 
 == Frequently Asked Questions ==
