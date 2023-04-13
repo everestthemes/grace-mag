@@ -13,6 +13,15 @@
             public $companion_plugins = array(); // Will be displayed under Demo Import Tab
             public $strings = array(); // Common Display Strings
 
+            //set the property here which are listed below.
+            public $theme_page = '';
+            public $plugin_install_page = '';
+            public $import_demo_page = '';
+            public $doc_link = '';
+            public $pro_link = '';
+            public $review_link = '';
+            public $support_link = '';
+
             /**
              * Get notice screenshot based on previous theme.
              *
