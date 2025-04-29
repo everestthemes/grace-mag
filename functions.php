@@ -16,18 +16,90 @@ if ( ! function_exists( 'grace_mag_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function grace_mag_setup() {
-        
-        /* Theme Prefix Define */
-		global $grace_mag_theme_prefix;
 
-		$grace_mag_theme_prefix = 'grace_mag';
-		/*
+        /*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Grace Mag, use a find and replace
 		 * to change 'grace-mag' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'grace-mag', get_template_directory() . '/languages' );
+
+        /**
+         * Implement the Custom Header feature.
+         */
+        require get_template_directory() . '/inc/custom-header.php';
+
+        /**
+         * Load welcome section to admin.
+         */
+        if ( is_admin() ) {
+            require get_template_directory().'/inc/welcome/welcome-config.php';
+        }
+
+        /**
+         * Custom template tags for this theme.
+         */
+        require get_template_directory() . '/inc/theme-functions.php';
+
+        /**
+         * Load TGM plugin activation.
+         */
+        require get_template_directory() . '/third-party/class-tgm-plugin-activation.php';
+
+        /**
+         * Custom template tags for this theme.
+         */
+        require get_template_directory() . '/inc/template-tags.php';
+
+        /**
+         * Functions which enhance the theme by hooking into WordPress.
+         */
+        require get_template_directory() . '/inc/template-functions.php';
+
+        /**
+         * Load options for theme.
+         */
+        require get_template_directory() . '/inc/option-choices.php';
+
+        /**
+         * Customizer additions.
+         */
+        require get_template_directory() . '/inc/customizer/customizer.php';
+
+        /**
+         * Load breadcrumbs.
+         */
+        require get_template_directory() . '/third-party/breadcrumbs.php';
+
+        /**
+         * Functions which hooks into the theme functions.
+         */
+        require get_template_directory() . '/inc/theme-hooks.php';
+
+        /**
+         * Load Jetpack compatibility file.
+         */
+        if ( defined( 'JETPACK__VERSION' ) ) {
+            require get_template_directory() . '/inc/jetpack.php';
+        }
+
+        /**
+         * Load widgets for theme
+         */
+        require get_template_directory() . '/widgets/widgets.php';
+
+        /**
+         * Post Meta Sidebar Position for this theme.
+         */
+        require get_template_directory() . '/inc/custom-fields/sidebar-position.php';
+        require get_template_directory() . '/inc/notice/ebwp-notice.php';
+        
+        /* Theme Prefix Define */
+		global $grace_mag_theme_prefix;
+
+		$grace_mag_theme_prefix = 'grace_mag';
+		
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -280,75 +352,5 @@ function grace_mag_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'grace_mag_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Load welcome section to admin.
- */
-if ( is_admin() ) {
-    require get_template_directory().'/inc/welcome/welcome-config.php';
-}
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/theme-functions.php';
-
-/**
- * Load TGM plugin activation.
- */
-require get_template_directory() . '/third-party/class-tgm-plugin-activation.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Load options for theme.
- */
-require get_template_directory() . '/inc/option-choices.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer/customizer.php';
-
-/**
- * Load breadcrumbs.
- */
-require get_template_directory() . '/third-party/breadcrumbs.php';
-
-/**
- * Functions which hooks into the theme functions.
- */
-require get_template_directory() . '/inc/theme-hooks.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Load widgets for theme
- */
-require get_template_directory() . '/widgets/widgets.php';
-
-/**
- * Post Meta Sidebar Position for this theme.
- */
-require get_template_directory() . '/inc/custom-fields/sidebar-position.php';
-require get_template_directory() . '/inc/notice/ebwp-notice.php';
 
 
