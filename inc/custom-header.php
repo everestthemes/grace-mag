@@ -17,14 +17,20 @@
  * @uses grace_mag_header_style()
  */
 function grace_mag_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'grace_mag_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
-		'wp-head-callback'       => 'grace_mag_header_style',
-	) ) );
+	add_theme_support(
+		'custom-header',
+		apply_filters(
+			'grace_mag_custom_header_args',
+			array(
+				'default-image'      => '',
+				'default-text-color' => '000000',
+				'width'              => 1000,
+				'height'             => 250,
+				'flex-height'        => true,
+				'wp-head-callback'   => 'grace_mag_header_style',
+			)
+		)
+	);
 }
 add_action( 'after_setup_theme', 'grace_mag_custom_header_setup' );
 
@@ -57,8 +63,8 @@ if ( ! function_exists( 'grace_mag_header_style' ) ) :
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
-		<?php
-		// If the user has set a custom color for the text use that.
+			<?php
+			// If the user has set a custom color for the text use that.
 		else :
 			?>
 			.site-title a,

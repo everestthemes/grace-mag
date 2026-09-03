@@ -131,7 +131,7 @@ do_action( 'grace_mag_site_preloader' );
 		<div class="header-bottom-block primary-menu">
 			<div class="container">
 				<div class="menu-wrap clearfix">
-				   <?php
+					<?php
 					/**
 					 * Hook - grace_mag_header_canvas_menu_button.
 					 *

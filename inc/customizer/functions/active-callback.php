@@ -8,7 +8,7 @@
 /**
  * Active callback function for when top header is active.
  */
-if( ! function_exists( 'grace_mag_active_top_header' ) ) {
+if ( ! function_exists( 'grace_mag_active_top_header' ) ) {
 
 	function grace_mag_active_top_header( $control ) {
 
@@ -16,16 +16,16 @@ if( ! function_exists( 'grace_mag_active_top_header' ) ) {
 
 			return true;
 		} else {
-			
+
 			return false;
-		}		
+		}
 	}
 }
 
 /**
  * Active callback function for when top header and news ticker is active.
  */
-if( ! function_exists( 'grace_mag_active_news_ticker' ) ) {
+if ( ! function_exists( 'grace_mag_active_news_ticker' ) ) {
 
 	function grace_mag_active_news_ticker( $control ) {
 
@@ -33,16 +33,16 @@ if( ! function_exists( 'grace_mag_active_news_ticker' ) ) {
 
 			return true;
 		} else {
-			
+
 			return false;
-		}		
+		}
 	}
 }
 
 /**
  * Active callback function for when banner is active.
  */
-if( ! function_exists( 'grace_mag_active_banner' ) ) {
+if ( ! function_exists( 'grace_mag_active_banner' ) ) {
 
 	function grace_mag_active_banner( $control ) {
 
@@ -50,16 +50,16 @@ if( ! function_exists( 'grace_mag_active_banner' ) ) {
 
 			return true;
 		} else {
-			
+
 			return false;
-		}		
+		}
 	}
 }
 
 /**
  * Active callback function for when banner is active.
  */
-if( ! function_exists( 'grace_mag_active_related_posts' ) ) {
+if ( ! function_exists( 'grace_mag_active_related_posts' ) ) {
 
 	function grace_mag_active_related_posts( $control ) {
 
@@ -67,8 +67,8 @@ if( ! function_exists( 'grace_mag_active_related_posts' ) ) {
 
 			return true;
 		} else {
-			
+
 			return false;
-		}		
+		}
 	}
 }

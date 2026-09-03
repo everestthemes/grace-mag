@@ -1,5 +1,11 @@
+== v1.1.8 : September 03, 2026 ==
+- WordPress 7.1 compatibility added
+- Added missing searchform.php
+- Fixed WPCS styling & security warnings
+- Fixed nested comment indentation
+
 == v1.1.7 : July 14, 2025 ==
-- Compatibility check with wordpress 6.8.1
+- Compatibility check with WordPress 6.8.1
 
 == v1.1.6 : April 29, 2025 ==
 

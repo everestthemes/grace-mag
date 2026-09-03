@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'grace-mag-sidebar' ) ) {
 ?>
 
 <div class="<?php grace_mag_sidebar_class(); ?>">
-    <aside id="secondary" class="secondary-widget-area">
-        <?php dynamic_sidebar( 'grace-mag-sidebar' ); ?>
-    </aside><!-- // aside -->
+	<aside id="secondary" class="secondary-widget-area">
+		<?php dynamic_sidebar( 'grace-mag-sidebar' ); ?>
+	</aside><!-- // aside -->
 </div><!--side-bar col-3-->

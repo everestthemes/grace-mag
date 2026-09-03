@@ -156,8 +156,7 @@ class Ebwp_Notice_Grace_mag {
 
 		if ( ! is_wp_error( activate_plugin( $plugin, '', is_multisite() ) ) ) {
 			$this->install_activate = true;
-		};
-
+		}
 	}
 
 	/**
@@ -216,7 +215,6 @@ class Ebwp_Notice_Grace_mag {
 		} else {
 			$this->save_user_data( $_POST );
 		}
-
 	}
 
 	/**
@@ -287,14 +285,14 @@ class Ebwp_Notice_Grace_mag {
 
 					<img class="logo-icon" src="<?php echo esc_url( self::LOGO_URL ); ?>">
 
-					<h1><?php esc_html_e( 'Thank You !!!', 'everest-themes-framework' ); ?></h1>
+					<h1><?php esc_html_e( 'Thank You !!!', 'grace-mag' ); ?></h1>
 
 					<?php
 
 					$plugin_link = '<strong><a href="//wordpress.org/plugins/everest-backup/" target="_blank">Everest Backup</a></strong>';
 
 					/* translators: %s is the Everest Backup plugin name wrapped with html. */
-					$string = sprintf( __( '%s has been installed and activated successfully.', 'everest-themes-framework' ), $plugin_link );
+					$string = sprintf( __( '%s has been installed and activated successfully.', 'grace-mag' ), $plugin_link );
 
 					echo wp_kses_post( wpautop( $string ) );
 					?>
@@ -394,7 +392,6 @@ class Ebwp_Notice_Grace_mag {
 		</div>
 		<?php
 	}
-
 }
 
 new Ebwp_Notice_Grace_mag();

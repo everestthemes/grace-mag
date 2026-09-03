@@ -76,7 +76,7 @@ img {
 =
 = padding
 =
-=========================== 
+===========================
 */
 .lrg-padding {
     padding-top: 60px;
@@ -102,7 +102,7 @@ img {
 =
 = Title fonts
 =
-=========================== 
+===========================
 */
 .xl-title {
     font-size: 40px;
@@ -134,7 +134,7 @@ img {
 =
 = Image HOver
 =
-=========================== 
+===========================
 */
 .img-hover {
     overflow: hidden;
@@ -155,7 +155,7 @@ img {
 =
 = background-color property
 =
-=========================== 
+===========================
 */
 .greenbg {
     background-color: #08a54a;
@@ -202,7 +202,7 @@ a.graybg {
 =
 = background-color property
 =
-=========================== 
+===========================
 */
 .greenc {
     color: #08a54a;
@@ -390,7 +390,7 @@ span.edit-link a:before {
 =
 = boxed style
 =
-=========================== 
+===========================
 */
 
 body.boxed {
@@ -416,7 +416,7 @@ body.boxed .site {
 =
 = Top styles
 =
-=========================== 
+===========================
 */
 .top-bar {
     background-color: #ffffff;
@@ -788,7 +788,7 @@ ul.newsticker li {
 =
 = header layout1 start
 =
-=========================== 
+===========================
 */
 .top-advertise-sec {
     margin-bottom: 30px;
@@ -906,7 +906,7 @@ ul.newsticker li {
 =
 = header layout1 end
 =
-=========================== 
+===========================
 */
 .header-inner.layout2 .breaking-news-wrap {
     background-color: #171717;
@@ -997,7 +997,7 @@ ul.newsticker li {
 =
 = header layout2 end
 =
-=========================== 
+===========================
 */
 
 
@@ -1127,6 +1127,17 @@ ul.newsticker li {
 
 .comment-body {
     margin-bottom: 30px;
+}
+
+.comment-list .children {
+    margin-left: 20px;
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    .comment-list .children {
+        margin-left: 50px;
+    }
 }
 
 .author-name h3 {
@@ -2615,17 +2626,17 @@ ul.newsticker li {
     list-style: disc outside none;
     padding: 5px;
   }
-  
+
   .sigle-post-content-area > ul > li > ul > li {
     list-style: disc outside none;
     padding: 5px;
     margin-left: 20px;
   }
-  
+
   .sigle-post-content-area > ul > li:last-child {
     padding-bottom: 10px;
   }
-  
+
   .sigle-post-content-area > ol > li {
     list-style: number;
     display: list-item;
@@ -2634,13 +2645,13 @@ ul.newsticker li {
     margin-right: 0;
     margin-bottom: 0;
   }
-  
+
   .sigle-post-content-area ol li {
     display: list-item !important;
     padding: 0 !important;
     border: none !important;
   }
-  
+
   .sigle-post-content-area > ol > li > ol > li {
     list-style: disc;
     display: list-item;
