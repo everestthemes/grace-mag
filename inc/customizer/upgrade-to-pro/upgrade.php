@@ -66,7 +66,7 @@ class Grace_Mag_Customize_Section_Upsell extends WP_Customize_Section {
 
 			$button_url = $theme->get( 'ThemeURI' );
 
-		// Fall back to the `Author URI` defined in `style.css`.
+			// Fall back to the `Author URI` defined in `style.css`.
 		} elseif ( ! $this->button_url && $theme->get( 'AuthorURI' ) ) {
 
 			$button_url = $theme->get( 'AuthorURI' );
@@ -85,7 +85,8 @@ class Grace_Mag_Customize_Section_Upsell extends WP_Customize_Section {
 	 * @access public
 	 * @return void
 	 */
-	protected function render_template() { ?>
+	protected function render_template() {
+		?>
 
 		<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
 
@@ -97,5 +98,6 @@ class Grace_Mag_Customize_Section_Upsell extends WP_Customize_Section {
 				<# } #>
 			</h3>
 		</li>
-	<?php }
+		<?php
+	}
 }
